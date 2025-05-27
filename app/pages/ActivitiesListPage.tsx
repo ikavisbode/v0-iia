@@ -16,7 +16,6 @@ interface ActivitiesListPageProps {
 const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) => {
   const { i18n } = useTranslation()
   const currentLang = i18n.language || "pt"
-  const [selectedLevel, setSelectedLevel] = useState("all")
   const [activities, setActivities] = useState<ActivityData[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -34,24 +33,7 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
     loadData()
   }, [])
 
-  const levels = ["all", "Iniciante", "Intermediário", "Avançado", "Todos os níveis"]
-
-  const filteredActivities = activities.filter((activity) => {
-    return selectedLevel === "all" || activity.level === selectedLevel
-  })
-
-  const getLevelColor = (level: string) => {
-    switch (level) {
-      case "Iniciante":
-        return "bg-green-100 text-green-800"
-      case "Intermediário":
-        return "bg-yellow-100 text-yellow-800"
-      case "Avançado":
-        return "bg-red-100 text-red-800"
-      default:
-        return "bg-blue-100 text-blue-800"
-    }
-  }
+  const filteredActivities = activities
 
   if (loading) {
     return (
@@ -83,29 +65,10 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
 
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          {/* Level Filter */}
-          <div className="flex justify-center mb-12">
-            <div className="bg-white rounded-lg p-1 flex flex-wrap gap-1 shadow-sm">
-              {levels.map((level) => (
-                <button
-                  key={level}
-                  onClick={() => setSelectedLevel(level)}
-                  className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
-                    selectedLevel === level ? "bg-red-600 text-white" : "text-gray-600 hover:text-gray-800"
-                  }`}
-                >
-                  {level === "all" ? "Todos os Níveis" : level}
-                </button>
-              ))}
-            </div>
-          </div>
-
           {/* Activities Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredActivities.map((activity) => {
               const content = activity[currentLang as keyof typeof activity]
-              const availableSpots = activity.maxParticipants - activity.currentParticipants
-              const occupancyPercentage = (activity.currentParticipants / activity.maxParticipants) * 100
 
               return (
                 <div
@@ -126,16 +89,13 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
                       <span className="inline-block px-3 py-1 bg-red-100 text-red-600 text-xs font-semibold rounded-full">
                         {activity.category}
                       </span>
-                      <span className={`px-2 py-1 text-xs font-semibold rounded ${getLevelColor(activity.level)}`}>
-                        {activity.level}
-                      </span>
                     </div>
 
                     <h3 className="text-heading text-xl font-bold text-gray-800 mb-3 line-clamp-2">{content.title}</h3>
 
                     <p className="text-body text-gray-600 mb-4 line-clamp-3">{content.description}</p>
 
-                    <div className="space-y-2 mb-4">
+                    <div className="space-y-2 mb-6">
                       <div className="flex items-center text-sm text-gray-500">
                         <Clock className="w-4 h-4 mr-2 text-red-400" />
                         <span className="font-medium mr-2">Duração:</span>
@@ -163,28 +123,6 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
                       </div>
                     </div>
 
-                    {/* Availability */}
-                    <div className="mb-4">
-                      <div className="flex justify-between text-sm text-gray-600 mb-2">
-                        <span>Vagas Disponíveis</span>
-                        <span>
-                          {availableSpots} de {activity.maxParticipants}
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div
-                          className={`h-2 rounded-full ${
-                            occupancyPercentage >= 90
-                              ? "bg-red-500"
-                              : occupancyPercentage >= 70
-                                ? "bg-yellow-500"
-                                : "bg-green-500"
-                          }`}
-                          style={{ width: `${occupancyPercentage}%` }}
-                        ></div>
-                      </div>
-                    </div>
-
                     <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold">
                       {content.price === "Gratuito" || content.price === "Free"
                         ? "Inscrever-se Gratuitamente"
@@ -198,7 +136,7 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
 
           {filteredActivities.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">Nenhuma atividade encontrada para o nível selecionado.</p>
+              <p className="text-gray-500 text-lg">Nenhuma atividade encontrada.</p>
             </div>
           )}
         </div>

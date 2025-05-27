@@ -1,0 +1,91 @@
+{
+  "id": "4",
+  "slug": "workshop-demidov",
+  "category": "Workshop Técnico",
+  "maxParticipants": 15,
+  "currentParticipants": 10,
+  "featured": false,
+  "images": [
+    "/images/nikolai-demidov.jpg",
+    "/images/diogo-rezende.jpg",
+    "https://images.pexels.com/photos/8106573/pexels-photo-8106573.jpeg?auto=compress&cs=tinysrgb&w=800"
+  ],
+  "pt": {
+    "title": "Workshop de Técnica Demidov",
+    "description": "Programa intensivo focado na técnica de Nikolai Demidov, explorando a análise ativa e a criação de circunstâncias propostas.",
+    "fullDescription": "O Workshop de Técnica Demidov é uma imersão profunda nos fundamentos da metodologia desenvolvida por Nikolai Demidov, discípulo e colaborador de Stanislavski. Este programa intensivo oferece aos participantes a oportunidade de explorar a análise ativa, o trabalho com circunstâncias propostas e a criação de eventos cênicos.\n\nA técnica Demidov enfatiza a importância da análise através da ação, onde o ator descobre o texto e o personagem através do fazer, não apenas do pensar. Nosso workshop combina exercícios práticos de análise ativa com o trabalho de mesa tradicional, criando uma abordagem integrada e dinâmica.\n\nOs participantes trabalharão com textos clássicos e contemporâneos, desenvolvendo habilidades de análise dramatúrgica, criação de eventos e construção de linha de ação. O workshop é limitado a 15 participantes para garantir atenção individualizada.",
+    "instructor": "Diogo Rezende",
+    "duration": "2 meses",
+    "date": "15 de Abril, 2025",
+    "time": "19h00 - 22h00",
+    "location": "Remoto",
+    "price": "R$ 150/mês"
+  },
+  "en": {
+    "title": "Demidov Technique Workshop",
+    "description": "Intensive program focused on Nikolai Demidov's technique, exploring active analysis and the creation of proposed circumstances.",
+    "fullDescription": "The Demidov Technique Workshop is a deep immersion into the fundamentals of the methodology developed by Nikolai Demidov, disciple and collaborator of Stanislavski. This intensive program offers participants the opportunity to explore active analysis, work with proposed circumstances, and the creation of scenic events.\n\nThe Demidov technique emphasizes the importance of analysis through action, where the actor discovers the text and character through doing, not just thinking. Our workshop combines practical active analysis exercises with traditional table work, creating an integrated and dynamic approach.\n\nParticipants will work with classic and contemporary texts, developing skills in dramaturgical analysis, event creation, and action line construction. The workshop is limited to 15 participants to ensure individualized attention.",
+    "instructor": "Diogo Rezende",
+    "duration": "2 months",
+    "date": "April 15, 2025",
+    "time": "7:00 PM - 10:00 PM",
+    "location": "Remote",
+    "price": "R$ 150/month"
+  },
+  "program": [
+    {
+      "pt": {
+        "day": "Módulo 1 - Análise Ativa",
+        "sessions": [
+          { "time": "Semanas 1-2", "topic": "Fundamentos da Análise Ativa" },
+          { "time": "Semanas 3-4", "topic": "Circunstâncias Propostas e Eventos" },
+          { "time": "Semanas 5-6", "topic": "Linha de Ação e Superobjetivo" },
+          { "time": "Semanas 7-8", "topic": "Aplicação Prática em Cenas" }
+        ]
+      },
+      "en": {
+        "day": "Module 1 - Active Analysis",
+        "sessions": [
+          { "time": "Weeks 1-2", "topic": "Fundamentals of Active Analysis" },
+          { "time": "Weeks 3-4", "topic": "Proposed Circumstances and Events" },
+          { "time": "Weeks 5-6", "topic": "Line of Action and Super-objective" },
+          { "time": "Weeks 7-8", "topic": "Practical Application in Scenes" }
+        ]
+      }
+    }
+  ],
+  "requirements": {
+    "pt": [
+      "Experiência intermediária em teatro ou atuação",
+      "Conhecimento básico do Sistema Stanislavski",
+      "Roupas confortáveis para movimento",
+      "Caderno para anotações",
+      "Disponibilidade para os 2 meses completos"
+    ],
+    "en": [
+      "Intermediate experience in theater or acting",
+      "Basic knowledge of Stanislavski System",
+      "Comfortable clothes for movement",
+      "Notebook for notes",
+      "Availability for the complete 2 months"
+    ]
+  },
+  "benefits": {
+    "pt": [
+      "Domínio da técnica de análise ativa",
+      "Desenvolvimento de habilidades dramatúrgicas",
+      "Compreensão profunda do texto teatral",
+      "Certificado de conclusão",
+      "Material didático exclusivo",
+      "Networking com outros profissionais"
+    ],
+    "en": [
+      "Mastery of active analysis technique",
+      "Development of dramaturgical skills",
+      "Deep understanding of theatrical text",
+      "Certificate of completion",
+      "Exclusive educational material",
+      "Networking with other professionals"
+    ]
+  }
+}

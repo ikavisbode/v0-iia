@@ -62,7 +62,6 @@ const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ activityId, onN
   }
 
   const content = activity[currentLang as keyof typeof activity]
-  const availableSpots = activity.maxParticipants - activity.currentParticipants
 
   return (
     <Layout>
@@ -122,25 +121,9 @@ const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ activityId, onN
               <h3 className="text-heading text-2xl font-bold text-gray-800 mb-6">Informações da Inscrição</h3>
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Nível:</span>
-                  <span className="font-medium text-gray-800">{activity.level}</span>
-                </div>
-                <div className="flex justify-between">
                   <span className="text-gray-600">Duração:</span>
                   <span className="font-medium text-gray-800">{content.duration}</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Vagas Disponíveis:</span>
-                  <span className="font-medium text-red-600">
-                    {availableSpots} de {activity.maxParticipants}
-                  </span>
-                </div>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2 mb-6">
-                <div
-                  className="bg-red-600 h-2 rounded-full"
-                  style={{ width: `${(activity.currentParticipants / activity.maxParticipants) * 100}%` }}
-                ></div>
               </div>
               <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 text-lg">
                 {content.price === "Gratuito" || content.price === "Free"

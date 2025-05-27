@@ -64,7 +64,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
     loadData()
   }, [])
 
-  const projectFilters = ["TODOS", "PERFORMANCE", "PESQUISA", "WORKSHOP"]
+  const projectFilters = ["TODOS", "PERFORMANCE", "PESQUISA"]
 
   const filteredProjects =
     activeProjectFilter === "TODOS" ? projects : projects.filter((project) => project.category === activeProjectFilter)

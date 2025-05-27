@@ -44,7 +44,6 @@ export interface ActivityData {
   id: string
   slug: string
   category: string
-  level: string
   maxParticipants: number
   currentParticipants: number
   featured: boolean

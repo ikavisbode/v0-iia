@@ -36,7 +36,7 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
     loadData()
   }, [])
 
-  const categories = ["all", "PERFORMANCE", "WORKSHOP", "PESQUISA", "LABORATÓRIO", "AUDIOVISUAL"]
+  const categories = ["all", "PERFORMANCE", "PESQUISA", "LABORATÓRIO", "AUDIOVISUAL"]
 
   const filteredProjects = projects.filter((project) => {
     const content = project[currentLang as keyof typeof project]
