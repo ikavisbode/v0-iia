@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
   ]
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer id="contact" className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo & Description */}
@@ -59,12 +59,12 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <Instagram className="w-4 h-4 text-red-400 flex-shrink-0" />
                 <a
-                  href="https://instagram.com/institutointerenacionaldeatuacao"
+                  href="https://instagram.com/institutointernacionaldatuacao"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-body text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                 >
-                  @institutointerenacionaldeatuacao
+                  @institutointernacionaldatuacao
                 </a>
               </div>
             </div>
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a
-                href="https://instagram.com/institutointerenacionaldeatuacao"
+                href="https://instagram.com/institutointernacionaldatuacao"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-red-600 transition-all duration-200"

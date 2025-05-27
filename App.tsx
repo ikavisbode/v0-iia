@@ -44,6 +44,8 @@ function App() {
         selectedId: id,
         targetSection: undefined,
       })
+      // Scroll to top when navigating to different pages
+      window.scrollTo({ top: 0, behavior: "smooth" })
     }
   }
 
