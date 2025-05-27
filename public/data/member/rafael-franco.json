@@ -1,0 +1,37 @@
+{
+  "id": "2",
+  "slug": "rafael-franco",
+  "department": "Educação",
+  "image": "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "email": "rafael.franco@iia.com.br",
+  "social": {
+    "linkedin": "#",
+    "instagram": "#"
+  },
+  "pt": {
+    "name": "Rafael Franco",
+    "role": "Coordenador Pedagógico",
+    "bio": "Rafael Franco é doutor em Artes Cênicas pela UNIRIO e um dos principais especialistas em técnicas de improvisação e teatro físico no Brasil. Com formação internacional e mais de 12 anos de experiência, ele revolucionou a pedagogia teatral no país.",
+    "specialties": [
+      "Improvisação Teatral",
+      "Teatro Físico",
+      "Pedagogia Teatral",
+      "Técnicas de Movimento",
+      "Criação Coletiva",
+      "Desenvolvimento Curricular"
+    ]
+  },
+  "en": {
+    "name": "Rafael Franco",
+    "role": "Pedagogical Coordinator",
+    "bio": "Rafael Franco holds a PhD in Performing Arts from UNIRIO and is one of the leading specialists in improvisation techniques and physical theater in Brazil. With international training and over 12 years of experience, he has revolutionized theatrical pedagogy in the country.",
+    "specialties": [
+      "Theatrical Improvisation",
+      "Physical Theater",
+      "Theatrical Pedagogy",
+      "Movement Techniques",
+      "Collective Creation",
+      "Curriculum Development"
+    ]
+  }
+}

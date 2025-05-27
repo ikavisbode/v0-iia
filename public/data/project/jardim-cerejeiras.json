@@ -1,0 +1,27 @@
+{
+  "id": "3",
+  "slug": "jardim-cerejeiras",
+  "category": "PERFORMANCE",
+  "status": "Pré-produção",
+  "images": ["https://images.pexels.com/photos/2014775/pexels-photo-2014775.jpeg?auto=compress&cs=tinysrgb&w=800"],
+  "pt": {
+    "title": "O Jardim das Cerejeiras",
+    "description": "Montagem clássica de Tchekhov com direção contemporânea, explorando as nuances psicológicas dos personagens através de técnicas modernas.",
+    "fullDescription": "Uma nova interpretação do clássico de Anton Tchekhov, explorando as complexidades emocionais e sociais da aristocracia russa em declínio.",
+    "director": "Ana Costa",
+    "cast": ["8 atores"],
+    "duration": "2h 15min",
+    "premiere": "Maio, 2025",
+    "location": "Teatro Oficina"
+  },
+  "en": {
+    "title": "The Cherry Orchard",
+    "description": "Classic Chekhov production with contemporary direction, exploring the psychological nuances of characters through modern techniques.",
+    "fullDescription": "A new interpretation of Anton Chekhov's classic, exploring the emotional and social complexities of the declining Russian aristocracy.",
+    "director": "Ana Costa",
+    "cast": ["8 actors"],
+    "duration": "2h 15min",
+    "premiere": "May, 2025",
+    "location": "Oficina Theater"
+  }
+}

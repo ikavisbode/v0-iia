@@ -1,0 +1,32 @@
+{
+  "id": "2",
+  "slug": "mestres-cena",
+  "category": "Série de Palestras",
+  "level": "Todos os níveis",
+  "maxParticipants": 100,
+  "currentParticipants": 78,
+  "featured": false,
+  "images": ["https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&w=800"],
+  "pt": {
+    "title": "Mestres de Cena: Novos Horizontes",
+    "description": "Série de palestras com grandes nomes do teatro nacional e internacional.",
+    "fullDescription": "A série \"Mestres de Cena: Novos Horizontes\" apresenta uma tarde de palestras e debates com grandes nomes do teatro nacional e internacional. Este evento gratuito oferece uma oportunidade única de aprender com profissionais renomados e descobrir novas perspectivas sobre as artes cênicas contemporâneas.",
+    "instructor": "Convidados Especiais",
+    "duration": "3 horas",
+    "date": "15 de Fevereiro, 2025",
+    "time": "14h00 às 17h00",
+    "location": "Auditório IIA, São Paulo",
+    "price": "Gratuito"
+  },
+  "en": {
+    "title": "Stage Masters: New Horizons",
+    "description": "Lecture series with great names from national and international theater.",
+    "fullDescription": "The \"Stage Masters: New Horizons\" series presents an afternoon of lectures and debates with great names from national and international theater. This free event offers a unique opportunity to learn from renowned professionals and discover new perspectives on contemporary performing arts.",
+    "instructor": "Special Guests",
+    "duration": "3 hours",
+    "date": "February 15, 2025",
+    "time": "2:00 PM to 5:00 PM",
+    "location": "IIA Auditorium, São Paulo",
+    "price": "Free"
+  }
+}

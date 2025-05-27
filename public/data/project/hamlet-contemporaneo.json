@@ -1,0 +1,60 @@
+{
+  "id": "1",
+  "slug": "hamlet-contemporaneo",
+  "category": "PERFORMANCE",
+  "status": "Em Cartaz",
+  "images": [
+    "https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "https://images.pexels.com/photos/2014775/pexels-photo-2014775.jpeg?auto=compress&cs=tinysrgb&w=800"
+  ],
+  "video": "https://example.com/hamlet-trailer",
+  "pt": {
+    "title": "Hamlet Contemporâneo",
+    "description": "Uma releitura moderna do clássico de Shakespeare, explorando temas contemporâneos através de técnicas inovadoras de atuação e cenografia digital.",
+    "fullDescription": "Uma releitura moderna e provocativa do clássico de Shakespeare, \"Hamlet Contemporâneo\" transporta a tragédia dinamarquesa para o Brasil urbano do século XXI.\n\nNossa montagem explora temas universais como poder, corrupção, vingança e loucura através de uma lente contemporânea, utilizando técnicas inovadoras de atuação que combinam o método Stanislavski com elementos do teatro físico brasileiro.\n\nO espetáculo questiona as estruturas de poder na sociedade moderna, usando a figura de Hamlet como um jovem brasileiro que enfrenta dilemas morais em um mundo corrompido. A cenografia minimalista e a trilha sonora original criam uma atmosfera única que dialoga com o público contemporâneo.",
+    "director": "Maria Silva",
+    "cast": ["João Santos", "Ana Costa", "Carlos Mendes", "Lucia Ferreira"],
+    "duration": "2h 30min",
+    "premiere": "15 de Janeiro, 2025",
+    "location": "Teatro Municipal de São Paulo"
+  },
+  "en": {
+    "title": "Contemporary Hamlet",
+    "description": "A modern reinterpretation of Shakespeare's classic, exploring contemporary themes through innovative acting techniques and digital scenography.",
+    "fullDescription": "A modern and provocative reinterpretation of Shakespeare's classic, \"Contemporary Hamlet\" transports the Danish tragedy to urban Brazil of the 21st century.\n\nOur production explores universal themes such as power, corruption, revenge, and madness through a contemporary lens, using innovative acting techniques that combine the Stanislavski method with elements of Brazilian physical theater.\n\nThe play questions power structures in modern society, using Hamlet's figure as a young Brazilian facing moral dilemmas in a corrupted world. The minimalist scenography and original soundtrack create a unique atmosphere that dialogues with contemporary audiences.",
+    "director": "Maria Silva",
+    "cast": ["João Santos", "Ana Costa", "Carlos Mendes", "Lucia Ferreira"],
+    "duration": "2h 30min",
+    "premiere": "January 15, 2025",
+    "location": "São Paulo Municipal Theater"
+  },
+  "schedule": [
+    { "day": "Quinta-feira", "time": "20h00", "dayEn": "Thursday", "timeEn": "8:00 PM" },
+    { "day": "Sexta-feira", "time": "20h00", "dayEn": "Friday", "timeEn": "8:00 PM" },
+    { "day": "Sábado", "time": "19h00 e 21h30", "dayEn": "Saturday", "timeEn": "7:00 PM & 9:30 PM" },
+    { "day": "Domingo", "time": "18h00", "dayEn": "Sunday", "timeEn": "6:00 PM" }
+  ],
+  "reviews": [
+    {
+      "author": "Folha de S.Paulo",
+      "rating": 5,
+      "pt": {
+        "text": "Uma montagem corajosa que reinventa o clássico shakespeariano com inteligência e sensibilidade."
+      },
+      "en": {
+        "text": "A courageous production that reinvents the Shakespearean classic with intelligence and sensitivity."
+      }
+    },
+    {
+      "author": "O Estado de S. Paulo",
+      "rating": 5,
+      "pt": {
+        "text": "Direção impecável e atuações memoráveis fazem desta uma das melhores montagens do ano."
+      },
+      "en": {
+        "text": "Impeccable direction and memorable performances make this one of the best productions of the year."
+      }
+    }
+  ]
+}

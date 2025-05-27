@@ -1,0 +1,90 @@
+{
+  "id": "1",
+  "slug": "camila-morais",
+  "department": "Direção",
+  "image": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "email": "camila.morais@iia.com.br",
+  "social": {
+    "linkedin": "#",
+    "instagram": "#"
+  },
+  "pt": {
+    "name": "Camila Morais",
+    "role": "Diretora Artística",
+    "bio": "Camila Morais é uma das principais vozes do teatro contemporâneo brasileiro. Formada pela UNICAMP com mestrado em Artes Cênicas pela USP, ela possui mais de 15 anos de experiência em direção teatral e formação de atores.\n\nSua trajetória inclui direções premiadas em festivais nacionais e internacionais, além de um trabalho consistente na formação de novos talentos. Camila é especialista no método Stanislavski e técnicas de teatro contemporâneo, tendo estudado com mestres renomados na Europa e Estados Unidos.\n\nComo Diretora Artística do Instituto Internacional de Atuação, ela lidera projetos inovadores que conectam tradição e vanguarda, sempre com foco na excelência artística e na transformação social através das artes cênicas.",
+    "specialties": [
+      "Direção Teatral",
+      "Método Stanislavski",
+      "Teatro Contemporâneo",
+      "Formação de Atores",
+      "Teatro Físico",
+      "Dramaturgia Contemporânea"
+    ]
+  },
+  "en": {
+    "name": "Camila Morais",
+    "role": "Artistic Director",
+    "bio": "Camila Morais is one of the leading voices in contemporary Brazilian theater. Graduated from UNICAMP with a master's degree in Performing Arts from USP, she has over 15 years of experience in theatrical direction and actor training.\n\nHer trajectory includes award-winning directions at national and international festivals, as well as consistent work in training new talents. Camila is a specialist in the Stanislavski method and contemporary theater techniques, having studied with renowned masters in Europe and the United States.\n\nAs Artistic Director of the International Institute of Acting, she leads innovative projects that connect tradition and avant-garde, always focusing on artistic excellence and social transformation through performing arts.",
+    "specialties": [
+      "Theatrical Direction",
+      "Stanislavski Method",
+      "Contemporary Theater",
+      "Actor Training",
+      "Physical Theater",
+      "Contemporary Dramaturgy"
+    ]
+  },
+  "education": {
+    "pt": [
+      "Mestrado em Artes Cênicas - USP (2012)",
+      "Graduação em Artes Cênicas - UNICAMP (2009)",
+      "Especialização em Direção Teatral - École Internationale de Théâtre Jacques Lecoq, Paris (2013)",
+      "Workshop Intensivo - Actors Studio, Nova York (2015)"
+    ],
+    "en": [
+      "Master's in Performing Arts - USP (2012)",
+      "Bachelor's in Performing Arts - UNICAMP (2009)",
+      "Specialization in Theatrical Direction - École Internationale de Théâtre Jacques Lecoq, Paris (2013)",
+      "Intensive Workshop - Actors Studio, New York (2015)"
+    ]
+  },
+  "achievements": {
+    "pt": [
+      "Prêmio APAC de Melhor Direção (2020)",
+      "Indicação ao Prêmio Shell de Teatro (2019, 2021)",
+      "Menção Honrosa - Festival de Teatro de Curitiba (2018)",
+      "Prêmio Jovem Talento - FUNARTE (2016)"
+    ],
+    "en": [
+      "APAC Best Direction Award (2020)",
+      "Shell Theater Award Nomination (2019, 2021)",
+      "Honorable Mention - Curitiba Theater Festival (2018)",
+      "Young Talent Award - FUNARTE (2016)"
+    ]
+  },
+  "currentProjects": [
+    {
+      "pt": {
+        "title": "Hamlet Contemporâneo",
+        "role": "Diretora",
+        "status": "Em cartaz"
+      },
+      "en": {
+        "title": "Contemporary Hamlet",
+        "role": "Director",
+        "status": "On stage"
+      }
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "João Santos, Ator",
+      "pt": {
+        "text": "Camila tem uma capacidade única de extrair o melhor de cada ator. Sua direção é ao mesmo tempo rigorosa e inspiradora."
+      },
+      "en": {
+        "text": "Camila has a unique ability to extract the best from each actor. Her direction is both rigorous and inspiring."
+      }
+    }
+  ]
+}

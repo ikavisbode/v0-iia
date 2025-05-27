@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "events": "Events",
+    "activities": "Activities",
+    "team": "Team",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "International Institute of Acting",
+    "subtitle": "Research - Technique - Production",
+    "cta": "Discover Our Projects",
+    "description": "We develop complete artists through international acting techniques, promoting artistic excellence and social transformation."
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Our History & Mission",
+    "history": {
+      "title": "Our History",
+      "content": "Founded in late 2024, the International Institute of Acting was born from the passion of a group of artists committed to elevating the level of performing arts as a whole."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "We develop complete artists through international acting techniques, promoting artistic excellence, theatrical and audiovisual research."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "content": "To be internationally recognized as a center of excellence in artistic training and innovative theatrical production."
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "Artistic Excellence, Constant Innovation, Inclusion and Diversity",
+      "items": [
+        "Artistic Excellence",
+        "Constant Innovation",
+        "Inclusion and Diversity",
+        "Social Transformation",
+        "International Collaboration"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Our Productions & Research",
+    "learnMore": "Learn More",
+    "category": "Category",
+    "status": "Status",
+    "director": "Director",
+    "cast": "Cast"
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Upcoming Events & Presentations",
+    "upcoming": "Upcoming",
+    "past": "Past",
+    "register": "Register",
+    "learnMore": "Learn More",
+    "date": "Date",
+    "location": "Location",
+    "price": "Price"
+  },
+  "activities": {
+    "title": "Academic Activities",
+    "subtitle": "Courses, Workshops & Training",
+    "duration": "Duration",
+    "level": "Level",
+    "instructor": "Instructor",
+    "schedule": "Schedule",
+    "enroll": "Enroll"
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Professionals Dedicated to Art",
+    "role": "Role",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "address": "Address",
+    "addressText": "Rua Augusta, 1500, Consolação, São Paulo - SP, 01304-001",
+    "contact": "Contact",
+    "phone": "Phone: +55 11 3456-7890",
+    "email": "Email: contact@internationalinstitute.com.br",
+    "followUs": "Follow Us",
+    "copyright": "© 2025 International Institute of Acting. All rights reserved."
+  },
+  "common": {
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading...",
+    "error": "Error loading"
+  }
+}

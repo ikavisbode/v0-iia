@@ -1,0 +1,94 @@
+{
+  "id": "3",
+  "slug": "marco-briani",
+  "department": "Direção",
+  "image": "/images/hero-bg.png",
+  "email": "marcobriani@gmail.com",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/marco-briani-611536a4/",
+    "instagram": "https://www.instagram.com/kabode/"
+  },
+  "pt": {
+    "name": "Marco Briani",
+    "role": "Diretor Artístico",
+    "bio": "Ator, diretor de teatro, dublador e professor. Formado no Teatro Escola Macunaíma (2018). Pós-graduado em Ciências Sociais Aplicadas à Alimentação pelo Senac (2014) e licenciatura em Artes Visuais pela Universidade Cruzeiro do Sul (2024). Fez quatro anos de curso de clown no grupo Interagir do Colégio São Domingos (mantenedora Fundação São Paulo), onde entrou em contato com a teoria de Jacques Lecoq e trabalhou noções de corpo neutro e máscara neutra. Ainda como parte do grupo, foi professor convidado, ministrando aulas de clown para adolescentes. Participou de diversas dublagens, filmes de longa-metragem como o live-action Mulan, documentários e séries. Apresentou profissionalmente o espetáculo infantil \"A nossa comunidade\", baseado na \"Comunidade do arco-íris\" com a direção de André Haidamus. Foi assistente de direção nas peças “A Ponte” de Lucienne Guedes (direção André Haidamus e Simone Shuba), “A Gaivota” de Anton Tchekhov (direção de Felipe Rocha), “Necrológios dos desiludidos do amor” (direção de Simone Shuba) e “O Pássaro Azul” (direção de Renata Kamla). Protagonista no filme \"Apto 88\" (direção Thais Abdala) e no curta \"HUGO\" (FAAP 2010). Professor de teatro na escola UNIU, também executando a função de diretor de palco e montador. Assina como professor as apresentações dos musicais “Mamma-Mia” (Teatro Paiol 2023), “Encanto” (Teatro Paiol 2023), “Onde está Delores” (2024 Teatro UMC), “Annie” (2024 Teatro UMC) e “Happy-Day” (Teatro Bravos 2024).",
+    "specialties": [
+      "Direção Teatral",
+      "Método Stanislavski",
+      "Teatro Contemporâneo",
+      "Formação de Atores",
+      "Meisner",
+      "Dramaturgia Contemporânea"
+    ]
+  },
+  "en": {
+    "name": "Marco Briani",
+    "role": "Artistic Director",
+    "bio": "Marco Briani is an actor, theater director, voice actor, and teacher. Graduated from Teatro Escola Macunaíma (2018). He holds a postgraduate degree in Social Sciences Applied to Food from Senac (2014) and a bachelor's degree in Visual Arts from Universidade Cruzeiro do Sul (2024). He completed four years of clown studies at Grupo Interagir of Colégio São Domingos, where he engaged with Jacques Lecoq's theory, working on neutral body and neutral mask concepts. As part of the group, he was also a guest teacher, conducting clown classes for teenagers. Marco participated in various dubbing projects, feature films like the live-action Mulan, documentaries, and series. He professionally presented the children's play \"Our Community\" directed by André Haidamus. He worked as assistant director in plays such as “A Ponte” by Lucienne Guedes (directed by André Haidamus and Simone Shuba), “The Seagull” by Anton Chekhov (directed by Felipe Rocha), “Necrologies of the Disillusioned in Love” (directed by Simone Shuba), and “The Blue Bird” (directed by Renata Kamla). He was the lead actor in the film \"Apto 88\" directed by Thais Abdala and the short film \"HUGO\" (FAAP 2010). Currently, he teaches theater at UNIU School of Art, also serving as stage director and set assembler. He directed musicals such as “Mamma-Mia” (Teatro Paiol 2023), “Encanto” (Teatro Paiol 2023), “Where is Delores” (2024 Teatro UMC), “Annie” (2024 Teatro UMC), and “Happy-Day” (Teatro Bravos 2024).",
+    "specialties": [
+      "Theatrical Direction",
+      "Stanislavski Method",
+      "Contemporary Theater",
+      "Actor Training",
+      "Meisner",
+      "Contemporary Dramaturgy"
+    ]
+  },
+  "education": {
+    "pt": [
+      "Licenciatura em Artes Visuais - Universidade Cruzeiro do Sul (2024)",
+      "Curso técnico em Teatro - Teatro Escola Macunaíma (2018)",
+      "Pós-graduação em Ciências Sociais Aplicadas à Alimentação - Senac (2014)",
+      "Curso internacional superior de gastronomia italiana - Alma, Colorno, Itália (2013)",
+      "Tecnólogo em Gastronomia - Senac (2012)",
+      "Curso intensivo de Meisner com Luciana Canton (2023)",
+      "Curso de interpretação para cinema - Grupo Cinedas (2022)",
+      "Curso de Produção Executiva - EBAC (2021)"
+    ],
+    "en": [
+      "Bachelor's in Visual Arts - Universidade Cruzeiro do Sul (2024)",
+      "Technical Course in Theater - Teatro Escola Macunaíma (2018)",
+      "Postgraduate in Social Sciences Applied to Food - Senac (2014)",
+      "International Higher Course in Italian Gastronomy - Alma, Colorno, Italy (2013)",
+      "Technologist in Gastronomy - Senac (2012)",
+      "Intensive Meisner Course with Luciana Canton (2023)",
+      "Acting for Cinema Course - Grupo Cinedas (2022)",
+      "Executive Production Course - EBAC (2021)"
+    ]
+  },
+  "achievements": {
+    "pt": [
+      "Participação em dublagens de filmes como o live-action Mulan",
+      "Direção e participação em peças premiadas e reconhecidas na cena teatral paulista"
+    ],
+    "en": [
+      "Participation in dubbing projects such as the live-action Mulan",
+      "Direction and participation in awarded and recognized plays in São Paulo's theater scene"
+    ]
+  },
+  "currentProjects": [
+    {
+      "pt": {
+        "title": "Cachorro ou Gato",
+        "role": "Produtor, Primeiro Assistente de Direção e Ator",
+        "status": "Em pós-produção"
+      },
+      "en": {
+        "title": "Dog or Cat",
+        "role": "Producer, First Assistant Director, and Actor",
+        "status": "Post-production"
+      }
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "João Santos, Ator",
+      "pt": {
+        "text": "Marco tem uma capacidade única de extrair o melhor de cada ator. Sua direção é ao mesmo tempo rigorosa e inspiradora."
+      },
+      "en": {
+        "text": "Marco has a unique ability to extract the best from each actor. His direction is both rigorous and inspiring."
+      }
+    }
+  ]
+}

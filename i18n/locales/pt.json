@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "events": "Eventos",
+    "activities": "Atividades",
+    "team": "Equipe",
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "Instituto Internacional de Atuação",
+    "subtitle": "Pesquisa - Técnica - Produção",
+    "cta": "Conheça Nossos Projetos",
+    "description": "Desenvolvemos artistas completos através de técnicas internacionais de atuação, promovendo excelência artística e transformação social."
+  },
+  "about": {
+    "title": "Sobre Nós",
+    "subtitle": "Nossa História & Missão",
+    "history": {
+      "title": "Nossa História",
+      "content": "Fundado no final de 2024, o Instituto Internacional de Atuação nasceu da paixão de um grupo de artistas comprometidos em elevar o nível das artes cênicas como um todo."
+    },
+    "mission": {
+      "title": "Nossa Missão",
+      "content": "Desenvolvemos artistas completos através de técnicas internacionais de atuação, promovendo excelência artística, pesquisa teatral e audiovisual."
+    },
+    "vision": {
+      "title": "Nossa Visão",
+      "content": "Ser reconhecido internacionalmente como centro de excelência em formação artística e produção teatral inovadora."
+    },
+    "values": {
+      "title": "Nossos Valores",
+      "description": "Excelência Artística, Inovação Constante, Inclusão e Diversidade",
+      "items": [
+        "Excelência Artística",
+        "Inovação Constante",
+        "Inclusão e Diversidade",
+        "Transformação Social",
+        "Colaboração Internacional"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Nossas Produções & Pesquisas",
+    "learnMore": "Saiba Mais",
+    "category": "Categoria",
+    "status": "Status",
+    "director": "Diretor",
+    "cast": "Elenco"
+  },
+  "events": {
+    "title": "Eventos",
+    "subtitle": "Próximos Eventos & Apresentações",
+    "upcoming": "Próximos",
+    "past": "Anteriores",
+    "register": "Inscrever-se",
+    "learnMore": "Saiba Mais",
+    "date": "Data",
+    "location": "Local",
+    "price": "Preço"
+  },
+  "activities": {
+    "title": "Atividades Acadêmicas",
+    "subtitle": "Cursos, Workshops & Formações",
+    "duration": "Duração",
+    "level": "Nível",
+    "instructor": "Instrutor",
+    "schedule": "Horário",
+    "enroll": "Matricular-se"
+  },
+  "team": {
+    "title": "Nossa Equipe",
+    "subtitle": "Profissionais Dedicados à Arte",
+    "role": "Função",
+    "experience": "Experiência",
+    "contact": "Contato"
+  },
+  "footer": {
+    "navigation": "Navegação",
+    "address": "Endereço",
+    "addressText": "Rua Augusta, 1500, Consolação, São Paulo - SP, 01304-001",
+    "contact": "Contato",
+    "phone": "Telefone: +55 11 3456-7890",
+    "email": "Email: contato@institutointernacional.com.br",
+    "followUs": "Siga-nos",
+    "copyright": "© 2025 Instituto Internacional de Atuação. Todos os direitos reservados."
+  },
+  "common": {
+    "readMore": "Ler Mais",
+    "viewAll": "Ver Todos",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "loading": "Carregando...",
+    "error": "Erro ao carregar"
+  }
+}

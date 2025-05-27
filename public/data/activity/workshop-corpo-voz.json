@@ -1,0 +1,88 @@
+{
+  "id": "1",
+  "slug": "workshop-corpo-voz",
+  "category": "Workshop Intensivo",
+  "level": "Todos os níveis",
+  "maxParticipants": 20,
+  "currentParticipants": 15,
+  "featured": true,
+  "images": [
+    "https://images.pexels.com/photos/3355366/pexels-photo-3355366.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "https://images.pexels.com/photos/2014775/pexels-photo-2014775.jpeg?auto=compress&cs=tinysrgb&w=800"
+  ],
+  "pt": {
+    "title": "Workshop: Corpo e Voz para Palco",
+    "description": "Workshop intensivo focado no desenvolvimento de técnicas corporais e vocais específicas para o teatro.",
+    "fullDescription": "Este workshop intensivo de fim de semana é dedicado ao desenvolvimento integrado de técnicas corporais e vocais específicas para o teatro. Os participantes explorarão a conexão fundamental entre corpo e voz, aprendendo como usar todo o seu instrumento artístico de forma eficaz no palco.\n\nO programa combina exercícios de aquecimento vocal, técnicas de respiração, projeção vocal, expressão corporal, movimento cênico e improvisação. Através de exercícios práticos e dinâmicas de grupo, os participantes desenvolverão maior consciência corporal, presença cênica e capacidade de comunicação através da voz e do movimento.\n\nIdeal para atores iniciantes e experientes, estudantes de teatro, performers e qualquer pessoa interessada em desenvolver suas habilidades de expressão artística. Não é necessária experiência prévia, apenas disposição para explorar e experimentar.",
+    "instructor": "Lucia Ferreira",
+    "duration": "2 dias (16 horas)",
+    "date": "30 de Janeiro, 2025",
+    "time": "9h00 às 17h00",
+    "location": "Estúdio Principal IIA, São Paulo",
+    "price": "R$ 150"
+  },
+  "en": {
+    "title": "Workshop: Body and Voice for Stage",
+    "description": "Intensive workshop focused on developing body and vocal techniques specific to theater.",
+    "fullDescription": "This intensive weekend workshop is dedicated to the integrated development of body and vocal techniques specific to theater. Participants will explore the fundamental connection between body and voice, learning how to use their entire artistic instrument effectively on stage.\n\nThe program combines vocal warm-up exercises, breathing techniques, vocal projection, body expression, scenic movement, and improvisation. Through practical exercises and group dynamics, participants will develop greater body awareness, stage presence, and communication skills through voice and movement.\n\nIdeal for beginning and experienced actors, theater students, performers, and anyone interested in developing their artistic expression skills. No previous experience necessary, just willingness to explore and experiment.",
+    "instructor": "Lucia Ferreira",
+    "duration": "2 days (16 hours)",
+    "date": "January 30, 2025",
+    "time": "9:00 AM to 5:00 PM",
+    "location": "IIA Main Studio, São Paulo",
+    "price": "R$ 150"
+  },
+  "program": [
+    {
+      "pt": {
+        "day": "Dia 1 - Sábado",
+        "sessions": [
+          { "time": "9h00 - 10h30", "topic": "Aquecimento e Consciência Corporal" },
+          { "time": "10h45 - 12h15", "topic": "Técnicas de Respiração e Apoio Vocal" },
+          { "time": "14h00 - 15h30", "topic": "Projeção Vocal e Articulação" },
+          { "time": "15h45 - 17h00", "topic": "Integração Corpo-Voz através de Exercícios" }
+        ]
+      },
+      "en": {
+        "day": "Day 1 - Saturday",
+        "sessions": [
+          { "time": "9:00 AM - 10:30 AM", "topic": "Warm-up and Body Awareness" },
+          { "time": "10:45 AM - 12:15 PM", "topic": "Breathing Techniques and Vocal Support" },
+          { "time": "2:00 PM - 3:30 PM", "topic": "Vocal Projection and Articulation" },
+          { "time": "3:45 PM - 5:00 PM", "topic": "Body-Voice Integration through Exercises" }
+        ]
+      }
+    }
+  ],
+  "requirements": {
+    "pt": [
+      "Roupas confortáveis para movimento",
+      "Garrafa de água",
+      "Caderno para anotações",
+      "Disposição para experimentar e se expressar"
+    ],
+    "en": [
+      "Comfortable clothes for movement",
+      "Water bottle",
+      "Notebook for notes",
+      "Willingness to experiment and express yourself"
+    ]
+  },
+  "benefits": {
+    "pt": [
+      "Desenvolvimento da consciência corporal",
+      "Melhoria da projeção e qualidade vocal",
+      "Aumento da presença cênica",
+      "Técnicas de relaxamento e concentração",
+      "Certificado de participação"
+    ],
+    "en": [
+      "Development of body awareness",
+      "Improvement of vocal projection and quality",
+      "Increased stage presence",
+      "Relaxation and concentration techniques",
+      "Certificate of participation"
+    ]
+  }
+}
