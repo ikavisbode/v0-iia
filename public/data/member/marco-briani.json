@@ -2,7 +2,7 @@
   "id": "3",
   "slug": "marco-briani",
   "department": "Direção",
-  "image": "/images/hero-bg.png",
+  "image": "/images/marco-briani-photo.jpeg",
   "email": "marcobriani@gmail.com",
   "social": {
     "linkedin": "https://www.linkedin.com/in/marco-briani-611536a4/",
@@ -55,40 +55,5 @@
       "Acting for Cinema Course - Grupo Cinedas (2022)",
       "Executive Production Course - EBAC (2021)"
     ]
-  },
-  "achievements": {
-    "pt": [
-      "Participação em dublagens de filmes como o live-action Mulan",
-      "Direção e participação em peças premiadas e reconhecidas na cena teatral paulista"
-    ],
-    "en": [
-      "Participation in dubbing projects such as the live-action Mulan",
-      "Direction and participation in awarded and recognized plays in São Paulo's theater scene"
-    ]
-  },
-  "currentProjects": [
-    {
-      "pt": {
-        "title": "Cachorro ou Gato",
-        "role": "Produtor, Primeiro Assistente de Direção e Ator",
-        "status": "Em pós-produção"
-      },
-      "en": {
-        "title": "Dog or Cat",
-        "role": "Producer, First Assistant Director, and Actor",
-        "status": "Post-production"
-      }
-    }
-  ],
-  "testimonials": [
-    {
-      "author": "João Santos, Ator",
-      "pt": {
-        "text": "Marco tem uma capacidade única de extrair o melhor de cada ator. Sua direção é ao mesmo tempo rigorosa e inspiradora."
-      },
-      "en": {
-        "text": "Marco has a unique ability to extract the best from each actor. His direction is both rigorous and inspiring."
-      }
-    }
-  ]
+  }
 }

@@ -61,30 +61,5 @@
       "Honorable Mention - Curitiba Theater Festival (2018)",
       "Young Talent Award - FUNARTE (2016)"
     ]
-  },
-  "currentProjects": [
-    {
-      "pt": {
-        "title": "Hamlet Contemporâneo",
-        "role": "Diretora",
-        "status": "Em cartaz"
-      },
-      "en": {
-        "title": "Contemporary Hamlet",
-        "role": "Director",
-        "status": "On stage"
-      }
-    }
-  ],
-  "testimonials": [
-    {
-      "author": "João Santos, Ator",
-      "pt": {
-        "text": "Camila tem uma capacidade única de extrair o melhor de cada ator. Sua direção é ao mesmo tempo rigorosa e inspiradora."
-      },
-      "en": {
-        "text": "Camila has a unique ability to extract the best from each actor. Her direction is both rigorous and inspiring."
-      }
-    }
-  ]
+  }
 }

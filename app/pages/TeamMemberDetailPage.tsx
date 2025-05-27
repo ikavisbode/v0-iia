@@ -124,7 +124,7 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-heading text-3xl font-bold text-gray-800 mb-8">Biografia</h2>
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg max-w-none text-justify">
               {content.bio.split("\n\n").map((paragraph, index) => (
                 <p key={index} className="text-body text-gray-600 mb-6 leading-relaxed">
                   {paragraph}
@@ -182,65 +182,6 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
                   <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-sm">
                     <Award className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
                     <span className="text-body text-gray-700 font-medium">{achievement}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Current Projects */}
-      {member.currentProjects && (
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-heading text-3xl font-bold text-gray-800 mb-12 text-center">Projetos Atuais</h2>
-              <div className="space-y-6">
-                {member.currentProjects.map((project, index) => {
-                  const projectContent = project[currentLang as keyof typeof project]
-                  return (
-                    <div key={index} className="p-6 bg-gray-50 rounded-lg">
-                      <div className="flex items-start justify-between mb-4">
-                        <h3 className="text-heading text-xl font-bold text-gray-800">{projectContent.title}</h3>
-                        <span
-                          className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            projectContent.status === "Em cartaz" || projectContent.status === "On stage"
-                              ? "bg-green-100 text-green-800"
-                              : projectContent.status === "Em desenvolvimento" ||
-                                  projectContent.status === "In development"
-                                ? "bg-yellow-100 text-yellow-800"
-                                : "bg-blue-100 text-blue-800"
-                          }`}
-                        >
-                          {projectContent.status}
-                        </span>
-                      </div>
-                      <p className="text-body text-gray-600">
-                        <strong>Função:</strong> {projectContent.role}
-                      </p>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Testimonials */}
-      {member.testimonials && (
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-heading text-3xl font-bold text-gray-800 mb-12 text-center">Depoimentos</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {member.testimonials.map((testimonial, index) => (
-                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                    <p className="text-body text-gray-600 italic mb-4">
-                      "{testimonial[currentLang as keyof typeof testimonial].text}"
-                    </p>
-                    <p className="font-medium text-gray-800">— {testimonial.author}</p>
                   </div>
                 ))}
               </div>
