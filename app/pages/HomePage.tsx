@@ -329,18 +329,18 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-20 bg-gray-900">
+      <section id="team" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-heading text-4xl font-bold text-white mb-4">Nossa Equipe</h2>
-            <p className="text-lg text-gray-300 font-medium">Os Artistas & Educadores</p>
+            <h2 className="text-heading text-4xl font-bold text-gray-800 mb-4">Nossa Equipe</h2>
+            <p className="text-lg text-gray-600 font-medium">Os Artistas & Educadores</p>
             <div className="w-16 h-1 bg-red-600 mx-auto mt-4"></div>
           </div>
 
           {membersLoading ? (
             <div className="text-center py-12">
               <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-red-600 mx-auto mb-4"></div>
-              <p className="text-gray-300">Carregando equipe...</p>
+              <p className="text-gray-600">Carregando equipe...</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -357,10 +357,10 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-heading text-xl font-semibold text-white mb-2 group-hover:text-red-400 transition-colors duration-200">
+                  <h3 className="text-heading text-xl font-semibold text-gray-800 mb-2 group-hover:text-red-600 transition-colors duration-200">
                     {member[currentLang as keyof typeof member].name}
                   </h3>
-                  <p className="text-body text-gray-300">{member[currentLang as keyof typeof member].role}</p>
+                  <p className="text-body text-gray-600">{member[currentLang as keyof typeof member].role}</p>
                 </div>
               ))}
             </div>
@@ -370,8 +370,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <Button
               onClick={() => onNavigate("team-list")}
               size="lg"
-              variant="outline"
-              className="btn-modern border-white text-white hover:bg-white hover:text-gray-900 font-medium"
+              className="btn-modern bg-red-600 hover:bg-red-700 text-white font-medium"
             >
               Conheça Toda a Equipe
             </Button>
