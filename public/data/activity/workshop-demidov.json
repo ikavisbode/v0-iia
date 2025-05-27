@@ -6,9 +6,8 @@
   "currentParticipants": 10,
   "featured": false,
   "images": [
-    "/images/nikolai-demidov.jpg",
-    "/images/diogo-rezende.jpg",
-    "https://images.pexels.com/photos/8106573/pexels-photo-8106573.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "/images/nikolai-demidov.png",
+    "/images/diogo-rezende.jpg"
   ],
   "pt": {
     "title": "Workshop de Técnica Demidov",
