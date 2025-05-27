@@ -13,6 +13,7 @@ import {
   type MemberData,
 } from "../../utils/dataLoader"
 import { useTranslation } from "react-i18next"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 interface HomePageProps {
   onNavigate: (page: string, section?: string, id?: string) => void
@@ -26,10 +27,23 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   const [activities, setActivities] = useState<ActivityData[]>([])
   const [teamMembers, setTeamMembers] = useState<MemberData[]>([])
 
+  // Carousel state
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const carouselImages = ["/images/2025_IIA_KV_1.png", "/images/2025_IIA_KV_3.png", "/images/2025_IIA_KV_4.png"]
+
   // Add loading states for each data type:
   const [projectsLoading, setProjectsLoading] = useState(true)
   const [activitiesLoading, setActivitiesLoading] = useState(true)
   const [membersLoading, setMembersLoading] = useState(true)
+
+  // Carousel auto-play effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length)
+    }, 5000) // Change slide every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [carouselImages.length])
 
   // Update the useEffect to handle loading states:
   useEffect(() => {
@@ -58,21 +72,79 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   const featuredActivity = activities.find((activity) => activity.featured)
   const otherActivities = activities.filter((activity) => !activity.featured)
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselImages.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length)
+  }
+
+  const valores = [
+    "Excelência Artística",
+    "Inovação Constante",
+    "Inclusão e Diversidade",
+    "Transformação Social",
+    "Colaboração Internacional",
+  ]
+
   return (
     <Layout>
-      {/* Hero Section */}
-      <section
-        id="home"
-        className="relative min-h-screen flex items-center justify-center"
-        style={{
-          backgroundImage: `url('/images/2025_IIA_KV_1.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      {/* Hero Section with Carousel */}
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Carousel Images */}
+        <div className="absolute inset-0">
+          {carouselImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
+              style={{
+                backgroundImage: `url('${image}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/20"></div>
 
+        {/* Carousel Navigation */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft size={24} />
+        </button>
+
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
+          aria-label="Next slide"
+        >
+          <ChevronRight size={24} />
+        </button>
+
+        {/* Carousel Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+          {carouselImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                index === currentSlide ? "bg-white" : "bg-white/50"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Hero Content */}
         <div className="container mx-auto px-4 text-center text-white relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-display text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -107,31 +179,37 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <h3 className="text-heading text-xl font-semibold text-gray-800 mb-4">Nossa História</h3>
-              <p className="text-body text-gray-600 text-sm leading-relaxed">
-                Fundado no final de 2024, o Instituto Internacional de Atuação nasceu da paixão de um grupo de artistas
-                comprometidos em elevar o nível das artes cênicas como um todo.
+              <p className="text-body text-gray-600 text-sm leading-relaxed text-justify">
+                Fundado no fim de 2024, o Instituto Internacional de Atuação nasceu da paixão de um grupo de artistas
+                comprometidos em elevar o nível da arte da cena como um todo. Nossa história está só no começo, mas
+                nossos membros já se espalham por diversos lugares do Brasil e do mundo. Juntos, caminhamos a passos
+                largos na realização de nossas primeiras atividades e produções.
               </p>
             </div>
             <div className="text-center">
               <h3 className="text-heading text-xl font-semibold text-gray-800 mb-4">Nossa Missão</h3>
-              <p className="text-body text-gray-600 text-sm leading-relaxed">
-                Desenvolvemos artistas completos através de técnicas internacionais de atuação, promovendo excelência
-                artística, pesquisa teatral e audiovisual.
+              <p className="text-body text-gray-600 text-sm leading-relaxed text-justify">
+                Desenvolvemos artistas completos através de técnicas internacionais de atuação, promovendo a excelência
+                artística, a pesquisa teatral e audiovisual, e o impacto social positivo através das artes da cena.
               </p>
             </div>
             <div className="text-center">
               <h3 className="text-heading text-xl font-semibold text-gray-800 mb-4">Nossa Visão</h3>
-              <p className="text-body text-gray-600 text-sm leading-relaxed">
-                Ser reconhecido internacionalmente como centro de excelência em formação artística, produção teatral
-                inovadora e transformação cultural.
+              <p className="text-body text-gray-600 text-sm leading-relaxed text-justify">
+                Ser reconhecido internacionalmente como um centro de excelência em formação artística, produção teatral
+                inovadora e intercâmbio cultural, transformando vidas através da arte da atuação.
               </p>
             </div>
             <div className="text-center">
               <h3 className="text-heading text-xl font-semibold text-gray-800 mb-4">Nossos Valores</h3>
-              <p className="text-body text-gray-600 text-sm leading-relaxed">
-                Excelência artística, inovação constante, inclusão e diversidade, transformação social e colaboração
-                internacional.
-              </p>
+              <ul className="text-body text-gray-600 text-sm leading-relaxed space-y-2">
+                {valores.map((valor, index) => (
+                  <li key={index} className="flex items-center justify-center">
+                    <span className="w-2 h-2 bg-red-600 rounded-full mr-2 flex-shrink-0"></span>
+                    {valor}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
@@ -148,12 +226,12 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
           {/* Project Filters */}
           <div className="flex justify-center mb-12">
-            <div className="flex space-x-2">
+            <div className="flex flex-wrap justify-center gap-2 md:space-x-2 md:gap-0">
               {projectFilters.map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setActiveProjectFilter(filter)}
-                  className={`btn-modern px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                  className={`btn-modern px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-200 ${
                     activeProjectFilter === filter
                       ? "bg-red-600 text-white"
                       : "bg-gray-700 text-gray-300 hover:bg-gray-600"

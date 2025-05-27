@@ -90,6 +90,14 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
                     <strong>Direção:</strong> {content.director}
                   </span>
                 </div>
+                {content.assistantDirector && (
+                  <div className="flex items-center space-x-4">
+                    <Users className="w-5 h-5 text-red-400" />
+                    <span>
+                      <strong>Assistência de Direção:</strong> {content.assistantDirector}
+                    </span>
+                  </div>
+                )}
                 <div className="flex items-center space-x-4">
                   <Calendar className="w-5 h-5 text-red-400" />
                   <span>
@@ -129,7 +137,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
             <h2 className="text-heading text-3xl font-bold text-gray-800 mb-8">Sobre o Projeto</h2>
             <div className="prose prose-lg max-w-none">
               {(content.fullDescription || content.description).split("\n\n").map((paragraph, index) => (
-                <p key={index} className="text-body text-gray-600 mb-6 leading-relaxed">
+                <p key={index} className="text-body text-gray-600 mb-6 leading-relaxed text-justify">
                   {paragraph}
                 </p>
               ))}
