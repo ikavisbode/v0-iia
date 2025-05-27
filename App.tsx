@@ -2,13 +2,13 @@
 
 import React, { useState } from "react"
 import "./i18n/config"
-import HomePage from "./pages/HomePage"
-import ProjectDetailPage from "./pages/ProjectDetailPage"
-import ActivityDetailPage from "./pages/ActivityDetailPage"
-import TeamMemberDetailPage from "./pages/TeamMemberDetailPage"
-import ProjectsListPage from "./pages/ProjectsListPage"
-import ActivitiesListPage from "./pages/ActivitiesListPage"
-import TeamListPage from "./pages/TeamListPage"
+import HomePage from "./app/pages/HomePage"
+import ProjectDetailPage from "./app/pages/ProjectDetailPage"
+import ActivityDetailPage from "./app/pages/ActivityDetailPage"
+import TeamMemberDetailPage from "./app/pages/TeamMemberDetailPage"
+import ProjectsListPage from "./app/pages/ProjectsListPage"
+import ActivitiesListPage from "./app/pages/ActivitiesListPage"
+import TeamListPage from "./app/pages/TeamListPage"
 
 type PageType =
   | "home"
