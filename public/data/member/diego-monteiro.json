@@ -1,0 +1,44 @@
+{
+  "slug": "diego-monteiro",
+  "department": "Direção",
+  "image": "/images/diego-monteiro.jpg",
+  "email": "contato@institutointernacionaldeatuacao.com",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/diego-monteiro-54b40452/",
+    "instagram": "https://www.instagram.com/diegomonteir_o/"
+  },
+  "pt": {
+    "name": "Diego Monteiro",
+    "role": "Diretor",
+    "bio": "Bacharel em Teatro pela Universidade Federal de São João del Rei (UFSJ) e Mestre em Artes Cênicas também pela UFSJ, Diogo Rezende desenvolve pesquisa voltada à área da atuação, direção e pedagogia teatral, tendo como base os trabalhos dos teatrólogos Konstantin Stanislávski (desde 2015) e Nikolai Demidov (desde 2017). Criou e coordena o grupo online aberto de pesquisa e treinamento \"Centro de Estudos Demidov\" (2021-). Dirigiu 3 peças longas: \"Casa de Bonecas\" (2018), \"Dama\" (2018) e “Vânia” (2022). Dirigiu também mais de uma dezena de peças curtas, entre elas: \"Esta propriedade está condenada\" (2018), “A Mulher do Velho” (2019), “O Urso” (2023), \"O Pedido de Casamento\" (2023), “Interior” (2023) e “Sérgio” (2023). Já escreveu 5 livros sobre Teatro, sendo 4 sobre o método de Demidov (o mais recente sendo \"A Revolução do Ator: O Método de Nikolai Demidov\", de 2024) e 1 sobre pedagogia teatral (“Aula de Teatro”, de 2023). Lançou também 2 coletâneas de peças curtas, 4 livros de ficção (o mais recente sendo “As Benesses de Esmero”, de 2023) e algumas outras publicações. Atualmente dá aulas particulares de Teatro/atuação no seu “Estúdio de Teatro” e faz parte do Instituto Internacional de Atuação.",
+    "specialties": [
+      "Atuação viva",
+      "Pedagogia teatral",
+      "Direção teatral",
+      "Método de Demidov",
+      "Sistema de Stanislávski"
+    ]
+  },
+  "en": {
+    "name": "Diogo Rezende",
+    "role": "Director-Pedagogue",
+    "bio": "Bachelor in Theater from the Federal University of São João del Rei (UFSJ) and Master in Performing Arts also from UFSJ, Diogo Rezende develops research focused on acting, directing, and theatrical pedagogy, based on the work of the theater theorists Konstantin Stanislavski (since 2015) and Nikolai Demidov (since 2017). He created and coordinates the open online research and training group \"Demidov Study Center\" (2021-). He directed three full-length plays: \"A Doll's House\" (2018), \"Dama\" (2018), and “Vanya” (2022). He also directed over a dozen short plays, including: \"This Property is Condemned\" (2018), “The Old Man's Wife” (2019), “The Bear” (2023), \"The Proposal\" (2023), “Interior” (2023), and “Sérgio” (2023). He has written five books about Theater, four of them on Demidov's method (the most recent being \"The Actor's Revolution: The Method of Nikolai Demidov\", 2024) and one on theatrical pedagogy (“Theater Class”, 2023). He also published two collections of short plays, four fiction books (the most recent being “The Benefits of Esmero”, 2023), and several other publications. Currently, he teaches private Theater/Acting classes at his “Theater Studio” and is part of the International Institute of Acting.",
+    "specialties": [
+      "Living Acting",
+      "Theatrical Pedagogy",
+      "Theatrical Direction",
+      "Demidov Method",
+      "Stanislavski “System”"
+    ]
+  },
+  "education": {
+    "pt": [
+      "Bacharelado em Teatro pela Universidade Federal de São João del-Rei (2019)",
+      "Mestrado em Artes Cênicas pela Universidade Federal São João del-Rei (2021)"
+    ],
+    "en": [
+      "Bachelor's in Theater - Federal University of São João del Rei (2019)",
+      "Master's in Performing Arts - Federal University of São João del Rei (2021)"
+    ]
+  }
+}
