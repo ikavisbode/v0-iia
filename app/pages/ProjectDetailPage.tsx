@@ -4,13 +4,13 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Calendar, Users, MapPin, Play, Star, Award, Target, Clock, Ticket } from 'lucide-react'
+import { ArrowLeft, Calendar, Users, MapPin, Play, Star, Award, Target, Clock, Ticket, Linkedin, Instagram, ExternalLink } from 'lucide-react'
 import Layout from "../../components/Layout"
 import { getProjectBySlug, type ProjectData } from "../../utils/dataLoader"
 
 interface ProjectDetailPageProps {
   projectId: string
-  onNavigate: (page: string, section?: string) => void
+  onNavigate: (page: string, section?: string, memberId?: string) => void
 }
 
 const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavigate }) => {
@@ -32,6 +32,36 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
     }
     loadProject()
   }, [projectId])
+
+  const handleDirectorClick = (directorUrl?: string) => {
+    if (!directorUrl) return
+    
+    if (directorUrl.startsWith("/")) {
+      // Internal URL - navigate within the app
+      const parts = directorUrl.split("/")
+      if (parts[1] === "member-detail" && parts[2]) {
+        onNavigate("member-detail", undefined, parts[2])
+      }
+    } else {
+      // External URL - open in new tab
+      window.open(directorUrl, "_blank")
+    }
+  }
+
+  const handleAssistantDirectorClick = (assistantDirectorUrl?: string) => {
+    if (!assistantDirectorUrl) return
+    
+    if (assistantDirectorUrl.startsWith("/")) {
+      // Internal URL - navigate within the app
+      const parts = assistantDirectorUrl.split("/")
+      if (parts[1] === "member-detail" && parts[2]) {
+        onNavigate("member-detail", undefined, parts[2])
+      }
+    } else {
+      // External URL - open in new tab
+      window.open(assistantDirectorUrl, "_blank")
+    }
+  }
 
   if (loading) {
     return (
@@ -91,25 +121,131 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
               </div>
 
               <div className="grid grid-cols-1 gap-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                    <Users className="w-6 h-6 text-red-400 flex-shrink-0" />
-                    <div>
-                      <span className="text-gray-300 text-sm">Direção</span>
-                      <p className="text-white font-semibold">{content.director}</p>
-                    </div>
-                  </div>
-
-                  {content.assistantDirector && (
-                    <div className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                      <Users className="w-6 h-6 text-red-400 flex-shrink-0" />
-                      <div>
-                        <span className="text-gray-300 text-sm">Assistência de Direção</span>
-                        <p className="text-white font-semibold">{content.assistantDirector}</p>
+                {/* Director Section */}
+                <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                  <div className="flex items-center space-x-4">
+                    <div className="relative">
+                      <img
+                        src={content.directorPicture || "/placeholder.svg"}
+                        alt={content.director}
+                        className="w-16 h-16 rounded-full object-cover border-2 border-red-400 shadow-lg"
+                      />
+                      <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
+                        <Users className="w-3 h-3 text-white" />
                       </div>
                     </div>
-                  )}
+                    <div className="flex-1">
+                      <span className="text-gray-300 text-sm">Direção</span>
+                      <div className="flex items-center space-x-3">
+                        <h3
+                          className={`text-white font-bold text-lg ${
+                            content.directorUrl ? 'cursor-pointer hover:text-red-400 transition-colors' : ''
+                          }`}
+                          onClick={() => handleDirectorClick(content.directorUrl)}
+                        >
+                          {content.director}
+                        </h3>
+                        {content.directorUrl && (
+                          <ExternalLink className="w-4 h-4 text-red-400" />
+                        )}
+                      </div>
 
+                      {/* Director Social Links - Only show if social object exists and has links */}
+                      {content.directorSocial && 
+                        (content.directorSocial.linkedin || content.directorSocial.instagram) && (
+                          <div className="flex items-center space-x-2 mt-2">
+                            {content.directorSocial.linkedin && (
+                              <a
+                                href={content.directorSocial.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <Linkedin className="w-4 h-4 text-white" />
+                              </a>
+                            )}
+                            {content.directorSocial.instagram && (
+                              <a
+                                href={content.directorSocial.instagram}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <Instagram className="w-4 h-4 text-white" />
+                              </a>
+                            )}
+                          </div>
+                        )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Assistant Director Section */}
+                {content.assistantDirector && (
+                  <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                    <div className="flex items-center space-x-4">
+                      <div className="relative">
+                        <img
+                          src={content.assistantDirectorPicture || "/placeholder.svg"}
+                          alt={content.assistantDirector}
+                          className="w-16 h-16 rounded-full object-cover border-2 border-red-400 shadow-lg"
+                        />
+                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
+                          <Users className="w-3 h-3 text-white" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <span className="text-gray-300 text-sm">Assistência de Direção</span>
+                        <div className="flex items-center space-x-3">
+                          <h3
+                            className={`text-white font-bold text-lg ${
+                              content.assistantDirectorUrl ? 'cursor-pointer hover:text-red-400 transition-colors' : ''
+                            }`}
+                            onClick={() => handleAssistantDirectorClick(content.assistantDirectorUrl)}
+                          >
+                            {content.assistantDirector}
+                          </h3>
+                          {content.assistantDirectorUrl && (
+                            <ExternalLink className="w-4 h-4 text-red-400" />
+                          )}
+                        </div>
+
+                        {/* Assistant Director Social Links - Only show if social object exists and has links */}
+                        {content.assistantDirectorSocial && 
+                          (content.assistantDirectorSocial.linkedin || content.assistantDirectorSocial.instagram) && (
+                            <div className="flex items-center space-x-2 mt-2">
+                              {content.assistantDirectorSocial.linkedin && (
+                                <a
+                                  href={content.assistantDirectorSocial.linkedin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="p-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
+                                  onClick={(e) => e.stopPropagation()}
+                                >
+                                  <Linkedin className="w-4 h-4 text-white" />
+                                </a>
+                              )}
+                              {content.assistantDirectorSocial.instagram && (
+                                <a
+                                  href={content.assistantDirectorSocial.instagram}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="p-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
+                                  onClick={(e) => e.stopPropagation()}
+                                >
+                                  <Instagram className="w-4 h-4 text-white" />
+                                </a>
+                              )}
+                            </div>
+                          )}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                     <Play className="w-6 h-6 text-red-400 flex-shrink-0" />
                     <div>
@@ -117,13 +253,13 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
                       <p className="text-white font-semibold">{content.duration}</p>
                     </div>
                   </div>
-                </div>
 
-                <div className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                  <Calendar className="w-6 h-6 text-red-400 flex-shrink-0" />
-                  <div>
-                    <span className="text-gray-300 text-sm">Estreia</span>
-                    <p className="text-white font-semibold">{content.premiere}</p>
+                  <div className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                    <Calendar className="w-6 h-6 text-red-400 flex-shrink-0" />
+                    <div>
+                      <span className="text-gray-300 text-sm">Estreia</span>
+                      <p className="text-white font-semibold">{content.premiere}</p>
+                    </div>
                   </div>
                 </div>
 

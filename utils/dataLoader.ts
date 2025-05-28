@@ -11,6 +11,19 @@ export interface ProjectData {
     description: string
     fullDescription?: string
     director: string
+    directorPicture?: string
+    directorSocial?: {
+      linkedin?: string
+      instagram?: string
+    }
+    directorUrl?: string
+    assistantDirector?: string
+    assistantDirectorPicture?: string
+    assistantDirectorSocial?: {
+      linkedin?: string
+      instagram?: string
+    }
+    assistantDirectorUrl?: string
     cast: string[]
     duration: string
     premiere: string
@@ -21,6 +34,19 @@ export interface ProjectData {
     description: string
     fullDescription?: string
     director: string
+    directorPicture?: string
+    directorSocial?: {
+      linkedin?: string
+      instagram?: string
+    }
+    directorUrl?: string
+    assistantDirector?: string
+    assistantDirectorPicture?: string
+    assistantDirectorSocial?: {
+      linkedin?: string
+      instagram?: string
+    }
+    assistantDirectorUrl?: string
     cast: string[]
     duration: string
     premiere: string
