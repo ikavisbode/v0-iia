@@ -3,9 +3,14 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
+  title: "Instituto Internacional de Atuação",
+  description: "Instituto Internacional de Atuação - Formação teatral de excelência",
   generator: "v0.dev",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    shortcut: "/apple-touch-icon.png",
+  },
 }
 
 export default function RootLayout({
@@ -14,10 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
+    <html lang="pt">
       <body>{children}</body>
     </html>
   )
