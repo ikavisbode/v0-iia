@@ -52,7 +52,15 @@ export interface ActivityData {
     title: string
     description: string
     fullDescription?: string
-    instructor: string
+    instructor: {
+      name: string
+      picture: string
+      social?: {
+        linkedin?: string
+        instagram?: string
+      }
+      url: string
+    }
     duration: string
     date: string
     time: string
@@ -63,7 +71,15 @@ export interface ActivityData {
     title: string
     description: string
     fullDescription?: string
-    instructor: string
+    instructor: {
+      name: string
+      picture: string
+      social?: {
+        linkedin?: string
+        instagram?: string
+      }
+      url: string
+    }
     duration: string
     date: string
     time: string

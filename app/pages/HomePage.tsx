@@ -343,6 +343,10 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                           <span className="font-medium">Preço:</span>{" "}
                           {featuredActivity[currentLang as keyof typeof featuredActivity].price}
                         </p>
+                        <p className="text-caption text-sm text-gray-500">
+                          <span className="font-medium">Instrutor:</span>{" "}
+                          {featuredActivity[currentLang as keyof typeof featuredActivity].instructor.name}
+                        </p>
                       </div>
                       <Button className="btn-modern bg-red-600 hover:bg-red-700 text-white font-medium">
                         Inscrever-se
@@ -382,6 +386,10 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                         <p className="text-caption text-xs text-gray-500">
                           <span className="font-medium">Preço:</span>{" "}
                           {activity[currentLang as keyof typeof activity].price}
+                        </p>
+                        <p className="text-caption text-xs text-gray-500">
+                          <span className="font-medium">Instrutor:</span>{" "}
+                          {activity[currentLang as keyof typeof activity].instructor.name}
                         </p>
                       </div>
                       <Button size="sm" className="btn-modern bg-red-600 hover:bg-red-700 text-white font-medium">

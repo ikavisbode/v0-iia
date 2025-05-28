@@ -1,90 +1,112 @@
 {
-  "id": "4",
+  "id": "workshop-demidov",
   "slug": "workshop-demidov",
   "category": "Workshop Técnico",
-  "maxParticipants": 15,
-  "currentParticipants": 10,
-  "featured": false,
+  "maxParticipants": 20,
+  "currentParticipants": 8,
+  "featured": true,
   "images": [
     "/images/nikolai-demidov.png",
-    "/images/diogo-rezende.jpg"
+    "/images/diogo-rezende.jpg",
+    "/images/2025_IIA_KV_1.png"
   ],
   "pt": {
-    "title": "Workshop de Técnica Demidov",
-    "description": "Workshop focado na técnica de Nikolai Demidov, explorando a análise ativa e a liberdade na atuação.",
+    "title": "Workshop Técnica Demidov",
+    "description": "Explore a técnica de Nikolai Demidov, focada na liberdade na atuação como um caminho para a vivência criativa do ator em cena.",
     "fullDescription": "Neste curso, os participantes serão introduzidos ao método desenvolvido pelo teatrólogo russo Nikolai Demidov, parceiro de trabalho de Konstantin Stanislávski por quase três décadas. O curso terá foco na prática do exercício mais importante do método de Demidov, os etúdes, e com ele os participantes poderão experienciar a proposta do teatrólogo sobre o treinamento da liberdade na atuação, como um caminho para a vivência criativa do ator em cena.",
-    "instructor": "Diogo Rezende",
-    "duration": "2 meses",
-    "date": "15 de Abril, 2025",
-    "time": "19h00 - 22h00",
+    "instructor": {
+      "name": "Diogo Rezende",
+      "picture": "/images/diogo-rezende.jpg",
+      "social": {
+        "linkedin": "https://linkedin.com/in/diogo-rezende",
+        "instagram": "https://instagram.com/diogo.rezende.ator"
+      },
+      "url": "/member-detail/diogo-rezende"
+    },
+    "duration": "1 Mês",
+    "date": "Sextas de Junho, 2025",
+    "time": "09:00 - 12:00",
     "location": "Remoto",
-    "price": "R$ 150/mês"
+    "price": "R$150"
   },
   "en": {
     "title": "Demidov Technique Workshop",
-    "description": "Workshop focused on the technique of Nikolai Demidov, exploring active analysis and freedom in acting.",
-    "fullDescription": "In this course, participants will be introduced to the method developed by the Russian theater practitioner Nikolai Demidov, a collaborator of Konstantin Stanislavski for almost three decades. The course will focus on practicing the most important exercise of Demidov's method, the études, through which participants will experience the practitioner's approach to training freedom in acting as a path to the actor's creative experience on stage.",
-    "instructor": "Diogo Rezende",
-    "duration": "2 months",
-    "date": "April 15, 2025",
-    "time": "7:00 PM - 10:00 PM",
+    "description": "Explore Nikolai Demidov's technique, focused on freedom in acting as a path to the actor's creative experience on stage.",
+    "fullDescription": "In this course, participants will be introduced to the method developed by the Russian theater practitioner Nikolai Demidov, who collaborated with Konstantin Stanislavski for almost three decades. The course will focus on practicing the most important exercise of Demidov's method — the études — through which participants will experience the practitioner's approach to training freedom in acting as a path to the actor's creative experience on stage.",
+    "instructor": {
+      "name": "Diogo Rezende",
+      "picture": "/images/diogo-rezende.jpg",
+      "social": {
+        "linkedin": "https://linkedin.com/in/diogo-rezende",
+        "instagram": "https://instagram.com/diogo.rezende.ator"
+      },
+      "url": "/member-detail/diogo-rezende"
+    },
+    "duration": "1 Mounth",
+    "date": "Friday's on June, 2025",
+    "time": "09:00 - 12:00",
     "location": "Remote",
-    "price": "R$ 150/month"
+    "price": "R$150"
   },
   "program": [
     {
       "pt": {
-        "day": "Módulo 1 - Análise Ativa",
-        "sessions": [
-          { "time": "Semanas 1-2", "topic": "Fundamentos da Análise Ativa" },
-          { "time": "Semanas 3-4", "topic": "Circunstâncias Propostas e Eventos" },
-          { "time": "Semanas 5-6", "topic": "Linha de Ação e Superobjetivo" },
-          { "time": "Semanas 7-8", "topic": "Aplicação Prática em Cenas" }
-        ]
+        "day": "Dia 1 - Etúdes inicias",
+        "sessions": []
       },
       "en": {
-        "day": "Module 1 - Active Analysis",
-        "sessions": [
-          { "time": "Weeks 1-2", "topic": "Fundamentals of Active Analysis" },
-          { "time": "Weeks 3-4", "topic": "Proposed Circumstances and Events" },
-          { "time": "Weeks 5-6", "topic": "Line of Action and Super-objective" },
-          { "time": "Weeks 7-8", "topic": "Practical Application in Scenes" }
-        ]
+        "day": "Day 1 - Fundamentals",
+        "sessions": []
+      }
+    },
+    {
+      "pt": {
+        "day": "Dia 2 - Etúdes avançados",
+        "sessions": []
+      },
+      "en": {
+        "day": "Day 2 - Practical Application",
+        "sessions": []
+      }
+    },
+    {
+      "pt": {
+        "day": "Dia 3 - Cenas",
+        "sessions": []
+      },
+      "en": {
+        "day": "Day 3 - Scenes",
+        "sessions": []
       }
     }
   ],
   "requirements": {
     "pt": [
-      "Experiência intermediária em teatro ou atuação",
-      "Conhecimento básico do Sistema Stanislavski",
+      "Experiência básica em teatro ou atuação",
       "Roupas confortáveis para movimento",
       "Caderno para anotações",
-      "Disponibilidade para os 2 meses completos"
+      "Mente aberta para experimentação"
     ],
     "en": [
-      "Intermediate experience in theater or acting",
-      "Basic knowledge of Stanislavski System",
+      "Basic experience in theater or acting",
       "Comfortable clothes for movement",
       "Notebook for notes",
-      "Availability for the complete 2 months"
+      "Open mind for experimentation"
     ]
   },
   "benefits": {
     "pt": [
       "Domínio da técnica de análise ativa",
-      "Desenvolvimento de habilidades dramatúrgicas",
-      "Compreensão profunda do texto teatral",
-      "Certificado de conclusão",
-      "Material didático exclusivo",
-      "Networking com outros profissionais"
+      "Desenvolvimento da verdade cênica",
+      "Melhoria das habilidades de improvisação",
+      "Acesso a materiais de estudo exclusivos"
     ],
     "en": [
       "Mastery of active analysis technique",
-      "Development of dramaturgical skills",
-      "Deep understanding of theatrical text",
-      "Certificate of completion",
-      "Exclusive educational material",
-      "Networking with other professionals"
+      "Development of scenic truth",
+      "Improvement of improvisation skills",
+      "Certificate of participation",
+      "Access to exclusive study materials"
     ]
   }
 }

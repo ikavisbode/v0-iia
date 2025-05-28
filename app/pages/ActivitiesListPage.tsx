@@ -104,7 +104,7 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
                       <div className="flex items-center text-sm text-gray-500">
                         <Users className="w-4 h-4 mr-2 text-red-400" />
                         <span className="font-medium mr-2">Instrutor:</span>
-                        <span>{content.instructor}</span>
+                        <span>{content.instructor.name}</span>
                       </div>
                       <div className="flex items-center text-sm text-gray-500">
                         <Calendar className="w-4 h-4 mr-2 text-red-400" />
