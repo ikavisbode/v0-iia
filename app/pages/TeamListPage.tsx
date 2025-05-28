@@ -3,8 +3,7 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
-import { Mail, Linkedin, Instagram, Search } from "lucide-react"
-import { Input } from "@/components/ui/input"
+import { Mail, Linkedin, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Layout from "../../components/Layout"
 import PageHeader from "../../components/PageHeader"
@@ -16,7 +15,6 @@ interface TeamListPageProps {
 
 const TeamListPage: React.FC<TeamListPageProps> = ({ onNavigate }) => {
   const { t, i18n } = useTranslation()
-  const [searchTerm, setSearchTerm] = useState("")
   const [selectedRole, setSelectedRole] = useState("all")
   const currentLang = i18n.language || "pt"
 
@@ -60,13 +58,8 @@ const TeamListPage: React.FC<TeamListPageProps> = ({ onNavigate }) => {
   }
 
   const filteredMembers = teamMembers.filter((member) => {
-    const content = member[currentLang as keyof typeof member]
-    const matchesSearch =
-      content.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      content.role.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      content.specialties.some((specialty) => specialty.toLowerCase().includes(searchTerm.toLowerCase()))
     const matchesRole = selectedRole === "all" || member.department === selectedRole
-    return matchesSearch && matchesRole
+    return matchesRole
   })
 
   return (
@@ -79,36 +72,6 @@ const TeamListPage: React.FC<TeamListPageProps> = ({ onNavigate }) => {
 
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          {/* Filters */}
-          <div className="mb-12 space-y-6">
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <Input
-                  type="text"
-                  placeholder="Buscar por nome, função ou especialidade..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 bg-white border-gray-300 focus:border-red-500 focus:ring-red-500"
-                />
-              </div>
-              <div className="flex items-center space-x-2">
-                <select
-                  value={selectedRole}
-                  onChange={(e) => setSelectedRole(e.target.value)}
-                  className="bg-white border border-gray-300 text-gray-700 rounded-md px-3 py-2 focus:border-red-500 focus:ring-red-500"
-                >
-                  <option value="all">Todos os Departamentos</option>
-                  {departments.slice(1).map((department) => (
-                    <option key={department} value={department}>
-                      {department}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-
           {/* Team Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredMembers.map((member) => {

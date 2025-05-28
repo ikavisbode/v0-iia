@@ -3,8 +3,7 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
-import { Filter, Search } from "lucide-react"
-import { Input } from "@/components/ui/input"
+// Remove these imports as they're no longer needed
 import { Button } from "@/components/ui/button"
 import Layout from "../../components/Layout"
 import PageHeader from "../../components/PageHeader"
@@ -17,7 +16,6 @@ interface ProjectsListPageProps {
 const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
   const { i18n } = useTranslation()
   const currentLang = i18n.language || "pt"
-  const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [projects, setProjects] = useState<ProjectData[]>([])
   const [loading, setLoading] = useState(true)
@@ -40,11 +38,8 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
 
   const filteredProjects = projects.filter((project) => {
     const content = project[currentLang as keyof typeof project]
-    const matchesSearch =
-      content.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      content.description.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === "all" || project.category === selectedCategory
-    return matchesSearch && matchesCategory
+    return matchesCategory
   })
 
   if (loading) {
@@ -77,37 +72,6 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
 
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          {/* Filters */}
-          <div className="mb-12 space-y-6">
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <Input
-                  type="text"
-                  placeholder="Buscar projetos..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 bg-white border-gray-300 focus:border-red-500 focus:ring-red-500"
-                />
-              </div>
-              <div className="flex items-center space-x-2">
-                <Filter className="text-gray-400 w-5 h-5" />
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="bg-white border border-gray-300 text-gray-700 rounded-md px-3 py-2 focus:border-red-500 focus:ring-red-500"
-                >
-                  <option value="all">Todas as Categorias</option>
-                  {categories.slice(1).map((category) => (
-                    <option key={category} value={category}>
-                      {category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => {
