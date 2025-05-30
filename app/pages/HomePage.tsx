@@ -12,7 +12,6 @@ import {
   type ActivityData,
   type MemberData,
 } from "../../utils/dataLoader"
-import { useTranslation } from "react-i18next"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 interface HomePageProps {
@@ -20,8 +19,7 @@ interface HomePageProps {
 }
 
 const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
-  const { i18n } = useTranslation()
-  const currentLang = i18n.language || "pt"
+  const currentLang = "pt" // Default to Portuguese since i18n is not working
   const [activeProjectFilter, setActiveProjectFilter] = useState("TODOS")
   const [projects, setProjects] = useState<ProjectData[]>([])
   const [activities, setActivities] = useState<ActivityData[]>([])
