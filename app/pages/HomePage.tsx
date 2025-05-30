@@ -96,7 +96,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="absolute inset-0">
           {carouselImages.map((image, index) => (
             <div
-              key={index}
+              key={`carousel-${index}`}
               className={`absolute inset-0 transition-opacity duration-1000 ${
                 index === currentSlide ? "opacity-100" : "opacity-0"
               }`}
@@ -134,7 +134,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
           {carouselImages.map((_, index) => (
             <button
-              key={index}
+              key={`indicator-${index}`}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-200 ${
                 index === currentSlide ? "bg-white" : "bg-white/50"
@@ -204,7 +204,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               <h3 className="text-heading text-xl font-semibold text-gray-800 mb-4">Nossos Valores</h3>
               <ul className="text-body text-gray-600 text-sm leading-relaxed space-y-2">
                 {valores.map((valor, index) => (
-                  <li key={index} className="flex items-center justify-center">
+                  <li key={`valor-${index}`} className="flex items-center justify-center">
                     <span className="w-2 h-2 bg-red-600 rounded-full mr-2 flex-shrink-0"></span>
                     {valor}
                   </li>
@@ -229,7 +229,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="flex flex-wrap justify-center gap-2 md:space-x-2 md:gap-0">
               {projectFilters.map((filter) => (
                 <button
-                  key={filter}
+                  key={`filter-${filter}`}
                   onClick={() => setActiveProjectFilter(filter)}
                   className={`btn-modern px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-200 ${
                     activeProjectFilter === filter
@@ -253,7 +253,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProjects.map((project) => (
                 <div
-                  key={project.id}
+                  key={`project-${project.id}`}
                   className="bg-gray-800 rounded-lg overflow-hidden group hover:transform hover:scale-105 transition-all duration-300 cursor-pointer"
                   onClick={() => onNavigate("project-detail", undefined, project.slug)}
                 >
@@ -360,7 +360,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               <div className="space-y-6">
                 {otherActivities.map((activity) => (
                   <div
-                    key={activity.id}
+                    key={`activity-${activity.id}`}
                     className="bg-white rounded-lg shadow-lg overflow-hidden flex cursor-pointer hover:shadow-xl transition-shadow duration-300"
                     onClick={() => onNavigate("activity-detail", undefined, activity.slug)}
                   >
@@ -430,9 +430,9 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamMembers.map((member) => (
+              {teamMembers.map((member, index) => (
                 <div
-                  key={member.id}
+                  key={`member-${member.id || member.slug || index}`}
                   className="text-center cursor-pointer group"
                   onClick={() => onNavigate("member-detail", undefined, member.slug)}
                 >

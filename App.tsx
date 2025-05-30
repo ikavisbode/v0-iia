@@ -9,6 +9,7 @@ import TeamMemberDetailPage from "./app/pages/TeamMemberDetailPage"
 import ProjectsListPage from "./app/pages/ProjectsListPage"
 import ActivitiesListPage from "./app/pages/ActivitiesListPage"
 import TeamListPage from "./app/pages/TeamListPage"
+import ContactPage from "./app/pages/ContactPage"
 
 type PageType =
   | "home"
@@ -18,6 +19,7 @@ type PageType =
   | "project-detail"
   | "activity-detail"
   | "member-detail"
+  | "contact-page"
 
 interface AppState {
   currentPage: PageType
@@ -78,6 +80,8 @@ function App() {
         return <ActivityDetailPage activityId={appState.selectedId || "1"} onNavigate={navigate} />
       case "member-detail":
         return <TeamMemberDetailPage memberId={appState.selectedId || "1"} onNavigate={navigate} />
+      case "contact-page":
+        return <ContactPage onNavigate={navigate} />
       default:
         return <HomePage onNavigate={navigate} />
     }
@@ -106,11 +110,12 @@ function App() {
             "team",
             "team-list",
             "contact",
+            "contact-page",
           ].includes(section)
         ) {
           if (section === "home") {
             navigate("home")
-          } else if (["projects-list", "activities-list", "team-list"].includes(section)) {
+          } else if (["projects-list", "activities-list", "team-list", "contact-page"].includes(section)) {
             navigate(section)
           } else {
             navigate("home", section)
