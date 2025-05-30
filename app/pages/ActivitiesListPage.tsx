@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 import { Clock, Users, Award, Calendar, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Layout from "../../components/Layout"
@@ -13,7 +14,8 @@ interface ActivitiesListPageProps {
 }
 
 const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) => {
-  const currentLang = "pt" // Default to Portuguese since i18n is not working
+  const { i18n } = useTranslation()
+  const currentLang = i18n.language || "pt"
   const [activities, setActivities] = useState<ActivityData[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -65,12 +67,12 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
         <div className="container mx-auto px-4">
           {/* Activities Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredActivities.map((activity, index) => {
+            {filteredActivities.map((activity) => {
               const content = activity[currentLang as keyof typeof activity]
 
               return (
                 <div
-                  key={`activity-list-${activity.id || activity.slug || index}`}
+                  key={activity.id}
                   className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
                   onClick={() => onNavigate("activity-detail", undefined, activity.slug)}
                 >
@@ -151,7 +153,7 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => window.open("mailto:contato@institutointernacional.com", "_blank")}
+              onClick={() => onNavigate("home", "contact")}
               size="lg"
               className="bg-white text-red-600 hover:bg-gray-100"
             >

@@ -2,7 +2,8 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
-import { Users, Calendar, MapPin, Play } from "lucide-react"
+import { useTranslation } from "react-i18next"
+import { Clock, Users, Award, Calendar, MapPin, Play } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import Layout from "../../components/Layout"
 import PageHeader from "../../components/PageHeader"
@@ -13,7 +14,8 @@ interface ProjectsListPageProps {
 }
 
 const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
-  const currentLang = "pt" // Default to Portuguese since i18n is not working
+  const { i18n } = useTranslation()
+  const currentLang = i18n.language || "pt"
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [projects, setProjects] = useState<ProjectData[]>([])
   const [loading, setLoading] = useState(true)
@@ -74,7 +76,7 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
             <div className="flex flex-wrap justify-center gap-2 md:space-x-2 md:gap-0">
               {categories.map((category) => (
                 <button
-                  key={`category-${category}`}
+                  key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-200 ${
                     selectedCategory === category
@@ -90,11 +92,11 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => {
+            {filteredProjects.map((project) => {
               const content = project[currentLang as keyof typeof project]
               return (
                 <div
-                  key={`project-list-${project.id || project.slug || index}`}
+                  key={project.id}
                   className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
                   onClick={() => onNavigate("project-detail", undefined, project.slug)}
                 >
@@ -158,7 +160,9 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
                       </div>
                     </div>
 
-                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold">Saiba Mais</Button>
+                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold">
+                      Saiba Mais
+                    </Button>
                   </div>
                 </div>
               )
@@ -182,7 +186,7 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => window.open("mailto:contato@institutointernacional.com", "_blank")}
+              onClick={() => onNavigate("home", "contact")}
               size="lg"
               className="bg-white text-red-600 hover:bg-gray-100"
             >

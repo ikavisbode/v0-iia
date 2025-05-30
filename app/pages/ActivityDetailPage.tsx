@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 import { Button } from "@/components/ui/button"
 import {
   ArrowLeft,
@@ -27,7 +28,8 @@ interface ActivityDetailPageProps {
 }
 
 const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ activityId, onNavigate }) => {
-  const currentLang = "pt" // Default to Portuguese since i18n is not working
+  const { i18n } = useTranslation()
+  const currentLang = i18n.language || "pt"
   const [activity, setActivity] = useState<ActivityData | null>(null)
   const [loading, setLoading] = useState(true)
 
@@ -244,7 +246,7 @@ const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ activityId, onN
             <div className="prose prose-lg max-w-none">
               {(content.fullDescription || content.description).split("\n\n").map((paragraph, index) => (
                 <p
-                  key={`description-${index}`}
+                  key={index}
                   className="text-body text-gray-700 mb-6 leading-relaxed text-lg bg-white p-6 rounded-xl shadow-sm border border-gray-100"
                 >
                   {paragraph}
@@ -270,14 +272,14 @@ const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ activityId, onN
                 const dayContent = day[currentLang as keyof typeof day]
                 return (
                   <div
-                    key={`program-day-${dayIndex}`}
+                    key={dayIndex}
                     className="bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 shadow-lg border border-gray-200"
                   >
                     <h3 className="text-heading text-2xl font-bold text-gray-800 mb-8 text-center">{dayContent.day}</h3>
                     <div className="space-y-4">
                       {dayContent.sessions.map((session, sessionIndex) => (
                         <div
-                          key={`session-${dayIndex}-${sessionIndex}`}
+                          key={sessionIndex}
                           className="flex items-start space-x-6 p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
                         >
                           <div className="flex-shrink-0 w-24 text-center">
@@ -316,10 +318,7 @@ const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ activityId, onN
                   <div className="space-y-4">
                     {activity.requirements[currentLang as keyof typeof activity.requirements].map(
                       (requirement, index) => (
-                        <div
-                          key={`requirement-${index}`}
-                          className="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl"
-                        >
+                        <div key={index} className="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl">
                           <BookOpen className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
                           <span className="text-body text-gray-700 font-medium">{requirement}</span>
                         </div>
@@ -341,7 +340,7 @@ const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ activityId, onN
                   <div className="space-y-4">
                     {activity.benefits[currentLang as keyof typeof activity.benefits].map((benefit, index) => (
                       <div
-                        key={`benefit-${index}`}
+                        key={index}
                         className="flex items-start space-x-4 p-4 bg-gradient-to-r from-red-50 to-red-25 rounded-xl border border-red-100"
                       >
                         <div className="w-6 h-6 bg-gradient-to-r from-red-600 to-red-500 rounded-full flex items-center justify-center mt-1 flex-shrink-0 shadow-sm">
@@ -370,7 +369,7 @@ const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ activityId, onN
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {activity.images.map((image, index) => (
               <div
-                key={`gallery-${index}`}
+                key={index}
                 className="group relative aspect-video rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
               >
                 <img
@@ -397,7 +396,7 @@ const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ activityId, onN
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
-                onClick={() => window.open("mailto:contato@institutointernacional.com", "_blank")}
+                onClick={() => onNavigate("home", "contact")}
                 size="lg"
                 className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg transform hover:scale-105 transition-all duration-200"
               >

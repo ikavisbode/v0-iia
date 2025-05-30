@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 import { Mail, Linkedin, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Layout from "../../components/Layout"
@@ -13,8 +14,9 @@ interface TeamListPageProps {
 }
 
 const TeamListPage: React.FC<TeamListPageProps> = ({ onNavigate }) => {
+  const { t, i18n } = useTranslation()
   const [selectedRole, setSelectedRole] = useState("all")
-  const currentLang = "pt" // Default to Portuguese since i18n is not working
+  const currentLang = i18n.language || "pt"
 
   const [teamMembers, setTeamMembers] = useState<MemberData[]>([])
   const [loading, setLoading] = useState(true)
@@ -72,11 +74,11 @@ const TeamListPage: React.FC<TeamListPageProps> = ({ onNavigate }) => {
         <div className="container mx-auto px-4">
           {/* Team Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredMembers.map((member, index) => {
+            {filteredMembers.map((member) => {
               const content = member[currentLang as keyof typeof member]
               return (
                 <div
-                  key={`team-member-${member.id || member.slug || index}`}
+                  key={member.id}
                   className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
                   onClick={() => onNavigate("member-detail", undefined, member.slug)}
                 >
@@ -102,11 +104,8 @@ const TeamListPage: React.FC<TeamListPageProps> = ({ onNavigate }) => {
                     <div className="mb-4">
                       <h4 className="text-sm font-medium text-gray-800 mb-2">Especialidades:</h4>
                       <div className="flex flex-wrap gap-1">
-                        {content.specialties.slice(0, 3).map((specialty, specialtyIndex) => (
-                          <span
-                            key={`specialty-${index}-${specialtyIndex}`}
-                            className="px-2 py-1 bg-red-100 text-red-700 text-xs rounded"
-                          >
+                        {content.specialties.slice(0, 3).map((specialty, index) => (
+                          <span key={index} className="px-2 py-1 bg-red-100 text-red-700 text-xs rounded">
                             {specialty}
                           </span>
                         ))}
@@ -169,7 +168,7 @@ const TeamListPage: React.FC<TeamListPageProps> = ({ onNavigate }) => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => window.open("mailto:contato@institutointernacional.com", "_blank")}
+              onClick={() => onNavigate("home", "contact")}
               size="lg"
               className="bg-white text-red-600 hover:bg-gray-100"
             >
