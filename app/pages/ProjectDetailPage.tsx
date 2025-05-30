@@ -2,9 +2,22 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
-import { useTranslation } from "react-i18next"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Calendar, Users, MapPin, Play, Star, Award, Target, Clock, Ticket, Linkedin, Instagram, ExternalLink } from 'lucide-react'
+import {
+  ArrowLeft,
+  Calendar,
+  Users,
+  MapPin,
+  Play,
+  Star,
+  Award,
+  Target,
+  Clock,
+  Ticket,
+  Linkedin,
+  Instagram,
+  ExternalLink,
+} from "lucide-react"
 import Layout from "../../components/Layout"
 import { getProjectBySlug, type ProjectData } from "../../utils/dataLoader"
 
@@ -14,8 +27,7 @@ interface ProjectDetailPageProps {
 }
 
 const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavigate }) => {
-  const { i18n } = useTranslation()
-  const currentLang = i18n.language || "pt"
+  const currentLang = "pt" // Default to Portuguese since i18n is not working
   const [project, setProject] = useState<ProjectData | null>(null)
   const [loading, setLoading] = useState(true)
 
@@ -35,7 +47,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
 
   const handleDirectorClick = (directorUrl?: string) => {
     if (!directorUrl) return
-    
+
     if (directorUrl.startsWith("/")) {
       // Internal URL - navigate within the app
       const parts = directorUrl.split("/")
@@ -50,7 +62,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
 
   const handleAssistantDirectorClick = (assistantDirectorUrl?: string) => {
     if (!assistantDirectorUrl) return
-    
+
     if (assistantDirectorUrl.startsWith("/")) {
       // Internal URL - navigate within the app
       const parts = assistantDirectorUrl.split("/")
@@ -139,19 +151,17 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
                       <div className="flex items-center space-x-3">
                         <h3
                           className={`text-white font-bold text-lg ${
-                            content.directorUrl ? 'cursor-pointer hover:text-red-400 transition-colors' : ''
+                            content.directorUrl ? "cursor-pointer hover:text-red-400 transition-colors" : ""
                           }`}
                           onClick={() => handleDirectorClick(content.directorUrl)}
                         >
                           {content.director}
                         </h3>
-                        {content.directorUrl && (
-                          <ExternalLink className="w-4 h-4 text-red-400" />
-                        )}
+                        {content.directorUrl && <ExternalLink className="w-4 h-4 text-red-400" />}
                       </div>
 
                       {/* Director Social Links - Only show if social object exists and has links */}
-                      {content.directorSocial && 
+                      {content.directorSocial &&
                         (content.directorSocial.linkedin || content.directorSocial.instagram) && (
                           <div className="flex items-center space-x-2 mt-2">
                             {content.directorSocial.linkedin && (
@@ -201,19 +211,17 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
                         <div className="flex items-center space-x-3">
                           <h3
                             className={`text-white font-bold text-lg ${
-                              content.assistantDirectorUrl ? 'cursor-pointer hover:text-red-400 transition-colors' : ''
+                              content.assistantDirectorUrl ? "cursor-pointer hover:text-red-400 transition-colors" : ""
                             }`}
                             onClick={() => handleAssistantDirectorClick(content.assistantDirectorUrl)}
                           >
                             {content.assistantDirector}
                           </h3>
-                          {content.assistantDirectorUrl && (
-                            <ExternalLink className="w-4 h-4 text-red-400" />
-                          )}
+                          {content.assistantDirectorUrl && <ExternalLink className="w-4 h-4 text-red-400" />}
                         </div>
 
                         {/* Assistant Director Social Links - Only show if social object exists and has links */}
-                        {content.assistantDirectorSocial && 
+                        {content.assistantDirectorSocial &&
                           (content.assistantDirectorSocial.linkedin || content.assistantDirectorSocial.instagram) && (
                             <div className="flex items-center space-x-2 mt-2">
                               {content.assistantDirectorSocial.linkedin && (
@@ -342,7 +350,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
             <div className="prose prose-lg max-w-none">
               {(content.fullDescription || content.description).split("\n\n").map((paragraph, index) => (
                 <p
-                  key={index}
+                  key={`description-${index}`}
                   className="text-body text-gray-700 mb-6 leading-relaxed text-lg bg-white p-6 rounded-xl shadow-sm border border-gray-100"
                 >
                   {paragraph}
@@ -367,7 +375,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
 
               <div className="space-y-4">
                 {content.cast.map((actor, index) => (
-                  <div key={index} className="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl">
+                  <div key={`cast-${index}`} className="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl">
                     <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <Users className="w-6 h-6 text-red-600" />
                     </div>
@@ -389,7 +397,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
                 <div className="space-y-4">
                   {project.schedule.map((session, index) => (
                     <div
-                      key={index}
+                      key={`schedule-${index}`}
                       className="flex items-start space-x-6 p-6 bg-gradient-to-r from-red-50 to-red-25 rounded-xl border border-red-100"
                     >
                       <div className="flex-shrink-0 w-24 text-center">
@@ -429,7 +437,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {project.images.map((image, index) => (
               <div
-                key={index}
+                key={`gallery-${index}`}
                 className="group relative aspect-video rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
               >
                 <img
@@ -457,11 +465,11 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {project.reviews.map((review, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                <div key={`review-${index}`} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                   <div className="flex items-center mb-6">
                     <div className="flex space-x-1 mr-4">
                       {[...Array(review.rating)].map((_, i) => (
-                        <span key={i} className="text-yellow-400 text-xl">
+                        <span key={`star-${index}-${i}`} className="text-yellow-400 text-xl">
                           ★
                         </span>
                       ))}
@@ -491,7 +499,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId, onNavi
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
-                onClick={() => onNavigate("home", "contact")}
+                onClick={() => window.open("mailto:contato@institutointernacional.com", "_blank")}
                 size="lg"
                 className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg transform hover:scale-105 transition-all duration-200"
               >
