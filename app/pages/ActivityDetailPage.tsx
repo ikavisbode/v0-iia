@@ -173,6 +173,63 @@ const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ activityId, onN
                   </div>
                 </div>
 
+                {/* Technical Operator Section - Only show if technicalOperator exists */}
+                {content.technicalOperator && (
+                  <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                    <div className="flex items-center space-x-4">
+                      <div className="relative">
+                        <img
+                          src={content.technicalOperator.picture || "/placeholder.svg"}
+                          alt={content.technicalOperator.name}
+                          className="w-16 h-16 rounded-full object-cover border-2 border-red-400 shadow-lg"
+                        />
+                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
+                          <Users className="w-3 h-3 text-white" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <span className="text-gray-300 text-sm">Operador Técnico</span>
+                        <div className="flex items-center space-x-3">
+                          <h3
+                            className="text-white font-bold text-lg cursor-pointer hover:text-red-400 transition-colors"
+                            onClick={() => handleInstructorClick(content.technicalOperator.url)}
+                          >
+                            {content.technicalOperator.name}
+                          </h3>
+                          <ExternalLink className="w-4 h-4 text-red-400" />
+                        </div>
+
+                        {/* Social Links for Technical Operator */}
+                        {content.technicalOperator.social &&
+                          (content.technicalOperator.social.linkedin || content.technicalOperator.social.instagram) && (
+                            <div className="flex items-center space-x-2 mt-2">
+                              {content.technicalOperator.social.linkedin && (
+                                <a
+                                  href={content.technicalOperator.social.linkedin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="p-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
+                                >
+                                  <Linkedin className="w-4 h-4 text-white" />
+                                </a>
+                              )}
+                              {content.technicalOperator.social.instagram && (
+                                <a
+                                  href={content.technicalOperator.social.instagram}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="p-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
+                                >
+                                  <Instagram className="w-4 h-4 text-white" />
+                                </a>
+                              )}
+                            </div>
+                          )}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                     <Calendar className="w-6 h-6 text-red-400 flex-shrink-0" />
@@ -223,7 +280,10 @@ const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ activityId, onN
                 </div>
               </div>
 
-              <Button className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white py-4 text-lg font-semibold rounded-xl shadow-lg transform hover:scale-105 transition-all duration-200">
+              <Button
+                className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white py-4 text-lg font-semibold rounded-xl shadow-lg transform hover:scale-105 transition-all duration-200"
+                onClick={() => window.open(activity.registrationUrl, "_blank")}
+              >
                 {content.price === "Gratuito" || content.price === "Free"
                   ? "Inscrever-se Gratuitamente"
                   : "Inscrever-se Agora"}

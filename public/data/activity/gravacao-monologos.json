@@ -1,0 +1,93 @@
+{
+  "id": "gravacao-monologos",
+  "slug": "gravacao-monologos",
+  "category": "Gravação de Monólogos",
+  "maxParticipants": 20,
+  "currentParticipants": 8,
+  "featured": true,
+  "registrationUrl": "https://wa.me/5511973553984",
+  "images": ["/images/monologo1.jpg", "/images/monologo2.jpg", "/images/2025_IIA_KV_4.png"],
+  "pt": {
+    "title": "Gravação de Monólogos",
+    "description": "Grave seu monólogo com direção especializada e qualidade profissional.",
+    "fullDescription": "Os participantes terão auxílio de direção em dois encontros presenciais ou remotos com Diego Monteiro. A gravação será executada com equipamento profissional de cinema por Marco Briani. Entregamos o material gravado com qualidade superior para compor seu portfólio artístico.",
+    "instructor": {
+      "name": "Diego Monteiro",
+      "picture": "/images/diego-monteiro.jpg",
+      "social": {
+        "linkedin": "https://linkedin.com/in/diego-monteiro",
+        "instagram": "https://instagram.com/diego.monteiro"
+      },
+      "url": "/member-detail/diego-monteiro"
+    },
+    "technicalOperator": {
+      "name": "Marco Briani",
+      "picture": "/images/marco-briani-photo.jpeg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/marco-briani-611536a4/",
+        "instagram": "https://www.instagram.com/kabode/"
+      },
+      "url": "/member-detail/marco-briani"
+    },
+    "duration": "2 encontros + gravação",
+    "date": "Agendamento conforme disponibilidade",
+    "time": "A combinar",
+    "location": "Presencial ou remoto",
+    "price": "R$ 500,00"
+  },
+  "en": {
+    "title": "Monologue Recording",
+    "description": "Record your monologue with specialized direction and professional quality.",
+    "fullDescription": "Participants will receive directing assistance in two in-person or remote sessions with Diego Monteiro. The recording will be carried out with professional cinema equipment by Marco Briani. We deliver the recorded material with superior quality to enhance your artistic portfolio.",
+    "instructor": {
+      "name": "Diego Monteiro",
+      "picture": "/images/diego-monteiro.jpg",
+      "social": {
+        "linkedin": "https://linkedin.com/in/diego-monteiro",
+        "instagram": "https://instagram.com/diego.monteiro"
+      },
+      "url": "/member-detail/diego-monteiro"
+    },
+    "technicalOperator": {
+      "name": "Marco Briani",
+      "picture": "/images/marco-briani-photo.jpeg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/marco-briani-611536a4/",
+        "instagram": "https://www.instagram.com/kabode/"
+      },
+      "url": "/member-detail/marco-briani"
+    },
+    "duration": "2 sessions + recording",
+    "date": "Scheduled upon availability",
+    "time": "To be arranged",
+    "location": "In-person or remote",
+    "price": "R$ 500,00"
+  },
+  "program": [],
+  "requirements": {
+    "pt": [
+      "Escolha prévia do monólogo a ser gravado",
+      "Disponibilidade para dois encontros e gravação",
+      "Roupas adequadas para a gravação"
+    ],
+    "en": [
+      "Previous selection of the monologue to be recorded",
+      "Availability for two sessions and recording",
+      "Appropriate clothing for recording"
+    ]
+  },
+  "benefits": {
+    "pt": [
+      "Direção personalizada com Diego Monteiro",
+      "Gravação profissional com equipamentos de cinema",
+      "Material de alta qualidade para portfólio artístico",
+      "Flexibilidade de encontros presenciais ou remotos"
+    ],
+    "en": [
+      "Personalized direction with Diego Monteiro",
+      "Professional recording with cinema equipment",
+      "High-quality material for artistic portfolio",
+      "Flexibility for in-person or remote sessions"
+    ]
+  }
+}

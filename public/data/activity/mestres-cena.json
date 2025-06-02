@@ -1,31 +1,84 @@
 {
-  "id": "2",
+  "id": "mestres-cena",
   "slug": "mestres-cena",
-  "category": "Série de Palestras",
-  "maxParticipants": 100,
-  "currentParticipants": 78,
-  "featured": false,
-  "images": ["https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&w=800"],
+  "category": "Workshop",
+  "maxParticipants": 25,
+  "currentParticipants": 18,
+  "featured": true,
+  "registrationUrl": "https://forms.gle/mestres-cena-registration",
+  "images": [
+    "https://images.pexels.com/photos/3355366/pexels-photo-3355366.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  ],
   "pt": {
-    "title": "Mestres de Cena: Novos Horizontes",
-    "description": "Série de palestras com grandes nomes do teatro nacional e internacional.",
-    "fullDescription": "A série \"Mestres de Cena: Novos Horizontes\" apresenta uma tarde de palestras e debates com grandes nomes do teatro nacional e internacional. Este evento gratuito oferece uma oportunidade única de aprender com profissionais renomados e descobrir novas perspectivas sobre as artes cênicas contemporâneas.",
-    "instructor": "Convidados Especiais",
-    "duration": "3 horas",
-    "date": "15 de Fevereiro, 2025",
-    "time": "14h00 às 17h00",
-    "location": "Auditório IIA, São Paulo",
-    "price": "Gratuito"
+    "title": "Mestres da Cena",
+    "description": "Workshop intensivo com grandes mestres do teatro contemporâneo.",
+    "fullDescription": "Um workshop único que reúne os maiores mestres da cena teatral contemporânea. Durante três dias intensivos, os participantes terão a oportunidade de explorar diferentes técnicas e metodologias de interpretação, direção e criação cênica.\n\nEste workshop é destinado a atores, diretores e estudantes de teatro que desejam aprofundar seus conhecimentos e expandir suas habilidades artísticas através do contato direto com profissionais renomados da área.",
+    "instructor": {
+      "name": "Vários Mestres",
+      "picture": "/placeholder.svg?height=400&width=400&text=Mestres+da+Cena",
+      "url": "#"
+    },
+    "duration": "3 dias",
+    "date": "15-17 de Março, 2024",
+    "time": "09:00 - 18:00",
+    "location": "Teatro Municipal",
+    "price": "R$ 450,00"
   },
   "en": {
-    "title": "Stage Masters: New Horizons",
-    "description": "Lecture series with great names from national and international theater.",
-    "fullDescription": "The \"Stage Masters: New Horizons\" series presents an afternoon of lectures and debates with great names from national and international theater. This free event offers a unique opportunity to learn from renowned professionals and discover new perspectives on contemporary performing arts.",
-    "instructor": "Special Guests",
-    "duration": "3 hours",
-    "date": "February 15, 2025",
-    "time": "2:00 PM to 5:00 PM",
-    "location": "IIA Auditorium, São Paulo",
-    "price": "Free"
+    "title": "Masters of the Stage",
+    "description": "Intensive workshop with great masters of contemporary theater.",
+    "fullDescription": "A unique workshop that brings together the greatest masters of contemporary theatrical scene. During three intensive days, participants will have the opportunity to explore different techniques and methodologies of interpretation, direction and scenic creation.\n\nThis workshop is intended for actors, directors and theater students who wish to deepen their knowledge and expand their artistic skills through direct contact with renowned professionals in the field.",
+    "instructor": {
+      "name": "Various Masters",
+      "picture": "/placeholder.svg?height=400&width=400&text=Masters+of+Stage",
+      "url": "#"
+    },
+    "duration": "3 days",
+    "date": "March 15-17, 2024",
+    "time": "09:00 - 18:00",
+    "location": "Municipal Theater",
+    "price": "R$ 450,00"
+  },
+  "program": [
+    {
+      "pt": {
+        "day": "Dia 1 - Fundamentos",
+        "sessions": [
+          { "time": "09:00", "topic": "Abertura e Apresentações" },
+          { "time": "10:00", "topic": "Técnicas de Respiração e Voz" },
+          { "time": "14:00", "topic": "Expressão Corporal" },
+          { "time": "16:00", "topic": "Improvisação Básica" }
+        ]
+      },
+      "en": {
+        "day": "Day 1 - Fundamentals",
+        "sessions": [
+          { "time": "09:00", "topic": "Opening and Presentations" },
+          { "time": "10:00", "topic": "Breathing and Voice Techniques" },
+          { "time": "14:00", "topic": "Body Expression" },
+          { "time": "16:00", "topic": "Basic Improvisation" }
+        ]
+      }
+    }
+  ],
+  "requirements": {
+    "pt": ["Experiência básica em teatro", "Roupas confortáveis para movimento", "Caderno para anotações"],
+    "en": ["Basic theater experience", "Comfortable clothes for movement", "Notebook for notes"]
+  },
+  "benefits": {
+    "pt": [
+      "Certificado de participação",
+      "Material didático incluso",
+      "Networking com profissionais",
+      "Acesso a gravações das sessões"
+    ],
+    "en": [
+      "Certificate of participation",
+      "Educational material included",
+      "Networking with professionals",
+      "Access to session recordings"
+    ]
   }
 }

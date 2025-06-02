@@ -1,112 +1,81 @@
 {
   "id": "workshop-demidov",
   "slug": "workshop-demidov",
-  "category": "Workshop Técnico",
-  "maxParticipants": 20,
+  "category": "Workshop",
+  "maxParticipants": 15,
   "currentParticipants": 8,
   "featured": true,
+  "registrationUrl": "https://wa.me/5535999090984",
   "images": [
     "/images/nikolai-demidov.png",
-    "/images/diogo-rezende.jpg",
-    "/images/2025_IIA_KV_1.png"
+    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
   ],
   "pt": {
     "title": "Workshop Técnica Demidov",
-    "description": "Explore a técnica de Nikolai Demidov, focada na liberdade na atuação como um caminho para a vivência criativa do ator em cena.",
-    "fullDescription": "Neste curso, os participantes serão introduzidos ao método desenvolvido pelo teatrólogo russo Nikolai Demidov, parceiro de trabalho de Konstantin Stanislávski por quase três décadas. O curso terá foco na prática do exercício mais importante do método de Demidov, os etúdes, e com ele os participantes poderão experienciar a proposta do teatrólogo sobre o treinamento da liberdade na atuação, como um caminho para a vivência criativa do ator em cena.",
+    "description": "Aprofundamento na técnica de interpretação de Nikolai Demidov.",
+    "fullDescription": "Workshop especializado na técnica de interpretação desenvolvida por Nikolai Demidov, um dos grandes mestres do teatro russo. Os participantes explorarão os princípios fundamentais desta metodologia, incluindo o trabalho com a imaginação criativa, a análise ativa e a construção orgânica do personagem.\n\nEste workshop é ideal para atores que desejam expandir seu repertório técnico e compreender uma das abordagens mais influentes da pedagogia teatral moderna.",
     "instructor": {
-      "name": "Diogo Rezende",
-      "picture": "/images/diogo-rezende.jpg",
-      "social": {
-        "linkedin": "https://linkedin.com/in/diogo-rezende",
-        "instagram": "https://instagram.com/diogo.rezende.ator"
-      },
-      "url": "/member-detail/diogo-rezende"
+      "name": "Professor Especialista",
+      "picture": "/placeholder.svg?height=400&width=400&text=Professor+Demidov",
+      "url": "#"
     },
-    "duration": "A ser anunciado",
-    "date": "A ser anunciado",
-    "time": "",
-    "location": "",
-    "price": ""
+    "duration": "5 dias",
+    "date": "1-5 de Abril, 2024",
+    "time": "19:00 - 22:00",
+    "location": "Sala de Ensaio Principal",
+    "price": "R$ 380,00"
   },
   "en": {
     "title": "Demidov Technique Workshop",
-    "description": "Explore Nikolai Demidov's technique, focused on freedom in acting as a path to the actor's creative experience on stage.",
-    "fullDescription": "In this course, participants will be introduced to the method developed by the Russian theater practitioner Nikolai Demidov, who collaborated with Konstantin Stanislavski for almost three decades. The course will focus on practicing the most important exercise of Demidov's method — the études — through which participants will experience the practitioner's approach to training freedom in acting as a path to the actor's creative experience on stage.",
+    "description": "Deep dive into Nikolai Demidov's acting technique.",
+    "fullDescription": "Specialized workshop on the acting technique developed by Nikolai Demidov, one of the great masters of Russian theater. Participants will explore the fundamental principles of this methodology, including work with creative imagination, active analysis and organic character construction.\n\nThis workshop is ideal for actors who want to expand their technical repertoire and understand one of the most influential approaches in modern theatrical pedagogy.",
     "instructor": {
-      "name": "Diogo Rezende",
-      "picture": "/images/diogo-rezende.jpg",
-      "social": {
-        "linkedin": "https://linkedin.com/in/diogo-rezende",
-        "instagram": "https://instagram.com/diogo.rezende.ator"
-      },
-      "url": "/member-detail/diogo-rezende"
+      "name": "Specialist Professor",
+      "picture": "/placeholder.svg?height=400&width=400&text=Professor+Demidov",
+      "url": "#"
     },
-    "duration": "To be announced",
-    "date": "To be announced",
-    "time": "",
-    "location": "",
-    "price": ""
+    "duration": "5 days",
+    "date": "April 1-5, 2024",
+    "time": "19:00 - 22:00",
+    "location": "Main Rehearsal Room",
+    "price": "R$ 380,00"
   },
   "program": [
     {
       "pt": {
-        "day": "Dia 1 - Etúdes inicias",
-        "sessions": []
+        "day": "Dia 1 - Introdução à Técnica",
+        "sessions": [
+          { "time": "19:00", "topic": "História e Fundamentos" },
+          { "time": "20:00", "topic": "Exercícios Preparatórios" },
+          { "time": "21:00", "topic": "Imaginação Criativa" }
+        ]
       },
       "en": {
-        "day": "Day 1 - Fundamentals",
-        "sessions": []
-      }
-    },
-    {
-      "pt": {
-        "day": "Dia 2 - Etúdes avançados",
-        "sessions": []
-      },
-      "en": {
-        "day": "Day 2 - Practical Application",
-        "sessions": []
-      }
-    },
-    {
-      "pt": {
-        "day": "Dia 3 - Cenas",
-        "sessions": []
-      },
-      "en": {
-        "day": "Day 3 - Scenes",
-        "sessions": []
+        "day": "Day 1 - Introduction to Technique",
+        "sessions": [
+          { "time": "19:00", "topic": "History and Fundamentals" },
+          { "time": "20:00", "topic": "Preparatory Exercises" },
+          { "time": "21:00", "topic": "Creative Imagination" }
+        ]
       }
     }
   ],
   "requirements": {
-    "pt": [
-      "Experiência básica em teatro ou atuação",
-      "Roupas confortáveis para movimento",
-      "Caderno para anotações",
-      "Mente aberta para experimentação"
-    ],
-    "en": [
-      "Basic experience in theater or acting",
-      "Comfortable clothes for movement",
-      "Notebook for notes",
-      "Open mind for experimentation"
-    ]
+    "pt": ["Experiência prévia em teatro", "Texto para trabalho prático", "Caderno de anotações"],
+    "en": ["Previous theater experience", "Text for practical work", "Notebook"]
   },
   "benefits": {
     "pt": [
-      "Domínio da técnica de análise ativa",
-      "Desenvolvimento da verdade cênica",
-      "Melhoria das habilidades de improvisação",
-      "Acesso a materiais de estudo exclusivos"
+      "Certificado de conclusão",
+      "Bibliografia especializada",
+      "Acompanhamento pós-workshop",
+      "Acesso a material exclusivo"
     ],
     "en": [
-      "Mastery of active analysis technique",
-      "Development of scenic truth",
-      "Improvement of improvisation skills",
-      "Certificate of participation",
-      "Access to exclusive study materials"
+      "Certificate of completion",
+      "Specialized bibliography",
+      "Post-workshop follow-up",
+      "Access to exclusive material"
     ]
   }
 }

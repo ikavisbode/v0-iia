@@ -73,12 +73,22 @@ export interface ActivityData {
   maxParticipants: number
   currentParticipants: number
   featured: boolean
+  registrationUrl: string
   images: string[]
   pt: {
     title: string
     description: string
     fullDescription?: string
     instructor: {
+      name: string
+      picture: string
+      social?: {
+        linkedin?: string
+        instagram?: string
+      }
+      url: string
+    }
+    technicalOperator?: {
       name: string
       picture: string
       social?: {
@@ -98,6 +108,15 @@ export interface ActivityData {
     description: string
     fullDescription?: string
     instructor: {
+      name: string
+      picture: string
+      social?: {
+        linkedin?: string
+        instagram?: string
+      }
+      url: string
+    }
+    technicalOperator?: {
       name: string
       picture: string
       social?: {

@@ -123,7 +123,13 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
                       </div>
                     </div>
 
-                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold">
+                    <Button
+                      className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        window.open(activity.registrationUrl, "_blank")
+                      }}
+                    >
                       {content.price === "Gratuito" || content.price === "Free"
                         ? "Inscrever-se Gratuitamente"
                         : "Inscrever-se"}
