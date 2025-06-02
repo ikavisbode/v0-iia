@@ -36,7 +36,7 @@
     "duration": "2 encontros + gravação",
     "date": "Agendamento conforme disponibilidade",
     "time": "A combinar",
-    "location": "Presencial ou remoto",
+    "location": "Remoto e Presencial",
     "price": "R$ 500,00"
   },
   "en": {
@@ -64,7 +64,7 @@
     "duration": "2 sessions + recording",
     "date": "Scheduled upon availability",
     "time": "To be arranged",
-    "location": "In-person or remote",
+    "location": "Remote and On-Site",
     "price": "R$ 500,00"
   },
   "program": [],
