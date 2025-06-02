@@ -1,39 +1,37 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState, useEffect } from "react"
-import { useTranslation } from "react-i18next"
-import { Clock, Users, Award, Calendar, MapPin } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Layout from "../../components/Layout"
-import PageHeader from "../../components/PageHeader"
-import { loadActivities, type ActivityData } from "../../utils/dataLoader"
+import type React from "react";
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { Clock, Users, Award, Calendar, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Layout from "../../components/Layout";
+import PageHeader from "../../components/PageHeader";
+import { loadActivities, type ActivityData } from "../../utils/dataLoader";
+import { useRouter } from "next/navigation";
 
-interface ActivitiesListPageProps {
-  onNavigate: (page: string, section?: string, id?: string) => void
-}
-
-const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) => {
-  const { i18n } = useTranslation()
-  const currentLang = i18n.language || "pt"
-  const [activities, setActivities] = useState<ActivityData[]>([])
-  const [loading, setLoading] = useState(true)
+const ActivitiesListPage: React.FC = () => {
+  const router = useRouter();
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language || "pt";
+  const [activities, setActivities] = useState<ActivityData[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        const activitiesData = await loadActivities()
-        setActivities(activitiesData)
+        const activitiesData = await loadActivities();
+        setActivities(activitiesData);
       } catch (error) {
-        console.error("Error loading activities:", error)
+        console.error("Error loading activities:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
-    loadData()
-  }, [])
+    };
+    loadData();
+  }, []);
 
-  const filteredActivities = activities
+  const filteredActivities = activities;
 
   if (loading) {
     return (
@@ -52,7 +50,7 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
           </div>
         </section>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -68,13 +66,13 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
           {/* Activities Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredActivities.map((activity) => {
-              const content = activity[currentLang as keyof typeof activity]
+              const content = activity[currentLang as keyof typeof activity];
 
               return (
                 <div
                   key={activity.id}
                   className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
-                  onClick={() => onNavigate("activity-detail", undefined, activity.slug)}
+                  onClick={() => router.push(`/atividades/${activity.slug}`)}
                 >
                   <div className="aspect-video overflow-hidden">
                     <img
@@ -91,9 +89,13 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
                       </span>
                     </div>
 
-                    <h3 className="text-heading text-xl font-bold text-gray-800 mb-3 line-clamp-2">{content.title}</h3>
+                    <h3 className="text-heading text-xl font-bold text-gray-800 mb-3 line-clamp-2">
+                      {content.title}
+                    </h3>
 
-                    <p className="text-body text-gray-600 mb-4 line-clamp-3">{content.description}</p>
+                    <p className="text-body text-gray-600 mb-4 line-clamp-3">
+                      {content.description}
+                    </p>
 
                     <div className="space-y-2 mb-6">
                       <div className="flex items-center text-sm text-gray-500">
@@ -119,15 +121,17 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
                       <div className="flex items-center text-sm text-gray-500">
                         <Award className="w-4 h-4 mr-2 text-red-400" />
                         <span className="font-medium mr-2">Preço:</span>
-                        <span className="text-red-600 font-semibold">{content.price}</span>
+                        <span className="text-red-600 font-semibold">
+                          {content.price}
+                        </span>
                       </div>
                     </div>
 
                     <Button
                       className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold"
                       onClick={(e) => {
-                        e.stopPropagation()
-                        window.open(activity.registrationUrl, "_blank")
+                        e.stopPropagation();
+                        window.open(activity.registrationUrl, "_blank");
                       }}
                     >
                       {content.price === "Gratuito" || content.price === "Free"
@@ -136,13 +140,15 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
                     </Button>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
 
           {filteredActivities.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">Nenhuma atividade encontrada.</p>
+              <p className="text-gray-500 text-lg">
+                Nenhuma atividade encontrada.
+              </p>
             </div>
           )}
         </div>
@@ -155,18 +161,19 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
             Pronto para começar sua jornada artística?
           </h2>
           <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-            Descubra o programa perfeito para desenvolver suas habilidades e alcançar seus objetivos artísticos.
+            Descubra o programa perfeito para desenvolver suas habilidades e
+            alcançar seus objetivos artísticos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => onNavigate("home", "contact")}
+              onClick={() => router.push("/#contact")}
               size="lg"
               className="bg-white text-red-600 hover:bg-gray-100"
             >
               Entre em Contato
             </Button>
             <Button
-              onClick={() => onNavigate("home", "about")}
+              onClick={() => router.push("/#about")}
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-red-600"
@@ -177,7 +184,7 @@ const ActivitiesListPage: React.FC<ActivitiesListPageProps> = ({ onNavigate }) =
         </div>
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default ActivitiesListPage
+export default ActivitiesListPage;

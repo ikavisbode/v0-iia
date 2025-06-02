@@ -22,7 +22,7 @@
         "linkedin": "https://linkedin.com/in/diogo-rezende",
         "instagram": "https://instagram.com/diogo.rezende.ator"
       },
-      "url": "/member-detail/diogo-rezende"
+      "url": "/membros/diogo-rezende"
     },
     "duration": "3 Encontros",
     "date": "Agendamento conforme disponibilidade",
@@ -40,8 +40,8 @@
       "social": {
         "linkedin": "https://linkedin.com/in/diogo-rezende",
         "instagram": "https://instagram.com/diogo.rezende.ator"
-        },
-          "url": "/member-detail/diogo-rezende"
+      },
+      "url": "/membros/diogo-rezende"
     },
     "duration": "3 days",
     "date": "Scheduled upon availability",
@@ -75,11 +75,7 @@
       "Texto para trabalho prático",
       "Caderno de anotações"
     ],
-    "en": [
-      "Previous theater experience",
-      "Text for practical work",
-      "Notebook"
-    ]
+    "en": ["Previous theater experience", "Text for practical work", "Notebook"]
   },
   "benefits": {
     "pt": [
