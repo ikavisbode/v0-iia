@@ -1,37 +1,43 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState, useEffect } from "react"
-import { useTranslation } from "react-i18next"
-import { Button } from "@/components/ui/button"
-import { ArrowLeft, Mail, Linkedin, Instagram, Award, BookOpen } from "lucide-react"
-import Layout from "../../components/Layout"
-import { getMemberBySlug, type MemberData } from "../../utils/dataLoader"
+import type React from "react";
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button";
+import {
+  ArrowLeft,
+  Mail,
+  Linkedin,
+  Instagram,
+  Award,
+  BookOpen,
+} from "lucide-react";
+import Layout from "@/components/Layout";
+import { getMemberBySlug, type MemberData } from "@/utils/dataLoader";
+import { useParams, useRouter } from "next/navigation";
 
-interface TeamMemberDetailPageProps {
-  memberId: string
-  onNavigate: (page: string, section?: string) => void
-}
-
-const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, onNavigate }) => {
-  const { i18n } = useTranslation()
-  const currentLang = i18n.language || "pt"
-  const [member, setMember] = useState<MemberData | null>(null)
-  const [loading, setLoading] = useState(true)
+const TeamMemberDetailPage: React.FC = () => {
+  const router = useRouter();
+  const params = useParams();
+  const memberId = params.slug as string;
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language || "pt";
+  const [member, setMember] = useState<MemberData | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadMember = async () => {
       try {
-        const memberData = await getMemberBySlug(memberId)
-        setMember(memberData)
+        const memberData = await getMemberBySlug(memberId);
+        setMember(memberData);
       } catch (error) {
-        console.error("Error loading member:", error)
+        console.error("Error loading member:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
-    loadMember()
-  }, [memberId])
+    };
+    loadMember();
+  }, [memberId]);
 
   if (loading) {
     return (
@@ -43,7 +49,7 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 
   if (!member) {
@@ -51,17 +57,22 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
       <Layout>
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-800 mb-4">Membro não encontrado</h1>
-            <Button onClick={() => onNavigate("home")} className="bg-red-600 hover:bg-red-700 text-white">
+            <h1 className="text-2xl font-bold text-gray-800 mb-4">
+              Membro não encontrado
+            </h1>
+            <Button
+              onClick={() => router.push("/")}
+              className="bg-red-600 hover:bg-red-700 text-white"
+            >
               Voltar ao Início
             </Button>
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 
-  const content = member[currentLang as keyof typeof member]
+  const content = member[currentLang as keyof typeof member];
 
   return (
     <Layout>
@@ -69,7 +80,7 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
       <section className="relative py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <Button
-            onClick={() => onNavigate("home", "team")}
+            onClick={() => router.push("/#team")}
             variant="ghost"
             className="text-white hover:text-red-400 mb-8"
           >
@@ -79,8 +90,12 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-heading text-4xl md:text-5xl font-bold text-white mb-4">{content.name}</h1>
-              <p className="text-2xl text-red-400 font-medium mb-6">{content.role}</p>
+              <h1 className="text-heading text-4xl md:text-5xl font-bold text-white mb-4">
+                {content.name}
+              </h1>
+              <p className="text-2xl text-red-400 font-medium mb-6">
+                {content.role}
+              </p>
               <p className="text-lg text-gray-300 mb-8">
                 <strong>Departamento:</strong> {member.department}
               </p>
@@ -89,7 +104,10 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-4 text-gray-300">
                   <Mail className="w-5 h-5 text-red-400" />
-                  <a href={`mailto:${member.email}`} className="hover:text-white transition-colors">
+                  <a
+                    href={`mailto:${member.email}`}
+                    className="hover:text-white transition-colors"
+                  >
                     {member.email}
                   </a>
                 </div>
@@ -113,7 +131,11 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
             </div>
 
             <div className="aspect-square rounded-lg overflow-hidden">
-              <img src={member.image || "/placeholder.svg"} alt={content.name} className="w-full h-full object-cover" />
+              <img
+                src={member.image || "/placeholder.svg"}
+                alt={content.name}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -123,10 +145,15 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-heading text-3xl font-bold text-gray-800 mb-8">Biografia</h2>
+            <h2 className="text-heading text-3xl font-bold text-gray-800 mb-8">
+              Biografia
+            </h2>
             <div className="prose prose-lg max-w-none text-justify">
               {content.bio.split("\n\n").map((paragraph, index) => (
-                <p key={index} className="text-body text-gray-600 mb-6 leading-relaxed">
+                <p
+                  key={index}
+                  className="text-body text-gray-600 mb-6 leading-relaxed"
+                >
                   {paragraph}
                 </p>
               ))}
@@ -142,10 +169,17 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
             {/* Education */}
             {member.education && (
               <div>
-                <h2 className="text-heading text-3xl font-bold text-gray-800 mb-8">Formação</h2>
+                <h2 className="text-heading text-3xl font-bold text-gray-800 mb-8">
+                  Formação
+                </h2>
                 <div className="space-y-4">
-                  {member.education[currentLang as keyof typeof member.education].map((edu, index) => (
-                    <div key={index} className="flex items-start space-x-3 p-4 bg-gray-50 rounded-lg">
+                  {member.education[
+                    currentLang as keyof typeof member.education
+                  ].map((edu, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start space-x-3 p-4 bg-gray-50 rounded-lg"
+                    >
                       <BookOpen className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
                       <span className="text-body text-gray-700">{edu}</span>
                     </div>
@@ -156,10 +190,15 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
 
             {/* Specialties */}
             <div>
-              <h2 className="text-heading text-3xl font-bold text-gray-800 mb-8">Especialidades</h2>
+              <h2 className="text-heading text-3xl font-bold text-gray-800 mb-8">
+                Especialidades
+              </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {content.specialties.map((specialty, index) => (
-                  <div key={index} className="px-4 py-2 bg-red-100 text-red-800 rounded-lg text-center font-medium">
+                  <div
+                    key={index}
+                    className="px-4 py-2 bg-red-100 text-red-800 rounded-lg text-center font-medium"
+                  >
                     {specialty}
                   </div>
                 ))}
@@ -178,10 +217,17 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
                 Conquistas e Reconhecimentos
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {member.achievements[currentLang as keyof typeof member.achievements].map((achievement, index) => (
-                  <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-sm">
+                {member.achievements[
+                  currentLang as keyof typeof member.achievements
+                ].map((achievement, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-sm"
+                  >
                     <Award className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
-                    <span className="text-body text-gray-700 font-medium">{achievement}</span>
+                    <span className="text-body text-gray-700 font-medium">
+                      {achievement}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -193,20 +239,23 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
       {/* CTA Section */}
       <section className="py-20 bg-red-600">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-heading text-3xl font-bold text-white mb-6">Interessado em trabalhar conosco?</h2>
+          <h2 className="text-heading text-3xl font-bold text-white mb-6">
+            Interessado em trabalhar conosco?
+          </h2>
           <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-            Entre em contato para saber mais sobre oportunidades de colaboração e projetos futuros.
+            Entre em contato para saber mais sobre oportunidades de colaboração
+            e projetos futuros.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => onNavigate("home", "contact")}
+              onClick={() => router.push("/#contact")}
               size="lg"
               className="bg-white text-red-600 hover:bg-gray-100"
             >
               Entre em Contato
             </Button>
             <Button
-              onClick={() => onNavigate("home", "about")}
+              onClick={() => router.push("/#about")}
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-red-600"
@@ -217,7 +266,7 @@ const TeamMemberDetailPage: React.FC<TeamMemberDetailPageProps> = ({ memberId, o
         </div>
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default TeamMemberDetailPage
+export default TeamMemberDetailPage;

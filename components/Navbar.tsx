@@ -1,33 +1,33 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState } from "react"
-import { Menu, X, Globe } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import i18n from "../i18n/config"
+import type React from "react";
+import { useState } from "react";
+import { Menu, X, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import i18n from "../i18n/config";
 
 const Navbar: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [currentLanguage, setCurrentLanguage] = useState("PT")
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState("PT");
 
   const toggleLanguage = () => {
-    const newLang = currentLanguage === "PT" ? "EN" : "PT"
-    const i18nLang = newLang === "PT" ? "pt" : "en"
+    const newLang = currentLanguage === "PT" ? "EN" : "PT";
+    const i18nLang = newLang === "PT" ? "pt" : "en";
 
     if (i18n && typeof i18n.changeLanguage === "function") {
-      i18n.changeLanguage(i18nLang)
-      setCurrentLanguage(newLang)
+      i18n.changeLanguage(i18nLang);
+      setCurrentLanguage(newLang);
     }
-  }
+  };
 
   const navLinks = [
-    { name: "INÍCIO", href: "#home" },
-    { name: "SOBRE", href: "#about" },
-    { name: "PROJETOS", href: "#projects-list" },
-    { name: "ATIVIDADES", href: "#activities-list" },
-    { name: "EQUIPE", href: "#team-list" },
-    { name: "CONTATO", href: "#contact" },
-  ]
+    { name: "INÍCIO", href: "/" },
+    { name: "SOBRE", href: "/#about" },
+    { name: "PROJETOS", href: "/#projects" },
+    { name: "ATIVIDADES", href: "/#activities" },
+    { name: "EQUIPE", href: "/#team" },
+    { name: "CONTATO", href: "/#contact" },
+  ];
 
   return (
     <nav className="bg-gray-900/95 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
@@ -35,8 +35,12 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#home" className="flex items-center">
-              <img src="/images/logo-white.png" alt="Instituto Internacional de Atuação" className="h-12 w-auto" />
+            <a href="/" className="flex items-center">
+              <img
+                src="/images/logo-white.png"
+                alt="Instituto Internacional de Atuação"
+                className="h-12 w-auto"
+              />
             </a>
           </div>
 
@@ -65,8 +69,15 @@ const Navbar: React.FC = () => {
               {currentLanguage}
             </Button>
 
-            <button className="md:hidden text-white hover:text-red-400" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <button
+              className="md:hidden text-white hover:text-red-400"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -88,7 +99,7 @@ const Navbar: React.FC = () => {
         )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

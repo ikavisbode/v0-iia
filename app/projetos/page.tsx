@@ -1,45 +1,50 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState, useEffect } from "react"
-import { useTranslation } from "react-i18next"
-import { Clock, Users, Award, Calendar, MapPin, Play } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import Layout from "../../components/Layout"
-import PageHeader from "../../components/PageHeader"
-import { loadProjects, type ProjectData } from "../../utils/dataLoader"
+import type React from "react";
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { Clock, Users, Award, Calendar, MapPin, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Layout from "@/components/Layout";
+import PageHeader from "@/components/PageHeader";
+import { loadProjects, type ProjectData } from "@/utils/dataLoader";
+import { useRouter } from "next/navigation";
 
-interface ProjectsListPageProps {
-  onNavigate: (page: string, section?: string, id?: string) => void
-}
-
-const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
-  const { i18n } = useTranslation()
-  const currentLang = i18n.language || "pt"
-  const [selectedCategory, setSelectedCategory] = useState("all")
-  const [projects, setProjects] = useState<ProjectData[]>([])
-  const [loading, setLoading] = useState(true)
+const ProjectsListPage: React.FC = () => {
+  const router = useRouter();
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language || "pt";
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [projects, setProjects] = useState<ProjectData[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        const projectsData = await loadProjects()
-        setProjects(projectsData)
+        const projectsData = await loadProjects();
+        setProjects(projectsData);
       } catch (error) {
-        console.error("Error loading projects:", error)
+        console.error("Error loading projects:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
-    loadData()
-  }, [])
+    };
+    loadData();
+  }, []);
 
-  const categories = ["all", "PERFORMANCE", "PESQUISA", "LABORATÓRIO", "AUDIOVISUAL"]
+  const categories = [
+    "all",
+    "PERFORMANCE",
+    "PESQUISA",
+    "LABORATÓRIO",
+    "AUDIOVISUAL",
+  ];
 
   const filteredProjects = projects.filter((project) => {
-    const matchesCategory = selectedCategory === "all" || project.category === selectedCategory
-    return matchesCategory
-  })
+    const matchesCategory =
+      selectedCategory === "all" || project.category === selectedCategory;
+    return matchesCategory;
+  });
 
   if (loading) {
     return (
@@ -58,7 +63,7 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
           </div>
         </section>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -93,12 +98,12 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => {
-              const content = project[currentLang as keyof typeof project]
+              const content = project[currentLang as keyof typeof project];
               return (
                 <div
                   key={project.id}
                   className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
-                  onClick={() => onNavigate("project-detail", undefined, project.slug)}
+                  onClick={() => router.push(`/projetos/${project.slug}`)}
                 >
                   <div className="aspect-video overflow-hidden">
                     <img
@@ -115,20 +120,25 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
                       </span>
                       <span
                         className={`px-2 py-1 rounded text-xs font-medium ${
-                          project.status === "Em Cartaz" || project.status === "Ativo"
+                          project.status === "Em Cartaz" ||
+                          project.status === "Ativo"
                             ? "bg-green-100 text-green-800"
                             : project.status === "Inscrições Abertas"
-                              ? "bg-blue-100 text-blue-800"
-                              : "bg-yellow-100 text-yellow-800"
+                            ? "bg-blue-100 text-blue-800"
+                            : "bg-yellow-100 text-yellow-800"
                         }`}
                       >
                         {project.status}
                       </span>
                     </div>
 
-                    <h3 className="text-heading text-xl font-bold text-gray-800 mb-3 line-clamp-2">{content.title}</h3>
+                    <h3 className="text-heading text-xl font-bold text-gray-800 mb-3 line-clamp-2">
+                      {content.title}
+                    </h3>
 
-                    <p className="text-body text-gray-600 mb-4 line-clamp-3">{content.description}</p>
+                    <p className="text-body text-gray-600 mb-4 line-clamp-3">
+                      {content.description}
+                    </p>
 
                     <div className="space-y-2 mb-6">
                       <div className="flex items-center text-sm text-gray-500">
@@ -139,7 +149,9 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
                       {content.assistantDirector && (
                         <div className="flex items-center text-sm text-gray-500">
                           <Users className="w-4 h-4 mr-2 text-red-400" />
-                          <span className="font-medium mr-2">Assistência de Direção:</span>
+                          <span className="font-medium mr-2">
+                            Assistência de Direção:
+                          </span>
                           <span>{content.assistantDirector}</span>
                         </div>
                       )}
@@ -165,13 +177,15 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
                     </Button>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
 
           {filteredProjects.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">Nenhum projeto encontrado com os filtros selecionados.</p>
+              <p className="text-gray-500 text-lg">
+                Nenhum projeto encontrado com os filtros selecionados.
+              </p>
             </div>
           )}
         </div>
@@ -180,20 +194,23 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
       {/* CTA Section */}
       <section className="py-20 bg-red-600">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-heading text-3xl font-bold text-white mb-6">Interessado em nossos projetos?</h2>
+          <h2 className="text-heading text-3xl font-bold text-white mb-6">
+            Interessado em nossos projetos?
+          </h2>
           <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-            Entre em contato conosco para saber mais sobre como participar ou apoiar nossos projetos.
+            Entre em contato conosco para saber mais sobre como participar ou
+            apoiar nossos projetos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => onNavigate("home", "contact")}
+              onClick={() => router.push("/#contact")}
               size="lg"
               className="bg-white text-red-600 hover:bg-gray-100"
             >
               Entre em Contato
             </Button>
             <Button
-              onClick={() => onNavigate("home", "about")}
+              onClick={() => router.push("/#about")}
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-red-600"
@@ -204,7 +221,7 @@ const ProjectsListPage: React.FC<ProjectsListPageProps> = ({ onNavigate }) => {
         </div>
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default ProjectsListPage
+export default ProjectsListPage;

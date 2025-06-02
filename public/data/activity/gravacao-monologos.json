@@ -6,7 +6,11 @@
   "currentParticipants": 8,
   "featured": true,
   "registrationUrl": "https://forms.gle/VN2LRgQErBJbhUuC7",
-  "images": ["/images/monologo1.jpg", "/images/monologo2.jpg", "/images/2025_IIA_KV_4.png"],
+  "images": [
+    "/images/monologo1.jpg",
+    "/images/monologo2.jpg",
+    "/images/2025_IIA_KV_4.png"
+  ],
   "pt": {
     "title": "Gravação de Monólogos",
     "description": "Grave seu monólogo com direção especializada e qualidade profissional.",
@@ -18,7 +22,7 @@
         "linkedin": "https://linkedin.com/in/diego-monteiro",
         "instagram": "https://instagram.com/diego.monteiro"
       },
-      "url": "/member-detail/diego-monteiro"
+      "url": "/membros/diego-monteiro"
     },
     "technicalOperator": {
       "name": "Marco Briani",
@@ -27,7 +31,7 @@
         "linkedin": "https://www.linkedin.com/in/marco-briani-611536a4/",
         "instagram": "https://www.instagram.com/kabode/"
       },
-      "url": "/member-detail/marco-briani"
+      "url": "/membros/marco-briani"
     },
     "duration": "2 encontros + gravação",
     "date": "Agendamento conforme disponibilidade",
@@ -46,7 +50,7 @@
         "linkedin": "https://linkedin.com/in/diego-monteiro",
         "instagram": "https://instagram.com/diego.monteiro"
       },
-      "url": "/member-detail/diego-monteiro"
+      "url": "/membros/diego-monteiro"
     },
     "technicalOperator": {
       "name": "Marco Briani",
@@ -55,7 +59,7 @@
         "linkedin": "https://www.linkedin.com/in/marco-briani-611536a4/",
         "instagram": "https://www.instagram.com/kabode/"
       },
-      "url": "/member-detail/marco-briani"
+      "url": "/membros/marco-briani"
     },
     "duration": "2 sessions + recording",
     "date": "Scheduled upon availability",
