@@ -8,71 +8,86 @@
   "registrationUrl": "https://wa.me/5535999090984",
   "images": [
     "/images/nikolai-demidov.png",
-    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    "/images/diogo-rezende.jpg",
+    "/images/2025_IIA_KV_1.png"
   ],
   "pt": {
     "title": "Workshop Técnica Demidov",
     "description": "Aprofundamento na técnica de interpretação de Nikolai Demidov.",
     "fullDescription": "Workshop especializado na técnica de interpretação desenvolvida por Nikolai Demidov, um dos grandes mestres do teatro russo. Os participantes explorarão os princípios fundamentais desta metodologia, incluindo o trabalho com a imaginação criativa, a análise ativa e a construção orgânica do personagem.\n\nEste workshop é ideal para atores que desejam expandir seu repertório técnico e compreender uma das abordagens mais influentes da pedagogia teatral moderna.",
     "instructor": {
-      "name": "Professor Especialista",
-      "picture": "/placeholder.svg?height=400&width=400&text=Professor+Demidov",
-      "url": "#"
+      "name": "Diogo Rezende",
+      "picture": "/images/diogo-rezende.jpg",
+      "social": {
+        "linkedin": "https://linkedin.com/in/diogo-rezende",
+        "instagram": "https://instagram.com/diogo.rezende.ator"
+      },
+      "url": "/member-detail/diogo-rezende"
     },
-    "duration": "5 dias",
-    "date": "1-5 de Abril, 2024",
-    "time": "19:00 - 22:00",
-    "location": "Sala de Ensaio Principal",
-    "price": "R$ 380,00"
+    "duration": "5 Encontros",
+    "date": "Agendamento conforme disponibilidade",
+    "time": "A combinar",
+    "location": "Remoto",
+    "price": "R$ 100"
   },
   "en": {
     "title": "Demidov Technique Workshop",
     "description": "Deep dive into Nikolai Demidov's acting technique.",
     "fullDescription": "Specialized workshop on the acting technique developed by Nikolai Demidov, one of the great masters of Russian theater. Participants will explore the fundamental principles of this methodology, including work with creative imagination, active analysis and organic character construction.\n\nThis workshop is ideal for actors who want to expand their technical repertoire and understand one of the most influential approaches in modern theatrical pedagogy.",
     "instructor": {
-      "name": "Specialist Professor",
-      "picture": "/placeholder.svg?height=400&width=400&text=Professor+Demidov",
-      "url": "#"
+      "name": "Diogo Rezende",
+      "picture": "/images/diogo-rezende.jpg",
+      "social": {
+        "linkedin": "https://linkedin.com/in/diogo-rezende",
+        "instagram": "https://instagram.com/diogo.rezende.ator"
+        },
+          "url": "/member-detail/diogo-rezende"
     },
     "duration": "5 days",
-    "date": "April 1-5, 2024",
-    "time": "19:00 - 22:00",
-    "location": "Main Rehearsal Room",
-    "price": "R$ 380,00"
+    "date": "Scheduled upon availability",
+    "time": "To be arranged",
+    "location": "Remote",
+    "price": "R$ 100"
   },
   "program": [
     {
       "pt": {
         "day": "Dia 1 - Introdução à Técnica",
         "sessions": [
-          { "time": "19:00", "topic": "História e Fundamentos" },
-          { "time": "20:00", "topic": "Exercícios Preparatórios" },
-          { "time": "21:00", "topic": "Imaginação Criativa" }
+          { "time": "Dia 1", "topic": "Parte I - Etúdes inicias" },
+          { "time": "Dia 2", "topic": "Parte II - Etúdes avançados" },
+          { "time": "Dia 3", "topic": "Parte III - Cenas" }
         ]
       },
       "en": {
         "day": "Day 1 - Introduction to Technique",
         "sessions": [
-          { "time": "19:00", "topic": "History and Fundamentals" },
-          { "time": "20:00", "topic": "Preparatory Exercises" },
-          { "time": "21:00", "topic": "Creative Imagination" }
+          { "time": "Day 1", "topic": "Part I - First Etúdes" },
+          { "time": "Day 2", "topic": "Part II - Advanced Etúdes" },
+          { "time": "Day 3", "topic": "Scenes" }
         ]
       }
     }
   ],
   "requirements": {
-    "pt": ["Experiência prévia em teatro", "Texto para trabalho prático", "Caderno de anotações"],
-    "en": ["Previous theater experience", "Text for practical work", "Notebook"]
+    "pt": [
+      "Experiência prévia em teatro",
+      "Texto para trabalho prático",
+      "Caderno de anotações"
+    ],
+    "en": [
+      "Previous theater experience",
+      "Text for practical work",
+      "Notebook"
+    ]
   },
   "benefits": {
     "pt": [
-      "Certificado de conclusão",
       "Bibliografia especializada",
       "Acompanhamento pós-workshop",
       "Acesso a material exclusivo"
     ],
     "en": [
-      "Certificate of completion",
       "Specialized bibliography",
       "Post-workshop follow-up",
       "Access to exclusive material"
