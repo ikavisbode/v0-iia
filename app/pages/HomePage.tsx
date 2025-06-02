@@ -30,6 +30,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   // Carousel state
   const [currentSlide, setCurrentSlide] = useState(0)
   const carouselImages = ["/images/2025_IIA_KV_1.png", "/images/2025_IIA_KV_3.png", "/images/2025_IIA_KV_4.png"]
+  const [activitiesSlide, setActivitiesSlide] = useState(0)
 
   // Add loading states for each data type:
   const [projectsLoading, setProjectsLoading] = useState(true)
@@ -305,100 +306,112 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               <p className="text-gray-600">Carregando atividades...</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Featured Activity */}
-              {featuredActivity && (
-                <div className="lg:row-span-2">
-                  <div
-                    className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300"
-                    onClick={() => onNavigate("activity-detail", undefined, featuredActivity.slug)}
-                  >
-                    <div className="aspect-video overflow-hidden">
-                      <img
-                        src={featuredActivity.images[0] || "/placeholder.svg"}
-                        alt={featuredActivity[currentLang as keyof typeof featuredActivity].title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-8">
-                      <span className="text-caption inline-block px-3 py-1 bg-red-100 text-red-600 text-sm font-medium rounded-full mb-4">
-                        Destaque
-                      </span>
-                      <h3 className="text-heading text-2xl font-semibold text-gray-800 mb-4">
-                        {featuredActivity[currentLang as keyof typeof featuredActivity].title}
-                      </h3>
-                      <p className="text-body text-gray-600 mb-6 leading-relaxed">
-                        {featuredActivity[currentLang as keyof typeof featuredActivity].description}
-                      </p>
-                      <div className="space-y-2 mb-6">
-                        <p className="text-caption text-sm text-gray-500">
-                          <span className="font-medium">Data:</span>{" "}
-                          {featuredActivity[currentLang as keyof typeof featuredActivity].date}
-                        </p>
-                        <p className="text-caption text-sm text-gray-500">
-                          <span className="font-medium">Local:</span>{" "}
-                          {featuredActivity[currentLang as keyof typeof featuredActivity].location}
-                        </p>
-                        <p className="text-caption text-sm text-gray-500">
-                          <span className="font-medium">Preço:</span>{" "}
-                          {featuredActivity[currentLang as keyof typeof featuredActivity].price}
-                        </p>
-                        <p className="text-caption text-sm text-gray-500">
-                          <span className="font-medium">Instrutor:</span>{" "}
-                          {featuredActivity[currentLang as keyof typeof featuredActivity].instructor.name}
-                        </p>
+            <div className="relative">
+              {/* Activities Carousel */}
+              <div className="overflow-hidden">
+                <div
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${activitiesSlide * (100 / Math.min(activities.length, 3))}%)` }}
+                >
+                  {activities.map((activity) => (
+                    <div key={activity.id} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                      <div
+                        className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300 h-full"
+                        onClick={() => onNavigate("activity-detail", undefined, activity.slug)}
+                      >
+                        <div className="aspect-video overflow-hidden">
+                          <img
+                            src={activity.images[0] || "/placeholder.svg"}
+                            alt={activity[currentLang as keyof typeof activity].title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="p-6">
+                          {activity.featured && (
+                            <span className="text-caption inline-block px-3 py-1 bg-red-100 text-red-600 text-sm font-medium rounded-full mb-4">
+                              Destaque
+                            </span>
+                          )}
+                          <h3 className="text-heading text-xl font-semibold text-gray-800 mb-3">
+                            {activity[currentLang as keyof typeof activity].title}
+                          </h3>
+                          <p className="text-body text-gray-600 mb-4 leading-relaxed line-clamp-3">
+                            {activity[currentLang as keyof typeof activity].description}
+                          </p>
+                          <div className="space-y-2 mb-4">
+                            <p className="text-caption text-sm text-gray-500">
+                              <span className="font-medium">Data:</span>{" "}
+                              {activity[currentLang as keyof typeof activity].date}
+                            </p>
+                            <p className="text-caption text-sm text-gray-500">
+                              <span className="font-medium">Local:</span>{" "}
+                              {activity[currentLang as keyof typeof activity].location}
+                            </p>
+                            <p className="text-caption text-sm text-gray-500">
+                              <span className="font-medium">Preço:</span>{" "}
+                              {activity[currentLang as keyof typeof activity].price}
+                            </p>
+                            <p className="text-caption text-sm text-gray-500">
+                              <span className="font-medium">Instrutor:</span>{" "}
+                              {activity[currentLang as keyof typeof activity].instructor.name}
+                            </p>
+                          </div>
+                          <Button
+                            className="btn-modern bg-red-600 hover:bg-red-700 text-white font-medium w-full"
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              if (activity.registrationUrl) {
+                                window.open(activity.registrationUrl, "_blank")
+                              }
+                            }}
+                          >
+                            Inscrever-se Agora
+                          </Button>
+                        </div>
                       </div>
-                      <Button className="btn-modern bg-red-600 hover:bg-red-700 text-white font-medium">
-                        Inscrever-se
-                      </Button>
                     </div>
-                  </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Carousel Navigation Dots */}
+              {activities.length > 3 && (
+                <div className="flex justify-center mt-6 space-x-2">
+                  {Array.from({ length: Math.max(1, activities.length - 2) }, (_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActivitiesSlide(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                        index === activitiesSlide ? "bg-red-600" : "bg-gray-300"
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
                 </div>
               )}
 
-              {/* Other Activities */}
-              <div className="space-y-6">
-                {otherActivities.map((activity) => (
-                  <div
-                    key={activity.id}
-                    className="bg-white rounded-lg shadow-lg overflow-hidden flex cursor-pointer hover:shadow-xl transition-shadow duration-300"
-                    onClick={() => onNavigate("activity-detail", undefined, activity.slug)}
+              {/* Carousel Controls */}
+              {activities.length > 3 && (
+                <>
+                  <button
+                    onClick={() => setActivitiesSlide((prev) => Math.max(0, prev - 1))}
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg z-10"
+                    aria-label="Previous activity"
+                    disabled={activitiesSlide === 0}
                   >
-                    <div className="w-32 h-32 flex-shrink-0">
-                      <img
-                        src={activity.images[0] || "/placeholder.svg"}
-                        alt={activity[currentLang as keyof typeof activity].title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-6 flex-1">
-                      <h4 className="text-heading text-lg font-semibold text-gray-800 mb-2">
-                        {activity[currentLang as keyof typeof activity].title}
-                      </h4>
-                      <p className="text-body text-gray-600 text-sm mb-3 line-clamp-2">
-                        {activity[currentLang as keyof typeof activity].description}
-                      </p>
-                      <div className="space-y-1 mb-3">
-                        <p className="text-caption text-xs text-gray-500">
-                          <span className="font-medium">Data:</span>{" "}
-                          {activity[currentLang as keyof typeof activity].date}
-                        </p>
-                        <p className="text-caption text-xs text-gray-500">
-                          <span className="font-medium">Preço:</span>{" "}
-                          {activity[currentLang as keyof typeof activity].price}
-                        </p>
-                        <p className="text-caption text-xs text-gray-500">
-                          <span className="font-medium">Instrutor:</span>{" "}
-                          {activity[currentLang as keyof typeof activity].instructor.name}
-                        </p>
-                      </div>
-                      <Button size="sm" className="btn-modern bg-red-600 hover:bg-red-700 text-white font-medium">
-                        Saiba Mais
-                      </Button>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                    <ChevronLeft size={24} />
+                  </button>
+
+                  <button
+                    onClick={() => setActivitiesSlide((prev) => Math.min(activities.length - 3, prev + 1))}
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg z-10"
+                    aria-label="Next activity"
+                    disabled={activitiesSlide >= activities.length - 3}
+                  >
+                    <ChevronRight size={24} />
+                  </button>
+                </>
+              )}
             </div>
           )}
 
