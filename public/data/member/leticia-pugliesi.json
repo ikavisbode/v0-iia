@@ -1,0 +1,58 @@
+{
+  "slug": "leticia-pugliesi",
+  "department": "Atuação",
+  "image": "/images/leticia-pugliesi.png",
+  "email": "contato@institutointernacionaldeatuacao.com",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/leticia-pugliesi",
+    "instagram": "https://www.instagram.com/letmocrete/"
+  },
+  "pt": {
+    "name": "Letícia Pugliesi",
+    "role": "Atriz",
+    "bio": "Atriz formada pelo Senac (2023), iniciou carreira em 2012 sendo premiada no ano seguinte como Melhor Atriz em \"Hamlet\" no Festival Regional de Teatro Estudantil \"Atílio Eduardo Gallo Lopes\". Em 2014, foi indicada a Melhor Atriz Coadjuvante em \"A Maldição do Vale Negro\" no mesmo festival. Repetiu o feito em 2015, como atriz convidada no espetáculo \"A Mansão\", no Festival Regional de Teatro Amador \"Leilah Assumpção\". Integrou o Grupo Namarca e produziu os eventos \"1° Holofote de Ouro\" (2016) e \"Acquarela\" (2017). No festival interno, recebeu o prêmio de Melhor Produção pela adaptação \"Fogo e Água\". Em 2017, fundou o Elenco 4 por 1, com releitura de \"Macbeth\", sendo indicada a Melhor Atriz no 2° Prêmio AATA de Espírito Santo do Pinhal - SP. No mesmo ano, ministrou aulas de teatro no Colégio Externato. Em 2018, atuou em \"Boca de Ouro\" na 41ª Semana Guiomar Novaes. Em 2022, no Grupo Namarca, participou de \"O Noviço\" assinando adaptação, assistência de direção, direção corporal, produção, design e maquiagem. A montagem foi premiada como Melhor Espetáculo, Melhor Produção Executiva e Melhor Atriz, e indicada a Melhor Texto Adaptado no 33° Festival de Teatro de São João da Boa Vista, sendo também apresentada na 46ª Semana Guiomar Novaes e no Festival Satyrianas de 2023. No Senac, atuou em \"O Casamento de Romildo e Juliette\", \"Sertão Estrelado\" e \"Geração Trianon\". Participou de diversas oficinas de interpretação, voz, performance drag queen, teatro musical e produção.",
+    "specialties": [
+      "Atuação teatral",
+      "Adaptação dramatúrgica",
+      "Assistência de direção",
+      "Produção",
+      "Direção corporal",
+      "Figurino e maquiagem"
+    ]
+  },
+  "en": {
+    "name": "Letícia Pugliesi",
+    "role": "Actress",
+    "bio": "Actress graduated from Senac (2023), she began her career in 2012, winning the Best Actress award the following year for \"Hamlet\" at the Regional Student Theater Festival \"Atílio Eduardo Gallo Lopes\". In 2014, she was nominated for Best Supporting Actress in \"The Curse of Black Valley\" at the same festival. She repeated the achievement in 2015 as a guest actress in the play \"The Mansion\" at the Regional Amateur Theater Festival \"Leilah Assumpção\". She joined the Namarca Group and produced the events \"1st Golden Spotlight\" (2016) and \"Acquarela\" (2017). At the internal festival, she received the Best Production award for the adaptation \"Fire and Water\". In 2017, she founded the cast 4 by 1 with a reinterpretation of \"Macbeth\", being nominated for Best Actress at the 2nd AATA Award of Espírito Santo do Pinhal - SP. That same year, she taught theater classes at Colégio Externato. In 2018, she performed in \"Boca de Ouro\" at the 41st Guiomar Novaes Week. In 2022, with the Namarca Group, she participated in \"The Novice\", being responsible for adaptation, assistant direction, body direction, production, design, and makeup. The production was awarded Best Play, Best Executive Production, and Best Actress, and was nominated for Best Adapted Text at the 33rd Theater Festival of São João da Boa Vista, also being presented at the 46th Guiomar Novaes Week and the Satyrianas Festival in 2023. At Senac, she performed in \"The Wedding of Romildo and Juliette\", \"Starry Sertão\", and \"Trianon Generation\". She participated in several workshops on acting, voice, drag queen performance, musical theater, and production.",
+    "specialties": [
+      "Theatrical acting",
+      "Dramaturgical adaptation",
+      "Assistant directing",
+      "Production",
+      "Body direction",
+      "Costume and makeup"
+    ]
+  },
+  "education": {
+    "pt": [
+      "Técnico em Teatro - Senac (2023)",
+      "Teatro Musical com Rodrigo Garcia (2023)",
+      "Design Gráfico - Universidade Cruzeiro do Sul (2021)",
+      "Workshop Mais Queens \"Performance Drag Queen\" - A.G.Q.E (2020)",
+      "Dramaturgia Através da Cena com ator Pedro Guilherme - Oficinas Culturais (2018)",
+      "Planejamento Estratégico e Elaboração de Projetos - Oficinas Culturais (2018)",
+      "Curso de Improvisação Teatral - PET Letras - UNESP Araraquara (2016)",
+      "Direção Teatral - Oficinas Culturais (2015)"
+    ],
+    "en": [
+      "Technical Course in Theater - Senac (2023)",
+      "Musical Theater with Rodrigo Garcia (2023)",
+      "Graphic Design - Universidade Cruzeiro do Sul (2021)",
+      "Workshop Mais Queens \"Drag Queen Performance\" - A.G.Q.E (2020)",
+      "Dramaturgy Through the Scene with actor Pedro Guilherme - Cultural Workshops (2018)",
+      "Strategic Planning and Project Development - Cultural Workshops (2018)",
+      "Theatrical Improvisation Course - PET Letras - UNESP Araraquara (2016)",
+      "Theatrical Direction - Cultural Workshops (2015)"
+    ]
+  }
+}
