@@ -429,27 +429,75 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               <p className="text-gray-600">Carregando equipe...</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamMembers.map((member) => (
-                <div
-                  key={member.id}
-                  className="text-center cursor-pointer group"
-                  onClick={() => onNavigate("member-detail", undefined, member.slug)}
-                >
-                  <div className="aspect-square overflow-hidden rounded-lg mb-4 group-hover:transform group-hover:scale-105 transition-all duration-300">
-                    <img
-                      src={member.image || "/placeholder.svg"}
-                      alt={member[currentLang as keyof typeof member].name}
-                      className="w-full h-full object-cover"
-                    />
+            <>
+              {/* Members Carousel */}
+              <div className="mb-16 relative">
+                <div className="relative overflow-hidden">
+                  <div
+                    className="flex transition-transform duration-500 ease-in-out"
+                    style={{ transform: `translateX(-${currentSlide * (100 / Math.min(teamMembers.length, 4))}%)` }}
+                  >
+                    {teamMembers.map((member) => (
+                      <div key={member.id} className="w-full md:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
+                        <div
+                          className="text-center cursor-pointer group"
+                          onClick={() => onNavigate("member-detail", undefined, member.slug)}
+                        >
+                          <div className="aspect-square overflow-hidden rounded-lg mb-4 group-hover:transform group-hover:scale-105 transition-all duration-300">
+                            <img
+                              src={member.image || "/placeholder.svg"}
+                              alt={member[currentLang as keyof typeof member].name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <h3 className="text-heading text-xl font-semibold text-gray-800 mb-2 group-hover:text-red-600 transition-colors duration-200">
+                            {member[currentLang as keyof typeof member].name}
+                          </h3>
+                          <p className="text-body text-gray-600">{member[currentLang as keyof typeof member].role}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <h3 className="text-heading text-xl font-semibold text-gray-800 mb-2 group-hover:text-red-600 transition-colors duration-200">
-                    {member[currentLang as keyof typeof member].name}
-                  </h3>
-                  <p className="text-body text-gray-600">{member[currentLang as keyof typeof member].role}</p>
                 </div>
-              ))}
-            </div>
+
+                {/* Carousel Navigation Dots */}
+                <div className="flex justify-center mt-6 space-x-2">
+                  {Array.from({ length: Math.max(1, teamMembers.length - 3) }, (_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                        index === currentSlide ? "bg-red-600" : "bg-gray-300"
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
+
+                {/* Carousel Controls */}
+                {teamMembers.length > 4 && (
+                  <>
+                    <button
+                      onClick={() => setCurrentSlide((prev) => Math.max(0, prev - 1))}
+                      className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg z-10"
+                      aria-label="Previous member"
+                      disabled={currentSlide === 0}
+                    >
+                      <ChevronLeft size={24} />
+                    </button>
+
+                    <button
+                      onClick={() => setCurrentSlide((prev) => Math.min(teamMembers.length - 4, prev + 1))}
+                      className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg z-10"
+                      aria-label="Next member"
+                      disabled={currentSlide >= teamMembers.length - 4}
+                    >
+                      <ChevronRight size={24} />
+                    </button>
+                  </>
+                )}
+              </div>
+            </>
           )}
 
           <div className="text-center mt-12">
