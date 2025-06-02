@@ -3,12 +3,12 @@ import { Instagram, Youtube, Mail } from "lucide-react"
 
 const Footer: React.FC = () => {
   const navLinks = [
-    { name: "Início", href: "#home" },
-    { name: "Sobre", href: "#about" },
-    { name: "Projetos", href: "#projects-list" },
-    { name: "Atividades", href: "#activities-list" },
-    { name: "Equipe", href: "#team-list" },
-    { name: "Contato", href: "#contact" },
+    { name: "Início", href: "/" },
+    { name: "Sobre", href: "/#about" },
+    { name: "Projetos", href: "/projetos" },
+    { name: "Atividades", href: "/atividades" },
+    { name: "Equipe", href: "/membros" },
+    { name: "Contato", href: "/#contact" },
   ]
 
   return (
