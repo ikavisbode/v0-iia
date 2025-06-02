@@ -1,0 +1,41 @@
+{
+  "slug": "catarina-savietto",
+  "department": "Atuação e Produção",
+  "image": "/images/catarina-savietto.jpg",
+  "email": "contato@institutointernacionaldeatuacao.com",
+  "social": {
+    "instagram": "https://www.instagram.com/cat_savietto/"
+  },
+  "pt": {
+    "name": "Catarina Savietto",
+    "role": "Atriz",
+    "bio": "Catarina Savietto é atriz, cantora, designer e professora de teatro, com experiência em produções teatrais, audiovisuais e publicitárias em São Paulo, Jundiaí e Uberlândia. Formada em Teatro - Licenciatura pela Universidade Federal de Uberlândia, também realizou cursos de Atuação e Interpretação para TV na Academy Vancouver e Teatro Musical no Ceftem. Em constante aperfeiçoamento, segue estudando canto e coral. Atualmente, Catarina se especializa em Atuação e Direção na pós-graduação do Célia Helena Centro de Artes e Educação.",
+    "specialties": [
+      "Atuação",
+      "Produção",
+      "Educação",
+      "Sistema de Stanislávski"
+    ]
+  },
+  "en": {
+    "name": "Catarina Savietto",
+    "role": "Actress",
+    "bio": "Catarina Savietto is an actress, singer, designer, and theater teacher, with experience in theatrical, audiovisual, and advertising productions in São Paulo, Jundiaí, and Uberlândia. She holds a degree in Theater Education from the Federal University of Uberlândia and has also completed Acting and TV Performance courses at the Academy Vancouver as well as Musical Theater training at Ceftem. Constantly seeking improvement, she continues to study singing and choir. Currently, Catarina is specializing in Acting and Directing through a postgraduate program at the Célia Helena Center for Arts and Education.",
+    "specialties": [
+      "Acting",
+      "Production",
+      "Education",
+      "Stanislavski System"
+    ]
+  },
+  "education": {
+    "pt": [
+      "Teatro-Licenciatura - UFU",
+      "Pós-Graduação em Atuação e Direção - Célia Helena"
+    ],
+    "en": [
+      "Theater Education Degree - UFU",
+      "Postgraduate Program in Acting and Directing - Célia Helena"
+    ]
+  }
+}

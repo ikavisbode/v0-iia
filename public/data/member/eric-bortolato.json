@@ -1,0 +1,48 @@
+{
+  "slug": "eric-bortolato",
+  "department": "Atuação e Roteiro",
+  "image": "/images/eric-bortolato.jpg",
+  "email": "contato@institutointernacionaldeatuacao.com",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/eric-bortolato-fernandes-ab098231/",
+    "instagram": "https://www.instagram.com/ericbortolato/"
+  },
+  "pt": {
+    "name": "Eric Bortolato",
+    "role": "Ator e Roteirista",
+    "bio": "Ator, roteirista e produtor. Começou sua carreira ao passar no exame de bolsas do Instituto Stanislavski, o curso de atores do Latin American Film Institute, em São Paulo-SP, em janeiro de 2018. Desde então, já atuou em 12 curtas-metragens e um longa-metragem, pondo em prática os princípios da atuação metódica aprendidos no instituto. Produziu, escreveu e atuou no curta-metragem As Confissões do Homem Cego (2025). Foi protagonista em um curta que ganhou diversos prêmios internacionais (11 minutos), além de ter recebido um prêmio de melhor ator por outro curta (Me Chame Pelo Meu Nome). Atualmente, é membro fundador do Instituto Internacional de Atuação, associação de atores formada em dezembro de 2024, onde participa de estudos de atuação e da montagem da peça O Espectador Condenado à Morte, entre outras atividades de cunho administrativo. Antes disso, graduou-se em Jornalismo e atuou na área, fez uma pós-graduação em Teorias da Comunicação e mestrado em Língua Portuguesa. Como escritor, publicou o conto “A Mulher Vestida de Sol” na coletânea A Arte do Terror – Apocalipse (Elemental, 2019).",
+    "specialties": [
+      "Atuação",
+      "Produção",
+      "Roteiro",
+      "Sistema de Stanislávski"
+    ]
+  },
+  "en": {
+    "name": "Eric Bortolato",
+    "role": "Actor and Screenwriter",
+    "bio": "Actor, screenwriter, and producer. He began his career after passing the scholarship exam at the Stanislavski Institute, the acting program of the Latin American Film Institute, in São Paulo, in January 2018. Since then, he has acted in 12 short films and one feature film, applying the principles of method acting learned at the institute. He produced, wrote, and acted in the short film The Confessions of the Blind Man (2025). He was the lead actor in a short film that won several international awards (11 Minutes), in addition to receiving a Best Actor award for another short (Call Me By My Name). Currently, he is a founding member of the International Acting Institute, an actors' association established in December 2024, where he participates in acting workshops and the staging of the play The Spectator Sentenced to Death, among other administrative activities. Before that, he graduated in Journalism and worked in the field, completed a postgraduate degree in Communication Theories, and earned a master's degree in Portuguese Language. As a writer, he published the short story The Woman Dressed in Sun in the anthology The Art of Terror – Apocalypse (Elemental, 2019).",
+    "specialties": [
+      "Acting",
+      "Production",
+      "screenwriting",
+      "Stanislavski System"
+    ]
+  },
+  "education": {
+    "pt": [
+      "Curso de Atores - Latin American Film Institute (2018)",
+      "Mestrado em Ligua Portuguesa - PUC SP (2017)",
+      "Comunicação Social e Jornalismo - URP (2007) ",
+      "Teoria e Práticas da Comunicação - Universidade Casper Libero (2011)",
+      "Instituto Stanislavski"
+    ],
+    "en": [
+     "Acting Program - Latin American Film Institute (2018)",
+     "Master's Degree in Portuguese Language - PUC SP (2017)",
+     "Social Communication and Journalism - URP (2007)",
+     "Theory and Practices of Communication - Casper Libero University (2011)",
+     "Stanislavski Institute"
+    ]
+  }
+}

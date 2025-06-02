@@ -1,0 +1,39 @@
+{
+  "slug": "edivaldo-zanotti",
+  "department": "Atuação e Produção",
+  "image": "/images/edivaldo-zanotti.jpg",
+  "email": "contato@institutointernacionaldeatuacao.com",
+  "social": {
+    "instagram": "https://www.instagram.com/edivaldoz/"
+  },
+  "pt": {
+    "name": "Edivaldo Zanotti",
+    "role": "Ator e Produtor",
+    "bio": "Profissional desde 1993, formado pelo Teatro Escola Claudio Melo, foi coordenador artístico e integrante do elenco do Klap Klap Show, espetáculo da Vila Sésamo no parque temático Hopi Hari, durante seis anos (1997 a 2003). Integrou a Cia Paulista de Artes em 2004, onde trabalhou como ator, maquiador, cenógrafo, figurinista e produtor cultural. Com os espetáculos da companhia, ganhou diversos prêmios em festivais de teatro pelo Brasil, destacando-se nas categorias de ator, ator coadjuvante, maquiagem e figurino. Teve destaque nos espetáculos “As Noivas de Nelson”, de Nelson Rodrigues, com direção de Marco Antônio Braz e participação especial de Anamaria Barreto, e “A Falecida”, também de Nelson Rodrigues e dirigida por Marco Antônio Braz, com Lucélia Santos, Walter Breda e Eduardo Silva no elenco. Cumpriu temporadas em São Paulo no Centro Cultural Vergueiro, Teatro Folha, Teatro UOL, em Campinas no Teatro Amil e no Rio de Janeiro nos teatros Solar de Botafogo e Maria Clara Machado, além de excursionar por inúmeras capitais do país. Já se apresentou na Cidade do México, Washington D.C., Portugal e Viena, na Áustria, com espetáculos teatrais. Seus trabalhos em audiovisual incluem o curta-metragem “Araucárias”, com roteiro e direção de Márcio Lovato, ao lado de Dionísio Neto e Décio P. Medeiros; o longa-metragem “Eu Te Levo”, com roteiro e direção de Marcelo Müller, com Anderson Di Rizzi, Giovanni Gallo e Rosi Campos; e o curta “O Convite”, com roteiro e direção de Marcelo Silva, com Victoria Camargo. Como cenógrafo, seu trabalho de maior destaque foi a instalação cênica na exposição “Holocausto”, no Museu Solar do Barão, na cidade de Jundiaí, que bateu recorde de público com mais de 180 mil visitantes. Fundador da Companhia do Acaso, desenvolve desde 2019 uma pesquisa corpóreo-literária voltada para o público infantil. Atualmente, é membro fundador do Instituto Internacional de Atuação, onde, além de atuar, também auxilia na parte burocrática de editais e documentações.",
+    "specialties": [
+      "Atuação",
+      "Produção",
+      "Direção teatral",
+      "Sistema de Stanislávski"
+    ]
+  },
+  "en": {
+    "name": "Edivaldo Zanotti",
+    "role": "Actor and Producer",
+    "bio": "A professional since 1993, he graduated from Teatro Escola Claudio Melo and was the artistic coordinator and cast member of the Klap Klap Show, a Sesame Street production at the Hopi Hari theme park, for six years (1997 to 2003). He joined the Cia Paulista de Artes in 2004, working as an actor, makeup artist, set designer, costume designer, and cultural producer. With the company's productions, he won several awards at theater festivals across Brazil, standing out in the categories of Best Actor, Supporting Actor, Makeup, and Costume Design. He had notable performances in the plays “As Noivas de Nelson” (“Nelson's Brides”) by Nelson Rodrigues, directed by Marco Antônio Braz with a special appearance by Anamaria Barreto, and “A Falecida” (“The Deceased”), also by Nelson Rodrigues and directed by Marco Antônio Braz, with Lucélia Santos, Walter Breda, and Eduardo Silva in the cast. He performed in São Paulo at the Centro Cultural Vergueiro, Teatro Folha, Teatro UOL, in Campinas at Teatro Amil, and in Rio de Janeiro at Solar de Botafogo and Maria Clara Machado theaters, in addition to touring many of the country’s capitals. He has also performed in Mexico City, Washington D.C., Portugal, and Vienna, Austria, with theatrical productions. His audiovisual work includes the short film “Araucárias,” written and directed by Márcio Lovato, alongside Dionísio Neto and Décio P. Medeiros; the feature film “Eu Te Levo” (“I’ll Take You”), written and directed by Marcelo Müller, with Anderson Di Rizzi, Giovanni Gallo, and Rosi Campos; and the short “O Convite” (“The Invitation”), written and directed by Marcelo Silva, with Victoria Camargo. As a set designer, his most notable work was the scenic installation for the exhibition “Holocausto” (“Holocaust”) at the Solar do Barão Museum in the city of Jundiaí, which broke attendance records with over 180,000 visitors. Founder of Companhia do Acaso, since 2019 he has been developing a corporeal-literary research project aimed at children. Currently, he is a founding member of the International Acting Institute, where, in addition to acting, he also assists with the administrative aspects of public funding applications and documentation.",
+    "specialties": [
+      "Acting",
+      "Production",
+      "Theatrical Direction",
+      "Stanislavski System"
+    ]
+  },
+  "education": {
+    "pt": [
+      "Teatro Escola Claudio Melo"
+    ],
+    "en": [
+      "Célia Helena (2007)"
+    ]
+  }
+}

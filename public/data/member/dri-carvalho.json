@@ -1,0 +1,53 @@
+{
+  "slug": "dri-carvalho",
+  "department": "Atriz",
+  "image": "/images/dri-carvalho.jpg",
+  "email": "contato@institutointernacionaldeatuacao.com",
+  "social": {
+    "instagram": "https://www.instagram.com/dri.carvalho.sp/"
+  },
+  "pt": {
+    "name": "Dri Carvalho",
+    "role": "Atriz",
+    "bio": "Licenciada em Artes Visuais e Bacharel em Artes Cênicas pela ECA-USP, atua como educadora, dramaturga, diretora, atriz, contadora de histórias e locutora. Possui sólida experiência na área de educação e formação cultural: foi educadora no Programa Curumim do Sesc Vila Mariana, coordenadora de oficinas na Associação Barreiros por seis anos e, por nove anos, conduziu oficinas de Artes Cênicas na Fundação Arte e Cultura de Ilhabela. Atualmente, integra a Ciatransforma, realizando contações de histórias; compõe a equipe de Flavia Garrafa, ministrando aulas de teatro em diversas escolas de São Paulo; atua no Teatro Educa Vida (teatro corporativo) e é integrante do coletivo Vozes Diversas, que desenvolve projetos voltados à arte e acessibilidade. Como atriz, faz parte da companhia Lusco Fusco e, recentemente, integrou o elenco do espetáculo “Não te esquecerei em 3 atos e infinitos fatos”, de Leonardo Alkimim, pela companhia Ilhoa. Durante sua trajetória como atriz, trabalhou com atores e diretores renomados, como Georgette Fadel, Caco Ciocler, Cintia Alves, Dedé Pacheco, Maria Alice Vergueiro e Eduardo Estrela.",
+    "specialties": [
+      "Atuação",
+      "Dramaturgia",
+      "Direção teatral",
+      "Educação",
+      "Sistema de Stanislávski"
+    ]
+  },
+  "en": {
+    "name": "Dri Carvalho",
+    "role": "Actress",
+    "bio": "Graduated in Visual Arts and with a Bachelor's degree in Performing Arts from ECA-USP, she works as an educator, playwright, director, actress, storyteller, and voice-over artist. She has solid experience in the field of education and cultural training: she worked as an educator in the Curumim Program at Sesc Vila Mariana, coordinated workshops at the Barreiros Association for six years, and for nine years led Performing Arts workshops at the Ilhabela Arts and Culture Foundation. Currently, she is part of Ciatransforma, performing storytelling activities; she is also a member of Flavia Garrafa’s team, teaching theater in various schools in São Paulo; she performs at Teatro Educa Vida (corporate theater) and is a member of the collective Vozes Diversas, which develops projects focused on art and accessibility. As an actress, she is part of the Lusco Fusco company and recently joined the cast of the play “Não te esquecerei em 3 atos e infinitos fatos” (“I Will Not Forget You in 3 Acts and Infinite Facts”), by Leonardo Alkimim, with the Ilhoa company. Throughout her career as an actress, she has worked with renowned actors and directors such as Georgette Fadel, Caco Ciocler, Cintia Alves, Dedé Pacheco, Maria Alice Vergueiro, and Eduardo Estrela.",
+    "specialties": [
+      "Acting",
+      "Dramaturgy",
+      "Theatrical Direction",
+      "Education",
+      "Stanislavski System"
+    ]
+  },
+  "education": {
+    "pt": [
+      "Artes Cênicas - ECA USP"
+    ],
+    "en": [
+      "Visual Arts - ECA USP"
+    ]
+ },
+  "achievements": {
+    "pt": [
+      "Prêmio Mambembe de melhor atriz",
+      "Prêmio APCA de melhor atriz",
+      "Prêmio Nascente V (direção teatral) – USP"
+    ],
+    "en": [
+      "APAC Best Actress Award",
+      "Mambembe Best Actress Award",
+      "Nascente V Award (Theatrical Direction)"
+    ]
+  }
+}
