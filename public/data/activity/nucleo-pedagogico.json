@@ -1,11 +1,11 @@
 {
-  "id": "grupo-de-estudos",
-  "slug": "grupo-de-estudos",
+  "id": "nucleo-pedagogico",
+  "slug": "nucleo-pedagogico",
   "category": "Pesquisa",
   "maxParticipants": 15,
   "currentParticipants": 8,
   "featured": true,
-  "registrationUrl": "https://forms.gle/saRJ5HAcueeinQZk6",
+  "registrationUrl": "https://www.institutointernacionaldeatuacao.com/",
   "images": [
     "/images/stanislavski1.png",
     "/images/stanislavski2.jpg",
