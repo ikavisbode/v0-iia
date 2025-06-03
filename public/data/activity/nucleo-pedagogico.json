@@ -7,9 +7,9 @@
   "featured": true,
   "registrationUrl": "https://www.institutointernacionaldeatuacao.com/",
   "images": [
-    "/images/stanislavski1.png",
+    "/images/stanislavski1.jpg",
     "/images/stanislavski2.jpg",
-    "/images/stanislavski3.png"
+    "/images/stanislavski3.jpg"
   ],
   "pt": {
     "title": "Grupo de Estudos: Stanislavski em Diálogo",
@@ -17,7 +17,7 @@
     "fullDescription": "Semanalmente, às segundas-feiras, os integrantes do Instituto Internacional de Atuação se reúnem para aprofundar o estudo do livro O Trabalho do Ator, de Konstantin Stanislavski. A dinâmica é simples e potente: a cada semana, um integrante assume a leitura de um capítulo e prepara um resumo para compartilhar com o grupo, a partir do qual o conteúdo é discutido coletivamente, abrindo espaço para reflexões, questionamentos, conexões com a prática e trocas de experiências. Mais do que compreender uma metodologia, buscamos entender como as ideias de Stanislavski reverberam hoje, em nossos corpos, cenas e processos criativos. O estudo se transforma em exercício de escuta, diálogo e construção conjunta de saberes, mantendo vivo o espírito investigativo que move a arte do ator.",
     "instructor": {
       "name": "Grupo de Estudos",
-      "picture": "/images/logo-white.png",
+      "picture": "/images/icone-fundo-solido2.png",
       "social": {
         "linkedin": "https://www.linkedin.com/company/instituto-internacional-de-atua%C3%A7%C3%A3o/",
         "instagram": "https://www.instagram.com/institutointernacionaldatuacao/"
@@ -33,7 +33,7 @@
     "fullDescription": "Every Monday, the members of the International Institute of Acting gather to deepen their study of the book An Actor’s Work by Konstantin Stanislavski. The dynamic is simple yet powerful: each week, one member takes on the reading of a chapter and prepares a summary to share with the group, after which the content is discussed collectively, opening space for reflections, questions, connections with practice, and the exchange of experiences. More than simply understanding a methodology, we seek to grasp how Stanislavski's ideas resonate today in our bodies, scenes, and creative processes. The study becomes an exercise in listening, dialogue, and the collective construction of knowledge, keeping alive the investigative spirit that drives the art of acting.",
     "instructor": {
       "name": "Grupo de Estudos",
-      "picture": "/images/logo-white.png",
+      "picture": "/images/icone-fundo-solido2.png",
       "social": {
         "linkedin": "https://www.linkedin.com/company/instituto-internacional-de-atua%C3%A7%C3%A3o/",
         "instagram": "https://www.instagram.com/institutointernacionaldatuacao/"
