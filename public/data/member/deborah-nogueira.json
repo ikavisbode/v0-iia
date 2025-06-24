@@ -1,0 +1,48 @@
+{
+"slug": "deborah-nogueira",
+  "department": "Atuação e Núcleo Criativo",
+  "image": "/images/deborah-nogueira.jpg",
+  "email": "contato@institutointernacionaldeatuacao.com",
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/instituto-internacional-de-atua%C3%A7%C3%A3o/?viewAsMember=true",
+    "instagram": "https://www.instagram.com/ndeboramaris/"
+  },
+  "pt": {
+    "name": "Débora Nogueira",
+    "role": "Atriz",
+    "bio": "Atriz, diretora e maquiadora. Formada pela Escola de Arte Dramática - USP (1987) e graduada em Publicidade e Propaganda pela Universidade Metodista de São Paulo (UMESP, 1983). No teatro, integrou montagens como \"Um Forró no Umbral\" (2016 e 2005), de Saara Nousiainen; \"Colcha de Retalhos\" (2015); \"A Família Como Ela É\" (2006); \"O Burguês Fidalgo\" (1986), de Molière, dirigido por William Pereira; \"O Arranca Dentes\" (1986), de Flamínio Scala; \"El Gran de Coca-Cola\" (1986), de Diane White e Ronald White - Off Broadway; \"Apareceu a Margarida\" (1985), dirigido por Roberto Athayde; \"A Importância de Estar de Acordo\" (1985), de Bertolt Brecht; \"Antígone\" (1984), de Jean Anouilh; e \"Bodas de Sangue\" (1983), de Federico García Lorca. Premiada no Festival de Teatro de Tatuí em 1987 e no Festival de Teatro do SESC em 1987.",
+    "specialties": [
+      "Atuação",
+      "Método Stanislavski",
+      "Teatro Contemporâneo",
+      "Maquiagem"
+    ]
+  },
+  "en": {
+    "name": "Débora Nogueira",
+    "role": "Actress",
+    "bio": "Actress, director, and makeup artist. Holds a degree in Dramatic Arts from the School of Dramatic Arts at the University of São Paulo (EAD/USP, 1987) and a bachelor's degree in Advertising from the Methodist University of São Paulo (UMESP, 1983). In theater, she was part of productions such as \"Um Forró no Umbra\" (2016 and 2005), by Saara Nousiainen; \"Colcha de Retalhos\" (2015); \"A Família Como Ela É\" (2006); \"O Burguês Fidalgo\" (1986), by Molière, directed by William Pereira; \"O Arranca Dentes\" (1986), by Flamínio Scala; \"El Gran de Coca-Cola\" (1986), by Diane White and Ronald White – Off Broadway; \"Apareceu a Margarida\" (1985), directed by Roberto Athayde; \"A Importância de Estar de Acordo\" (1985), by Bertolt Brecht; \"Antígone\" (1984), by Jean Anouilh; and \"Bodas de Sangue\" (1983), by Federico García Lorca. Awarded at the Tatuí Theater Festival in 1987 and the SESC Theater Festival in 1987.",
+    "specialties": [
+      "Acting",
+      "Stanislavski Method",
+      "Contemporary Theater",
+      "Makeup Artist"
+    ]
+  },
+  "education": {
+    "pt": [
+      "Formada pela Escola de Arte Dramática - USP (1987)",
+      "Graduação em Publicidade e Propaganda - Universidade Metodista de São Paulo (UMESP) (1983)",
+      "Dublagem - Senac/SP (2015)",
+      "Oratória - Centro Espírita Irmão X (2009)"
+    ],
+    "en": [
+      "Acting in Escola de Arte Dramática - University of São Paulo (USP) (1987)",
+      "Bachelor’s in Advertising - Methodist University of São Paulo (UMESP/SP) (1983)",
+      "Voice Acting - Senac/SP (2021)",
+      "Oratory – Centro Espírita Irmão X (2009)"
+    ]
+  }
+}
+
+

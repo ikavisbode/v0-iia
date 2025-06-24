@@ -1,0 +1,40 @@
+{
+"slug": "mattias-erisson",
+  "department": "Atuação e Núcleo Criativo",
+  "image": "/images/mattias-erisson.jpg",
+  "email": "contato@institutointernacionaldeatuacao.com",
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/instituto-internacional-de-atua%C3%A7%C3%A3o/?viewAsMember=true",
+    "instagram": "https://www.instagram.com/mattiaserisson/"
+  },
+  "pt": {
+    "name": "Mattias Erisson",
+    "role": "Ator",
+    "bio": "Ator, apresentador, escritor, locutor e modelo. Formou-se no curso de Artes Dramáticas, pelo Senac/SP, em 2016. Já nesse mesmo ano, fez parte do Núcleo de Artes Dramáticas, sobre teatro e racialidades, na Escola Livre de Teatro de Santo André, sob direção de Jé Oliveira. No cinema, participou do média-metragem \"Profetas e Roubos\" (2016), dirigido por Raniel Xavier; dos longa-metragens \"Meu Casulo de Drywall\" (2020), dirigido por Caroline Fioratti, \"Partiu Fama\" (2021), \"Entre Laços\" (2022), \"Standup - O Filme\" (2022), todos com direção de Miguel Rodrigues; e do curta-metragem \"Passa a Bola\" (2025), dirigido por Guilherme Herrera; dentre outros projetos. Também esteve na Academia de Atores, sob direção de Paulo Emílio Lisboa e passou por grupos como Tramas Digitais e Cia London de Teatro, pelo grupo de pesquisa de atuação para cinema AP43, com direção de Nara Sakarê e do grupo de teatro Na Pele, onde participou da peça \"Último Desejo\" (2025). Foi professor de educação física da Secretaria de Estado da Educação de São Paulo. Atualmente, escreve seu primeiro livro e faz parte do Instituto Internacional de Atuação, como ator, assistente de produção e conselheiro fiscal.",
+    "specialties": [
+      "Atuação",
+      "Método Stanislavski",
+      "Teatro Contemporâneo"
+    ]
+  },
+  "en": {
+    "name": "Mattias Erisson",
+    "role": "Actor",
+    "bio": "Actor, presenter, writer, voice-over artist, and model. Graduated in Dramatic Arts from SENAC/SP in 2016. That same year, he joined the Núcleo de Artes Dramáticas, focused on theatre and racial issues, at the Escola Livre de Teatro de Santo André, under the direction of Jé Oliveira. In cinema, he appeared in the films \"Profetas e Roubos\" (2016), directed by Raniel Xavier; \"Meu Casulo de Drywall\" (2020), directed by Caroline Fioratti; \"Partiu Fama\" (2021); \"Entre Laços\" (2022); and \"Standup - O Filme\" (2022), all directed by Miguel Rodrigues; as well as the short film \"Passa a Bola\" (2025), directed by Guilherme Herrera, among other projects. He also trained at the Academia de Atores, under the direction of Paulo Emílio Lisboa, and was involved with groups such as Tramas Digitais, Cia London de Teatro, the film acting research collective AP43 (directed by Nara Sakarê), and the theatre group Na Pele, where he performed in the play \"Último Desejo\" (2025). He previously worked as a physical education teacher for the São Paulo State Department of Education. He is currently writing his first book and is part of the Instituto Internacional de Atuação as an actor, production assistant, and fiscal advisor.",
+    "specialties": [
+      "Acting",
+      "Stanislavski Method",
+      "Contemporary Theater"
+    ]
+  },
+  "education": {
+    "pt": [
+      "Habilitação Técnica e Profissional em Artes Dramáticas - Senac/SP (2016)"
+    ],
+    "en": [
+      "Technical and Professional Qualification in Performance Arts - Senac/SP (2016)"
+    ]
+  }
+}
+
+
