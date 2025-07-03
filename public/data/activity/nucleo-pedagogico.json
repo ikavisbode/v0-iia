@@ -5,7 +5,7 @@
   "maxParticipants": 15,
   "currentParticipants": 8,
   "featured": true,
-  "registrationUrl": "https://www.institutointernacionaldeatuacao.com/",
+  "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf0_plj5ZLdZAJP54dnoRssEnF_QBl3qeuja5ltVod_d49H4A/viewform?usp=dialog",
   "images": [
     "/images/stanislavski1.jpg",
     "/images/stanislavski2.jpg",
@@ -25,7 +25,9 @@
     },
     "duration": "2 Horas",
     "date": "De 15 em 15 dias às segundas",
-    "location": "Remoto"
+    "time": "Das 19:00 às 21:00",
+    "location": "Remoto",
+    "price": "Grátis"
   },
   "en": {
     "title": "Study Group: Stanislavski in Dialogue",
@@ -41,6 +43,8 @@
     },
     "duration": "2 Hours",
     "date": "Every other Monday",
-    "location": "Remote"
+    "time": "7PM - 9PM",
+    "location": "Remote",
+    "price": "Free"
   }
 }
