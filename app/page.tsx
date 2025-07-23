@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import {
@@ -48,6 +48,71 @@ const HomePage: React.FC = () => {
     return () => clearInterval(interval);
   }, [carouselImages.length]);
 
+  const [isMobile, setIsMobile] = useState(false);
+  const displayedMembers = isMobile ? teamMembers : [...teamMembers, ...teamMembers];
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768); // md: 768px
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  useEffect(() => {
+    if (!isMobile || !carouselRef.current) return;
+
+    const container = carouselRef.current;
+
+    const updateScrollButtons = () => {
+      const { scrollLeft, scrollWidth, clientWidth } = container;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
+    };
+
+    updateScrollButtons(); // verifica ao montar
+
+    container.addEventListener("scroll", updateScrollButtons);
+    window.addEventListener("resize", updateScrollButtons);
+
+    return () => {
+      container.removeEventListener("scroll", updateScrollButtons);
+      window.removeEventListener("resize", updateScrollButtons);
+    };
+  }, [isMobile]);
+
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [paused, setPaused] = useState(false);
+  const [speed, setSpeed] = useState(1);
+
+  useEffect(() => {
+    if (membersLoading || isMobile) return;
+
+    const container = carouselRef.current;
+    if (!container) return;
+
+    let animationId: number;
+
+    const animate = () => {
+      if (!paused) {
+        container.scrollLeft += speed;
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          container.scrollLeft = 0;
+        } else if (container.scrollLeft <= 0) {
+          container.scrollLeft = container.scrollWidth / 2;
+        }
+      }
+      animationId = requestAnimationFrame(animate);
+    };
+
+    animationId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationId);
+  }, [membersLoading, paused, speed, isMobile]);
+
   // Update the useEffect to handle loading states:
   useEffect(() => {
     const loadData = async () => {
@@ -73,9 +138,6 @@ const HomePage: React.FC = () => {
     activeProjectFilter === "TODOS"
       ? projects
       : projects.filter((project) => project.category === activeProjectFilter);
-
-  const featuredActivity = activities.find((activity) => activity.featured);
-  const otherActivities = activities.filter((activity) => !activity.featured);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
@@ -530,19 +592,17 @@ const HomePage: React.FC = () => {
             <>
               {/* Members Carousel */}
               <div className="mb-16 relative">
-                <div className="relative overflow-hidden">
-                  <div
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={{
-                      transform: `translateX(-${
-                        currentSlide * (100 / Math.min(teamMembers.length, 4))
-                      }%)`,
-                    }}
-                  >
-                    {teamMembers.map((member) => (
+                <div 
+                  className="relative overflow-hidden space-x-4 overflow-x-auto scrollbar-hide md:overflow-hidden"
+                  ref={carouselRef}
+                  onMouseEnter={() => setPaused(true)}
+                  onMouseLeave={() => setPaused(false)}
+                >
+                  <div className="flex w-max">
+                    {displayedMembers.map((member, index) => (
                       <div
-                        key={member.slug}
-                        className="w-full md:w-1/2 lg:w-1/4 flex-shrink-0 px-4"
+                        key={index}
+                        className="w-[250px] flex-shrink-0 px-4"
                       >
                         <div
                           className="text-center cursor-pointer group"
@@ -569,46 +629,27 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Carousel Navigation Dots */}
-                <div className="flex justify-center mt-6 space-x-2">
-                  {Array.from(
-                    { length: Math.max(1, teamMembers.length - 3) },
-                    (_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentSlide(index)}
-                        className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                          index === currentSlide ? "bg-red-600" : "bg-gray-300"
-                        }`}
-                        aria-label={`Go to slide ${index + 1}`}
-                      />
-                    )
-                  )}
-                </div>
-
                 {/* Carousel Controls */}
                 {teamMembers.length > 4 && (
                   <>
                     <button
-                      onClick={() =>
-                        setCurrentSlide((prev) => Math.max(0, prev - 1))
-                      }
-                      className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg z-10"
+                      onMouseDown={() => setSpeed(-3)}
+                      onMouseUp={() => setSpeed(1)}
+                      onMouseLeave={() => setSpeed(1)}
+                      disabled={!canScrollLeft}
+                      className={`absolute left-0 top-[125px] transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg z-10 ${!canScrollLeft ? 'opacity-30 cursor-not-allowed' : ''}`}
                       aria-label="Previous member"
-                      disabled={currentSlide === 0}
                     >
                       <ChevronLeft size={24} />
                     </button>
 
                     <button
-                      onClick={() =>
-                        setCurrentSlide((prev) =>
-                          Math.min(teamMembers.length - 4, prev + 1)
-                        )
-                      }
-                      className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg z-10"
+                      onMouseDown={() => setSpeed(3)}
+                      onMouseUp={() => setSpeed(1)}
+                      onMouseLeave={() => setSpeed(1)}
+                      disabled={!canScrollRight}
+                      className={`absolute right-0 top-[125px] transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg z-10 ${!canScrollRight ? 'opacity-30 cursor-not-allowed' : ''}`}
                       aria-label="Next member"
-                      disabled={currentSlide >= teamMembers.length - 4}
                     >
                       <ChevronRight size={24} />
                     </button>
