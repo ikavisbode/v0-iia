@@ -48,7 +48,9 @@ const HomePage: React.FC = () => {
     return () => clearInterval(interval);
   }, [carouselImages.length]);
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth < 768 : false
+  );
   const displayedMembers = isMobile ? teamMembers : [...teamMembers, ...teamMembers];
 
   useEffect(() => {
@@ -61,9 +63,14 @@ const HomePage: React.FC = () => {
 
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!isMobile || !carouselRef.current) return;
+    if (!isMobile || !carouselRef.current) {
+      setCanScrollLeft(true);
+      setCanScrollRight(true);
+      return
+    }
 
     const container = carouselRef.current;
 
@@ -82,9 +89,8 @@ const HomePage: React.FC = () => {
       container.removeEventListener("scroll", updateScrollButtons);
       window.removeEventListener("resize", updateScrollButtons);
     };
-  }, [isMobile]);
+  }, [membersLoading]);
 
-  const carouselRef = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
   const [speed, setSpeed] = useState(1);
 
