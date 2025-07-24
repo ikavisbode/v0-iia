@@ -1,0 +1,96 @@
+{
+  "id": "workshop-maquiagem",
+  "slug": "workshop-maquiagem",
+  "category": "Workshop",
+  "maxParticipants": 15,
+  "currentParticipants": 8,
+  "featured": true,
+  "registrationUrl": "https://forms.gle/gVQ95LALaq96LH5V9",
+  "images": [
+    "/images/deborah-nogueira.jpg",
+    "/images/2025_IIA_KV_1.png",
+    "/images/2025_IIA_KV_3.png"
+  ],
+  "pt": {
+    "title": "Workshop de Maquiagem",
+    "description": "A maquiagem e a criação do personagem.",
+    "fullDescription": "Workshop de maquiagem com aprofundamento no desenvolvimento de caracterização da personagem utilizando o artifício da maquiagem. Quem ministra o curso é a Atriz, diretora e maquiadora Débora Nogueira é formada pela Escola de Arte Dramática - USP (1987) e é premiada no Festival de Teatro de Tatuí em 1987 e no Festival de Teatro do SESC em 1987.",
+    "instructor": {
+      "name": "Débora Nogueira",
+      "picture": "/images/deborah-nogueira.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/company/instituto-internacional-de-atua%C3%A7%C3%A3o/?viewAsMember=true",
+        "instagram": "https://www.instagram.com/ndeboramaris/"
+      },
+      "url": "/membros/deborah-nogueira"
+    },
+    "duration": "5 Encontros",
+    "date": "Agendamento conforme disponibilidade",
+    "time": "A combinar, 1h de aula por encontro",
+    "location": "Remoto",
+    "price": "R$ 80"
+  },
+  "en": {
+    "title": "Makeup Workshop",
+    "description": "Makeup and character creation.",
+    "fullDescription": "Makeup workshop with a focus on the in-depth development of character creation through the art of makeup. The course is led by actress, director, and makeup artist Débora Nogueira, a graduate of the School of Dramatic Arts at USP (1987), and award winner at both the Tatuí Theater Festival and the SESC Theater Festival in 1987.",
+    "instructor": {
+      "name": "Débora Nogueira",
+      "picture": "/images/deborah-nogueira.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/company/instituto-internacional-de-atua%C3%A7%C3%A3o/?viewAsMember=true",
+        "instagram": "https://www.instagram.com/ndeboramaris/"
+      },
+      "url": "/membros/diogo-rezende"
+    },
+    "duration": "5 days",
+    "date": "Scheduled upon availability",
+    "time": "To be arranged, 1 hour lessons",
+    "location": "Remote",
+    "price": "R$ 80"
+  },
+  "program": [
+    {
+      "pt": {
+        "day": "Currículo - Worksho de Maquiagem",
+        "sessions": [
+          { "time": "Dia 1", "topic": "A pele e seus cuidados, material a ser utilizado" },
+          { "time": "Dia 2", "topic": "Descobrindo seu rosto “máscara” , olhar para si e cobrir a sobrancelha" },
+          { "time": "Dia 3", "topic": "Personagens marcantes e técnica de envelhecimento, percepção de luz e sombra" },
+          { "time": "Dia 4", "topic": "Explorar cor e expressão, circo" },
+          { "time": "Dia 5", "topic": "Espetáculos, estética, concepção, o teatro brasileiro e personagem escolhido para último encontro. " }
+        ]
+      },
+      "en": {
+        "day": "Curriculum - Makeup Workshop",
+        "sessions": [
+          { "time": "Day 1", "topic": "The skin and its care, materials to be used." },
+          { "time": "Day 2", "topic": "Discovering your face as a 'mask', self-observation, and eyebrow covering." },
+          { "time": "Day 3", "topic": "Striking characters and aging techniques, perception of light and shadow." },
+          { "time": "Day 4", "topic": "Exploring color and expression, circus." },
+          { "time": "Day 5", "topic": "Performances, aesthetics, concept, Brazilian theater, and the character chosen for the final session." }
+        ]
+      }
+    }
+  ],
+  "requirements": {
+    "pt": [
+      "Material básico de maquiagem",
+      "Trazer: Algodão, água micelar, base e um lapis de olho",
+      "Caderno de anotações"
+    ],
+    "en": ["Basic makeup materials", "To bring: cotton, micellar water, foundation, and an eyeliner pencil", "Notebook for notes"]
+  },
+  "benefits": {
+    "pt": [
+      "Criação de maquiagem específica para as suas características",
+      "Acompanhamento durante a criação",
+      "Acesso a material exclusivo"
+    ],
+    "en": [
+      "Creation of makeup tailored to your features",
+      "Guidance throughout the creation process",
+      "Access to exclusive materials"
+    ]
+  }
+}
