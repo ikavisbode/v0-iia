@@ -1,0 +1,57 @@
+{
+  "id": "curta-illi",
+  "slug": "curta-illi",
+  "category": "AUDIOVISUAL",
+  "status": "Em Produção",
+  "images": [
+    "/images/----.jpg",
+    "/images/----.jpeg",
+    "/images/----.png"
+  ],
+  "pt": {
+    "title": "illi",
+    "description": "O IIA desenvolveu junto com seus artístas um curta metragem de autoria de Marco Briani",
+    "fullDescription": "O IIA desenvolveu junto com seus artístas um curta metragem de autoria de Marco Briani, em uma parceria com a produtora Alento e Casa Prod. Artísticas, o curta esta em produção e logo menos será lançado em festivais além de uma versão online.",
+    "director": "Marco Briani",
+    "directorPicture": "/images/marco-briani-photo.jpeg",
+    "directorSocial": {
+      "linkedin": "https://www.linkedin.com/in/marco-briani-611536a4/",
+      "instagram": "https://instagram.com/diego.monteiro.diretor"
+    },
+    "directorUrl": "/membros/marco-briani",
+    "assistantDirector": "Marco Briani",
+    "assistantDirectorPicture": "/images/marco-briani-photo.jpeg",
+    "assistantDirectorSocial": {
+      "linkedin": "https://www.linkedin.com/in/marco-briani-611536a4/",
+      "instagram": "https://www.instagram.com/kabode/"
+    },
+    "assistantDirectorUrl": "/membros/marco-briani",
+    "cast": ["Núcleo Criativo IIA", "Elenco em formação"],
+    "duration": "10 minutos",
+    "premiere": "Em Produção",
+    "location": "Remoto"
+  },
+  "en": {
+    "title": "illi",
+    "description": "IIA developed, together with its artists, a short film written by Marco Briani",
+    "fullDescription": "IIA developed, together with its artists, a short film written by Marco Briani, in partnership with the production companies Alento and Casa Prod. Artísticas. The short film is currently in production and will soon be released at festivals, as well as in an online version.",
+    "director": "Marco Briani",
+    "directorPicture": "/images/marco-briani-photo.jpeg",
+    "directorSocial": {
+      "linkedin": "https://www.linkedin.com/in/marco-briani-611536a4/",
+      "instagram": "https://www.instagram.com/kabode/"
+    },
+    "directorUrl": "/membros/marco-briani",
+    "assistantDirector": "Marco Briani",
+    "assistantDirectorPicture": "/images/marco-briani-photo.jpeg",
+    "assistantDirectorSocial": {
+      "linkedin": "https://www.linkedin.com/in/marco-briani-611536a4/",
+      "instagram": "https://www.instagram.com/kabode/"
+    },
+    "assistantDirectorUrl": "/membros/marco-briani",
+    "cast": ["IIA Creative Core", "Cast in formation"],
+    "duration": "10 minutes",
+    "premiere": "In Production",
+    "location": "Remote"
+  }
+}
